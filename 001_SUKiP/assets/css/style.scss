@@ -3,6 +3,11 @@
 ************************/
 
 $main-color: #01D4B3;
+$gray: #F7F7F7;
+
+$height-header: 86px;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, main, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
@@ -11,15 +16,16 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   outline: 0;
   vertical-align: baseline;
   background: transparent;
+
 }
 
 body {
   line-height: 1;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Noto Sans Japanese';
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.87);
+  font-family: "Open Sans", "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 }
 
 main {
@@ -66,10 +72,22 @@ img {
 /***********************
 01_COMMON
 ************************/
+body {
+  min-width: 1100px;
+  overflow-x: hidden;
+}
+
 p {
   font-size: 16px;
   line-height: 18px;
-  color: rgba(0, 0, 0, 0.87);
+  color: #676767;
+}
+
+h2 {
+  text-align: center;
+  color: $main-color;
+  font-size: 32px;
+  margin-bottom: 64px;
 }
 
 .text-center {
@@ -92,6 +110,24 @@ p {
   float: right;
 }
 
+.margin-auto {
+  margin: 0 auto;
+}
+
+.clearfix {
+  *zoom: 1;
+
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
 .button {
   display: block;
   box-sizing: border-box;
@@ -105,10 +141,15 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.inner {
-  width: 960px;
+.lp-inner {
+  width: 1200px;
   display: block;
-  width: 960px;
+  margin: 0 auto;
+}
+
+.lp-inner-sub {
+  width: 1000px;
+  display: block;
   margin: 0 auto;
 }
 
@@ -116,26 +157,53 @@ p {
   color: $main-color;
   background-color: #FFF;
   border-radius: 30px;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   height: 40px;
   line-height:40px;
   display: block;
-  padding: auto 16px;
   width: 100px;
   text-align: center;
+  font-weight: bold;
 }
 
 .lp-button-ghost {
   color: white;
   background-color: $main-color;
   border-radius: 30px;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   height: 40px;
   line-height:40px;
   display: block;
-  padding: auto 16px;
   width: 100px;
   text-align: center;
+  font-weight: bold;
+}
+
+.lp-button-large {
+  width: 140px;
+  font-size: 21px;
+}
+
+.lp-button-white {
+  padding: 0 24px;
+  margin-top: 32px;
+}
+
+.separator-top {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 100vw 0 0;
+  border-color: $main-color #FFF transparent transparent;
+}
+
+.separator-footer {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 100vw 0 0;
+  border-color: $main-color $gray transparent transparent;
+  transform: rotate(180deg);
 }
 
 /***********************
@@ -143,9 +211,12 @@ p {
 ************************/
 .lp-header {
   background-color: $main-color;
-  height: 86px;
-  overflow: hidden;
+  height: $height-header;
+  width: 100vw;
   line-height: 86px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
+  position: fixed;
+  z-index: 20;
 
   img {
     position: absolute;
@@ -161,3 +232,250 @@ p {
   }
 }
 
+/***********************
+03_MAIN
+************************/
+.lp-main {
+  z-index: 10;
+}
+
+/***********************
+04_MAIN VISUAL
+************************/
+.lp-main-catch {
+  padding-top: $height-header;
+  color: #FFF;
+  position: relative;
+  overflow: hidden;
+  background-color: $main-color;
+
+  p {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 16px;
+  }
+}
+
+.lp-main-catch-text {
+  height: 614px;
+  margin: 0 auto;
+  margin-top: 124px;
+  padding: 100px 10px 20px;
+  color: #FFF;
+  position: relative;
+
+}
+
+.lp-main-catch-visual {
+  width: 498px;
+  height: 360px;
+  margin: 0;
+  float: right;
+
+  .sp_mock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    background: url(../img/sp_mock.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    width: 20%;
+    height: 80%;
+  }
+
+  .pc_mock {
+    position: absolute;
+    top: 246px;
+    right: 170px;
+    z-index: 1;
+    background: url(../img/pc_mock.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    width: 30%;
+    height: 77%;
+  }
+}
+
+/***********************
+05_RECOMMEND
+************************/
+.lp-main-recommend {
+
+  ul {
+    li {
+      display: inline-block;
+      width: 235px;
+      text-align: center;
+      vertical-align: top;
+    }
+  }
+
+  .lp-button-ghost {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 48px;
+    margin-top: 30px;
+  }
+
+  .lp-inner-sub-title {
+    font-weight: bold;
+    margin-top: 16px;
+  }
+}
+
+/***********************
+06_MERIT
+************************/
+.lp-main-merit {
+  background-color: $gray;
+  padding: 80px 0 50px 0;
+
+  $list-width: 700px;
+
+  .lp-main-merit-list {
+    display: block;
+    margin: 64px auto 0 auto;
+    width: $list-width;
+
+    .lp-main-merit-list-image {
+      width: $list-width / 2;
+    }
+
+    & > li {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-top: 32px;
+      };
+    }
+
+    & > li:nth-child(even) {
+      .lp-main-merit-list-image {
+        float: left;
+      }
+
+      .lp-main-merit-list-description {
+        margin-left: 350px;
+      }
+    }
+
+    & > li:nth-child(odd) {
+      .lp-main-merit-list-image {
+        float: right;
+      }
+    }
+
+    .lp-main-merit-list-number {
+      color: $main-color;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 32px;
+        border-bottom: 4px solid $main-color;
+      }
+    }
+
+    .lp-main-merit-list-title {
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: 32px;
+    }
+  }
+}
+
+/***********************
+07_FLOW
+************************/
+.lp-main-flow {
+  padding: 80px 0 50px 0;
+
+  ol {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+
+    $list-height: 340px;
+    $list-margin: 48px;
+    $list-width: 250px - $list-margin;
+
+    li {
+      display: inline-block;
+      background-color: $gray;
+      width: $list-width;
+      vertical-align: top;
+      padding: 40px;
+      box-sizing: border-box;
+      position: relative;
+      height: $list-height;
+
+      &:not(:last-child) {
+        margin-right: $list-margin;
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        left: $list-width;
+        top: 0;
+        width: 0;
+        border-top: $list-height/2 solid transparent;
+        border-right: $list-margin solid transparent;
+        border-bottom: $list-height/2 solid transparent;
+        border-left: $list-margin solid $gray;
+
+        position: absolute;
+      }
+    }
+
+    img {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/***********************
+08_ACTIVITY
+************************/
+.lp-main-activity {
+  background-color: $gray;
+  height: 585px;
+  padding: 80px 0 50px 0;
+
+  ul {
+    text-align: center;
+  }
+
+
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+
+    p {
+      margin-top: 16px;
+    }
+  }
+}
+
+/***********************
+09_FOOTER
+************************/
+.lp-footer {
+  height: 700px;
+  padding: 80px 0 50px 0;
+  background-color: $main-color;
+
+  h2, p {
+    color: #FFF;
+  }
+
+}
