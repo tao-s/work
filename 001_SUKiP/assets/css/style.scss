@@ -5,7 +5,9 @@
 $main-color: #01D4B3;
 $gray: #F7F7F7;
 
-$height-header: 86px;
+$pc: "only screen and (min-width: 751px)";
+$sp: "only screen and (max-width: 750px)";
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -72,23 +74,42 @@ img {
 01_COMMON
 ************************/
 body {
-  min-width: 1100px;
-  overflow-x: hidden;
-}
-
-p {
-  font-size: 16px;
-  line-height: 18px;
-  color: #676767;
+  @media #{$pc} {
+    min-width: 1100px;
+    overflow-x: hidden;
+  }
 }
 
 h2 {
   text-align: center;
   color: $main-color;
-  font-size: 32px;
   font-weight: bold;
-  margin-bottom: 16px;
-  line-height: 1.3;
+
+  @media #{$pc} {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  @media #{$sp} {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+p {
+  color: #676767;
+
+  @media #{$pc} {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media #{$sp} {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
 }
 
 .text-center {
@@ -130,15 +151,31 @@ h2 {
 }
 
 .lp-inner {
-  width: 1200px;
-  display: block;
-  margin: 0 auto;
+  @media #{$pc} {
+    width: 1200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media #{$sp} {
+    width: calc(100vw - 32px);
+    padding: 0 16px;
+    min-width: 320px;
+  }
 }
 
 .lp-inner-sub {
-  width: 1000px;
-  display: block;
-  margin: 0 auto;
+  @media #{$pc} {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+  }
+
+  @media #{$sp} {
+    width: calc(100vw - 32px);
+    padding: 0 16px;
+    min-width: 320px;
+  }
 }
 
 .lp-button-white {
@@ -172,52 +209,110 @@ h2 {
 }
 
 .lp-button-small {
-  height: 40px;
-  width: 100px;
-  line-height:40px;
   text-align: center;
   font-weight: bold;
   box-sizing: border-box;
   border-radius: 30px;
   display: block;
+
+  @media #{$sp} {
+    height: 32px;
+    width: 95px;
+    line-height: 32px;
+  }
+
+  @media #{$pc} {
+    height: 40px;
+    width: 100px;
+    line-height:40px;
+  }
 }
 
 .lp-button-large {
-  width: 220px;
-  height: 60px;
-  line-height: 60px;
   text-align: center;
-  font-size: 21px;
   font-weight: bold;
   box-sizing: border-box;
   border-radius: 30px;
   display: block;
+
+  @media #{$pc} {
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 21px;
+  }
+
+  @media #{$sp} {
+    width: 175px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+  }
 }
 
 .separator-top {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 120px 100vw 0 0;
   border-color: $main-color #FFF transparent transparent;
+
+  @media #{$pc} {
+    border-width: 120px 100vw 0 0;
+  }
+
+  @media #{$sp} {
+    border-width: 50px 100vw 0 0;
+  }
 }
 
 .separator-footer {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 120px 0 0 100vw;
   border-color: $gray transparent transparent $main-color;
+
+  @media #{$pc} {
+    border-width: 120px 0 0 100vw;
+  }
+
+  @media #{$sp} {
+    border-width: 50px 0 0 100vw;
+  }
+}
+
+.pc-none {
+  @media #{$pc} {
+    display: none!important;
+  }
+}
+
+.sp-none {
+  @media #{$sp} {
+    display: none!important;
+  }
 }
 
 /***********************
 02_HEADER
 ************************/
+
+// main の計算で使用するので、ヘッダースコープ外
+$height-header-pc: 86px;
+$height-header-sp: 54px;
+
 .lp-header {
+  @media #{$pc} {
+    height: $height-header-pc;
+    line-height: $height-header-pc;
+  }
+
+  @media #{$sp} {
+    height: $height-header-sp;
+    line-height: $height-header-sp;
+  }
+
   background-color: $main-color;
-  height: $height-header;
   width: 100vw;
-  line-height: 86px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
   position: fixed;
   z-index: 20;
@@ -225,6 +320,11 @@ h2 {
   img {
     position: absolute;
     top: 18px;
+
+    @media #{$sp} {
+      height: 32px;
+      top: 12px
+    }
   }
 
   .lp-header-login {
@@ -244,26 +344,40 @@ h2 {
 03_MAIN
 ************************/
 .lp-main {
-  z-index: 10;
+  width: 100vw;
 }
 
 /***********************
 04_MAIN VISUAL
 ************************/
 .lp-main-catch {
-  padding-top: $height-header;
   color: #FFF;
   position: relative;
   overflow: hidden;
   background-color: $main-color;
-  padding-top: 200px;
-  padding-bottom: 120px;
+
+  @media #{$pc} {
+    padding-top: $height-header-pc + 120px;
+    padding-bottom: 120px;
+  }
+
+  @media #{$sp} {
+    // ヘッダー分を足し算
+    padding-top: $height-header-sp + 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
 
   h2 {
     color: #FFF;
     text-align: left;
     font-size: 42px;
     display: inline-block;
+
+    @media #{$sp} {
+      font-size: 28px;
+      text-align: center;
+    }
   }
 
   p {
@@ -272,39 +386,39 @@ h2 {
     font-size: 16px;
     line-height: 1.4;
     margin-top: 16px;
+    display: inline-block;
+
+    @media #{$sp} {
+      margin-bottom: 36px;
+    }
   }
 
   .lp-button-white {
     margin-top: 40px;
+
+    @media #{$sp} {
+      margin: 40px auto 0 auto
+    }
   }
-}
 
-.lp-main-catch-text {
-  height: 614px;
-  margin: 0 auto;
-  margin-top: 124px;
-  padding: 100px 10px 20px;
-  color: #FFF;
-  position: relative;
+  .lp-main-catch-text {
+    height: 614px;
+    margin: 0 auto;
+    margin-top: 124px;
+    padding: 100px 10px 20px;
+    color: #FFF;
+    position: relative;
+  }
 
-}
+  img {
+    @media #{$sp} {
+      width: 100%;
+      float: none;
+    }
 
-.lp-main-catch-visual {
-  width: 498px;
-  height: 360px;
-  margin: 0;
-  float: right;
-
-  .pc_mock {
-    position: absolute;
-    top: 246px;
-    right: 170px;
-    z-index: 1;
-    background: url(../img/pc_mock.png) no-repeat;
-    -webkit-background-size: 100% 100%;
-    background-size: 100%;
-    width: 30%;
-    height: 77%;
+    width: 640px;
+    margin: 0;
+    float: right;
   }
 }
 
@@ -312,20 +426,48 @@ h2 {
 05_RECOMMEND
 ************************/
 .lp-main-recommend {
-  padding: 80px 0px;
+
+  @media #{$pc} {
+    padding: 80px 0px;
+  }
+
+  @media #{$sp} {
+    padding: 54px 0px;
+    text-align: center;
+  }
 
   ul {
     margin-bottom: 56px;
 
+    @media #{$sp} {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
     li {
       display: inline-block;
-      width: 216px;
-      margin-top: 40px;
-      text-align: center;
       vertical-align: top;
+      text-align: center;
 
-      &:not(:nth-child(4n)) {
-        margin-right: 40px;
+      @media #{$pc} {
+        width: 216px;
+        margin-top: 40px;
+
+        &:not(:nth-child(4n)) {
+          margin-right: 40px;
+        }
+      }
+
+      @media #{$sp} {
+        width: 45%;
+
+        &:nth-child(odd) {
+          margin-right: 5%;
+        }
+
+        &:nth-child(n + 3) {
+          margin-top: 32px;
+        }
       }
     }
   }
@@ -347,7 +489,7 @@ h2 {
       height: 0;
       width: 0;
       top: -35px;
-      left: 89px;
+      left: calc(50% - 15px);
       border: 20px solid transparent;
       border-bottom: 15px solid $gray;
       position: absolute;
@@ -358,76 +500,136 @@ h2 {
 /***********************
 06_MERIT
 ************************/
-.lp-main-merit {
-  background-color: $gray;
-  padding: 80px 0;
+@media #{$pc} {
+  .lp-main-merit {
+    background-color: $gray;
+    padding: 80px 0;
 
-  $list-width: 700px;
+    $list-width: 700px;
+
+    .lp-main-merit-list {
+      display: block;
+      margin: 64px auto 56px auto;
+      width: $list-width;
+
+      & > li {
+        position: relative;
+
+        &:not(:first-child) {
+          margin-top: 64px;
+        }
+
+        &:nth-child(even) {
+          .lp-main-merit-list-image {
+            float: left;
+            text-align: left;
+          }
+
+          .lp-main-merit-list-description {
+            padding-left: 470px;
+          }
+        }
+
+        &:nth-child(odd) {
+          .lp-main-merit-list-image {
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .lp-main-merit-list-description {
+      margin-top: 60px;
+    }
+
+    .lp-main-merit-list-number {
+      color: $main-color;
+      position: relative;
+      font-size: 28px;
+
+      .lp-main-merit-list-number-strong {
+        font-size: 42px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        width: 32px;
+        border-bottom: 4px solid $main-color;
+      }
+    }
+
+    .lp-main-merit-list-image {
+      width: $list-width / 2;
+    }
+
+    .lp-main-merit-list-title {
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    .lp-main-merit-list-description-example {
+      li {
+        list-style: disc;
+        list-style-position: inside;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+@media #{$sp} {
 
   .lp-main-merit-list {
-    display: block;
-    margin: 64px auto 56px auto;
-    width: $list-width;
+    margin-bottom: 40px;
+  }
 
-    & > li {
+  .lp-main-merit {
+    background-color: $gray;
+    padding: 54px 0;
+
+    img {
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    .lp-main-merit-list-description {
+      width: calc(100vw - 128px);
+      margin: 0 auto;
+    }
+
+    .lp-main-merit-list-number {
+      color: $main-color;
       position: relative;
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: 16px;
 
-      &:not(:first-child) {
-        margin-top: 64px;
-      }
-
-      &:nth-child(even) {
-        .lp-main-merit-list-image {
-          float: left;
-          text-align: left;
-        }
-
-        .lp-main-merit-list-description {
-          padding-left: 470px;
-        }
-      }
-
-      &:nth-child(odd) {
-        .lp-main-merit-list-image {
-          float: right;
-          text-align: right;
-        }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: calc(50% - 18px);
+        width: 36px;
+        border-bottom: 4px solid $main-color;
       }
     }
-  }
-
-  .lp-main-merit-list-description {
-    margin-top: 60px;
-  }
-
-  .lp-main-merit-list-number {
-    color: $main-color;
-    position: relative;
-    font-size: 28px;
 
     .lp-main-merit-list-number-strong {
-      font-size: 42px;
+      font-size: 28px;
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -16px;
-      left: 0;
-      width: 32px;
-      border-bottom: 4px solid $main-color;
+    .lp-main-merit-list-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 32px;
+      margin-bottom: 16px;
     }
-  }
-
-  .lp-main-merit-list-image {
-    width: $list-width / 2;
-  }
-
-  .lp-main-merit-list-title {
-    font-size: 21px;
-    font-weight: bold;
-    margin-top: 32px;
-    margin-bottom: 16px;
   }
 
   .lp-main-merit-list-description-example {
@@ -443,7 +645,15 @@ h2 {
 07_FLOW
 ************************/
 .lp-main-flow {
-  padding: 80px 0;
+
+  @media #{$pc} {
+    padding: 80px 0px;
+  }
+
+  @media #{$sp} {
+    padding: 54px 0px;
+    text-align: center;
+  }
 
   .lp-main-flow-step {
     font-size: 21px;
@@ -464,37 +674,70 @@ h2 {
     $list-margin: 48px;
     $list-width: 250px - $list-margin;
 
-    li {
-      display: inline-block;
-      background-color: $gray;
-      width: $list-width;
-      vertical-align: top;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      position: relative;
-      height: $list-height;
+    @media #{$pc} {
+      li {
+        display: inline-block;
+        background-color: $gray;
+        width: $list-width;
+        vertical-align: top;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        position: relative;
+        height: $list-height;
 
-      &:not(:last-child) {
-        margin-right: $list-margin;
+        &:not(:last-child) {
+          margin-right: $list-margin;
+        }
+
+        &:not(:last-child)::after {
+          content: '';
+          left: $list-width;
+          top: 0;
+          width: 0;
+          border-top: $list-height/2 solid transparent;
+          border-right: $list-margin solid transparent;
+          border-bottom: $list-height/2 solid transparent;
+          border-left: $list-margin solid $gray;
+
+          position: absolute;
+        }
       }
 
-      &:not(:last-child)::after {
-        content: '';
-        left: $list-width;
-        top: 0;
-        width: 0;
-        border-top: $list-height/2 solid transparent;
-        border-right: $list-margin solid transparent;
-        border-bottom: $list-height/2 solid transparent;
-        border-left: $list-margin solid $gray;
-
-        position: absolute;
+      img {
+        margin-top: 50px;
+        margin-bottom: 70px;
       }
     }
 
-    img {
-      margin-top: 50px;
-      margin-bottom: 70px;
+    @media #{$sp} {
+      li {
+        background-color: $gray;
+        position: relative;
+        margin-bottom: 48px;
+        padding: 12px 0 24px 0;
+        height: 215px;
+        box-sizing: border-box;
+
+        &:not(:last-child)::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-right: calc(50vw - 12px) solid transparent;
+          border-left: calc(50vw - 12px) solid transparent;
+          border-top: 25px solid #F7F7F7;
+          left: 0;
+          bottom: -24px;
+        }
+      }
+
+      .lp-main-flow-step {
+        margin-bottom: 16px;
+      }
+
+      img {
+        margin-bottom: 24px;
+      }
     }
   }
 }
@@ -504,18 +747,42 @@ h2 {
 ************************/
 .lp-main-activity {
   background-color: $gray;
-  padding: 80px 0;
+
+  @media #{$pc} {
+    padding: 80px 0;
+  }
+
+  @media #{$sp} {
+    padding: 54px 0
+  }
 
   ul {
     text-align: center;
-    margin-top: 80px;
+
+    @media #{$pc} {
+      margin-top: 80px;
+    }
+
+    @media #{$sp} {
+      margin-top: 40px;
+    }
   }
 
   li {
     display: inline-block;
 
-    &:not(:last-child) {
-      margin-right: 120px;
+    @media #{$sp} {
+      width: 45%;
+
+      &:nth-child(n + 3) {
+        margin-top: 32px;
+      }
+    }
+
+    @media #{$pc} {
+      &:not(:last-child) {
+        margin-right: 120px;
+      }
     }
 
     p {
@@ -531,6 +798,10 @@ h2 {
   padding: 80px 0 50px 0;
   background-color: $main-color;
 
+  @media #{$sp} {
+    padding: 55px 0 50px 0;
+  }
+
   h2, p {
     color: #FFF;
     font-weight: bold;
@@ -538,11 +809,20 @@ h2 {
 
   h2 {
     font-size: 42px;
+    margin-bottom: 24px;
+
+    @media #{$sp} {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
   }
 
   .lp-footer-button {
     margin-top: 54px;
     margin-bottom: 64px;
-  }
 
+    @media #{$sp} {
+      margin-top: 40px;
+    }
+  }
 }

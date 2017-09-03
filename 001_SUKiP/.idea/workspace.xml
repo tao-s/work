@@ -16,8 +16,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="205" column="15" lean-forward="true" selection-start-line="205" selection-start-column="15" selection-end-line="205" selection-end-column="15" />
+                <state relative-caret-position="251">
+                  <caret line="231" column="12" lean-forward="true" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -30,8 +30,8 @@
           <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="517" column="24" lean-forward="false" selection-start-line="517" selection-start-column="24" selection-end-line="517" selection-end-column="24" />
+                <state relative-caret-position="494">
+                  <caret line="824" column="21" lean-forward="false" selection-start-line="824" selection-start-column="20" selection-end-line="824" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -50,7 +50,18 @@
       <find>line-he</find>
       <find>flow</find>
       <find>logo</find>
+      <find>header</find>
+      <find>lp-button</find>
       <find>h2</find>
+      <find>footer</find>
+      <find>$height-header</find>
+      <find>p</find>
+      <find>inner</find>
+      <find>sub</find>
+      <find>54</find>
+      <find>審査</find>
+      <find>FLOW</find>
+      <find>body</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -79,8 +90,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="24" />
-    <option name="width" value="1382" />
+    <option name="y" value="23" />
+    <option name="width" value="1427" />
     <option name="height" value="1023" />
   </component>
   <component name="ProjectView">
@@ -158,12 +169,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504369767728</updated>
-      <workItem from="1504369769371" duration="10968000" />
+      <workItem from="1504369769371" duration="19540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10968000" />
+    <option name="totallyTimeSpent" value="19540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -201,18 +212,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="517" column="24" lean-forward="false" selection-start-line="517" selection-start-column="24" selection-end-line="517" selection-end-column="24" />
+        <state relative-caret-position="251">
+          <caret line="231" column="12" lean-forward="true" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="205" column="15" lean-forward="true" selection-start-line="205" selection-start-column="15" selection-end-line="205" selection-end-column="15" />
+        <state relative-caret-position="494">
+          <caret line="824" column="21" lean-forward="false" selection-start-line="824" selection-start-column="20" selection-end-line="824" selection-end-column="21" />
           <folding />
         </state>
       </provider>
