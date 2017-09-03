@@ -524,15 +524,33 @@ p {
   margin-top: 24px;
 }
 
+@media only screen and (max-width: 750px) {
+  .lp-main-recommend .lp-inner-sub-description {
+    border-radius: 12px;
+  }
+}
+
 .lp-main-recommend .lp-inner-sub-description::before {
   content: "";
   height: 0;
   width: 0;
   top: -35px;
   left: calc(50% - 15px);
-  border: 20px solid transparent;
-  border-bottom: 15px solid #F7F7F7;
   position: absolute;
+}
+
+@media only screen and (min-width: 751px) {
+  .lp-main-recommend .lp-inner-sub-description::before {
+    border: 20px solid transparent;
+    border-bottom: 15px solid #F7F7F7;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lp-main-recommend .lp-inner-sub-description::before {
+    border: 15px solid transparent;
+    border-bottom: 25px solid #F7F7F7;
+  }
 }
 
 /***********************

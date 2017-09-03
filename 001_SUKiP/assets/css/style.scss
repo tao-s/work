@@ -482,15 +482,27 @@ $height-header-sp: 54px;
     position: relative;
     margin-top: 24px;
 
+    @media #{$sp} {
+      border-radius: 12px;
+    }
+
     &::before {
       content: "";
       height: 0;
       width: 0;
       top: -35px;
       left: calc(50% - 15px);
-      border: 20px solid transparent;
-      border-bottom: 15px solid $gray;
       position: absolute;
+
+      @media #{$pc} {
+        border: 20px solid transparent;
+        border-bottom: 15px solid $gray;
+      }
+
+      @media #{$sp} {
+        border: 15px solid transparent;
+        border-bottom: 25px solid $gray;
+      }
     }
   }
 }
