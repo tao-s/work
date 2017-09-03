@@ -161,7 +161,6 @@ p {
   .lp-inner {
     width: calc(100vw - 32px);
     padding: 0 16px;
-    min-width: 320px;
   }
 }
 
@@ -177,7 +176,6 @@ p {
   .lp-inner-sub {
     width: calc(100vw - 32px);
     padding: 0 16px;
-    min-width: 320px;
   }
 }
 
