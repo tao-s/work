@@ -1,3 +1,14 @@
+// 00_RESET
+// 01_COMMON
+// 02_HEADER
+// 03_MAIN
+// 04_MAIN_VISUAL
+// 05_RECOMMEND
+// 06_POINT
+// 07_FLOW
+// 08_ACTIVITY
+// 09_FOOTER
+
 /***********************
 00_RESET
 ************************/
@@ -180,9 +191,16 @@ p {
   }
 }
 
-.lp-inner-700 {
-  width: 700px;
-  margin: auto;
+.lp-inner-third {
+  @media #{$pc} {
+    width: 700px;
+    margin: auto;
+  }
+
+  @media #{$sp} {
+    width: calc(100vw - 32px);
+    padding: 0 16px;
+  }
 }
 
 .lp-button-white {
@@ -330,8 +348,8 @@ $height-header-sp: 54px;
     height: 42px;
 
     @media #{$sp} {
-      height: 24px;
-      top: 16px;
+      height: 32px;
+      top: 12px;
     }
   }
 
@@ -503,7 +521,7 @@ $height-header-sp: 54px;
 
     @media #{$sp} {
       border-radius: 12px;
-      padding: 12px 6px;
+      padding: 12px 10px;
       font-size: 12px;
     }
 
@@ -537,32 +555,60 @@ $height-header-sp: 54px;
 ************************/
 .lp-main-point {
   background-color: $gray;
-  padding: 80px 0;
 
-  .lp-button-ghost {
-    margin-top: 54px;
-    border: 2px solid $main-color;
-  }
+  @media #{$pc} {
+    padding: 80px 0;
 
-  ol {
-    margin-top: 54px;
-  }
-
-  li {
-    display: inline-block;
-    width: 311px;
-
-    &:nth-child(2n + 1) {
-      margin-right: 72px;
-    }
-
-    &:nth-child(n + 3) {
+    .lp-button-ghost {
       margin-top: 54px;
     }
 
-    img {
-      width: 100%;
+    ol {
+      margin-top: 54px;
     }
+
+    li {
+      display: inline-block;
+      width: 311px;
+
+      &:nth-child(2n + 1) {
+        margin-right: 72px;
+      }
+
+      &:nth-child(n + 3) {
+        margin-top: 54px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media #{$sp} {
+    padding: 54px 0;
+
+    ol {
+      margin-top: 40px;
+
+      li {
+        img {
+          width: 100%;
+        }
+      }
+
+      li + li {
+        margin-top: 48px;
+      }
+    }
+
+    .lp-button-ghost {
+      margin-top: 40px;
+    }
+  }
+
+  .lp-button-ghost {
+    border: 2px solid $main-color;
   }
 }
 
@@ -640,7 +686,7 @@ $height-header-sp: 54px;
       li {
         background-color: $gray;
         position: relative;
-        margin-bottom: 48px;
+        margin-bottom: 40px;
         padding: 10px 0 24px 0;
         height: 215px;
         box-sizing: border-box;
@@ -664,6 +710,7 @@ $height-header-sp: 54px;
 
       img {
         margin-bottom: 16px;
+        height: 76px;
       }
     }
   }

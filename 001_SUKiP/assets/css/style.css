@@ -183,9 +183,18 @@ p {
   }
 }
 
-.lp-inner-700 {
-  width: 700px;
-  margin: auto;
+@media only screen and (min-width: 751px) {
+  .lp-inner-third {
+    width: 700px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lp-inner-third {
+    width: calc(100vw - 32px);
+    padding: 0 16px;
+  }
 }
 
 .lp-button-white {
@@ -357,8 +366,8 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-header img {
-    height: 24px;
-    top: 16px;
+    height: 32px;
+    top: 12px;
   }
 }
 
@@ -548,7 +557,7 @@ p {
 @media only screen and (max-width: 750px) {
   .lp-main-recommend .lp-inner-sub-description {
     border-radius: 12px;
-    padding: 12px 6px;
+    padding: 12px 10px;
     font-size: 12px;
   }
 }
@@ -585,33 +594,53 @@ p {
 ************************/
 .lp-main-point {
   background-color: #EEE;
-  padding: 80px 0;
+}
+
+@media only screen and (min-width: 751px) {
+  .lp-main-point {
+    padding: 80px 0;
+  }
+  .lp-main-point .lp-button-ghost {
+    margin-top: 54px;
+  }
+  .lp-main-point ol {
+    margin-top: 54px;
+  }
+  .lp-main-point li {
+    display: inline-block;
+    width: 311px;
+  }
+  .lp-main-point li:nth-child(2n + 1) {
+    margin-right: 72px;
+  }
+  .lp-main-point li:nth-child(n + 3) {
+    margin-top: 54px;
+  }
+  .lp-main-point li img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lp-main-point {
+    padding: 54px 0;
+  }
+  .lp-main-point ol {
+    margin-top: 40px;
+  }
+  .lp-main-point ol li img {
+    width: 100%;
+  }
+  .lp-main-point ol li + li {
+    margin-top: 48px;
+  }
+  .lp-main-point .lp-button-ghost {
+    margin-top: 40px;
+  }
 }
 
 .lp-main-point .lp-button-ghost {
-  margin-top: 54px;
   border: 2px solid #01D4B3;
-}
-
-.lp-main-point ol {
-  margin-top: 54px;
-}
-
-.lp-main-point li {
-  display: inline-block;
-  width: 311px;
-}
-
-.lp-main-point li:nth-child(2n + 1) {
-  margin-right: 72px;
-}
-
-.lp-main-point li:nth-child(n + 3) {
-  margin-top: 54px;
-}
-
-.lp-main-point li img {
-  width: 100%;
 }
 
 /***********************
@@ -683,7 +712,7 @@ p {
   .lp-main-flow ol li {
     background-color: #EEE;
     position: relative;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
     padding: 10px 0 24px 0;
     height: 215px;
     -webkit-box-sizing: border-box;
@@ -705,6 +734,7 @@ p {
   }
   .lp-main-flow ol img {
     margin-bottom: 16px;
+    height: 76px;
   }
 }
 
