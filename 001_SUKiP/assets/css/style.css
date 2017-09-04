@@ -341,13 +341,14 @@ p {
 
 .lp-header img {
   position: absolute;
-  top: 18px;
+  top: 26px;
+  height: 32px;
 }
 
 @media only screen and (max-width: 750px) {
   .lp-header img {
-    height: 32px;
-    top: 12px;
+    height: 24px;
+    top: 16px;
   }
 }
 
@@ -521,7 +522,7 @@ p {
 
 .lp-main-recommend .lp-inner-sub-description {
   background-color: #F7F7F7;
-  padding: 24px 40px;
+  padding: 24px 16px;
   border-radius: 24px;
   position: relative;
   margin-top: 24px;
@@ -538,7 +539,7 @@ p {
   content: "";
   height: 0;
   width: 0;
-  top: -35px;
+  top: -30px;
   left: calc(50% - 15px);
   position: absolute;
 }
@@ -546,14 +547,14 @@ p {
 @media only screen and (min-width: 751px) {
   .lp-main-recommend .lp-inner-sub-description::before {
     border: 20px solid transparent;
-    border-bottom: 15px solid #F7F7F7;
+    border-bottom: 24px solid #F7F7F7;
   }
 }
 
 @media only screen and (max-width: 750px) {
   .lp-main-recommend .lp-inner-sub-description::before {
     border: 15px solid transparent;
-    border-bottom: 25px solid #F7F7F7;
+    border-bottom: 15px solid #F7F7F7;
   }
 }
 

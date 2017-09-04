@@ -317,11 +317,12 @@ $height-header-sp: 54px;
 
   img {
     position: absolute;
-    top: 18px;
+    top: 26px;
+    height: 32px;
 
     @media #{$sp} {
-      height: 32px;
-      top: 12px
+      height: 24px;
+      top: 16px;
     }
   }
 
@@ -481,7 +482,7 @@ $height-header-sp: 54px;
 
   .lp-inner-sub-description {
     background-color: $gray;
-    padding: 24px 40px;
+    padding: 24px 16px;
     border-radius: 24px;
     position: relative;
     margin-top: 24px;
@@ -495,18 +496,18 @@ $height-header-sp: 54px;
       content: "";
       height: 0;
       width: 0;
-      top: -35px;
+      top: -30px;
       left: calc(50% - 15px);
       position: absolute;
 
       @media #{$pc} {
         border: 20px solid transparent;
-        border-bottom: 15px solid $gray;
+        border-bottom: 24px solid $gray;
       }
 
       @media #{$sp} {
         border: 15px solid transparent;
-        border-bottom: 25px solid $gray;
+        border-bottom: 15px solid $gray;
       }
     }
   }
