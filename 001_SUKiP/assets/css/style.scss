@@ -511,13 +511,13 @@ $height-header-sp: 54px;
 06_MERIT
 ************************/
 @media #{$pc} {
-  .lp-main-merit {
+  .lp-main-point {
     background-color: $gray;
     padding: 80px 0;
 
     $list-width: 700px;
 
-    .lp-main-merit-list {
+    .lp-main-point-list {
       display: block;
       margin: 64px auto 56px auto;
       width: $list-width;
@@ -530,18 +530,18 @@ $height-header-sp: 54px;
         }
 
         &:nth-child(even) {
-          .lp-main-merit-list-image {
+          .lp-main-point-list-image {
             float: left;
             text-align: left;
           }
 
-          .lp-main-merit-list-description {
+          .lp-main-point-list-description {
             padding-left: 470px;
           }
         }
 
         &:nth-child(odd) {
-          .lp-main-merit-list-image {
+          .lp-main-point-list-image {
             float: right;
             text-align: right;
           }
@@ -549,16 +549,16 @@ $height-header-sp: 54px;
       }
     }
 
-    .lp-main-merit-list-description {
+    .lp-main-point-list-description {
       margin-top: 60px;
     }
 
-    .lp-main-merit-list-number {
+    .lp-main-point-list-number {
       color: $main-color;
       position: relative;
       font-size: 28px;
 
-      .lp-main-merit-list-number-strong {
+      .lp-main-point-list-number-strong {
         font-size: 42px;
       }
 
@@ -572,18 +572,18 @@ $height-header-sp: 54px;
       }
     }
 
-    .lp-main-merit-list-image {
+    .lp-main-point-list-image {
       width: $list-width / 2;
     }
 
-    .lp-main-merit-list-title {
+    .lp-main-point-list-title {
       font-size: 21px;
       font-weight: bold;
       margin-top: 32px;
       margin-bottom: 16px;
     }
 
-    .lp-main-merit-list-description-example {
+    .lp-main-point-list-description-example {
       li {
         list-style: disc;
         list-style-position: inside;
@@ -595,11 +595,11 @@ $height-header-sp: 54px;
 
 @media #{$sp} {
 
-  .lp-main-merit-list {
+  .lp-main-point-list {
     margin-bottom: 40px;
   }
 
-  .lp-main-merit {
+  .lp-main-point {
     background-color: $gray;
     padding: 54px 0;
 
@@ -608,12 +608,12 @@ $height-header-sp: 54px;
       margin-top: 32px;
     }
 
-    .lp-main-merit-list-description {
+    .lp-main-point-list-description {
       width: calc(100vw - 128px);
       margin: 0 auto;
     }
 
-    .lp-main-merit-list-number {
+    .lp-main-point-list-number {
       color: $main-color;
       position: relative;
       font-size: 21px;
@@ -630,11 +630,11 @@ $height-header-sp: 54px;
       }
     }
 
-    .lp-main-merit-list-number-strong {
+    .lp-main-point-list-number-strong {
       font-size: 28px;
     }
 
-    .lp-main-merit-list-title {
+    .lp-main-point-list-title {
       font-size: 16px;
       font-weight: bold;
       margin-top: 32px;
@@ -642,7 +642,7 @@ $height-header-sp: 54px;
     }
   }
 
-  .lp-main-merit-list-description-example {
+  .lp-main-point-list-description-example {
     li {
       list-style: disc;
       list-style-position: inside;

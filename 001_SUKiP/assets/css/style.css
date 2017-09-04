@@ -557,44 +557,44 @@ p {
 06_MERIT
 ************************/
 @media only screen and (min-width: 751px) {
-  .lp-main-merit {
+  .lp-main-point {
     background-color: #F7F7F7;
     padding: 80px 0;
   }
-  .lp-main-merit .lp-main-merit-list {
+  .lp-main-point .lp-main-point-list {
     display: block;
     margin: 64px auto 56px auto;
     width: 700px;
   }
-  .lp-main-merit .lp-main-merit-list > li {
+  .lp-main-point .lp-main-point-list > li {
     position: relative;
   }
-  .lp-main-merit .lp-main-merit-list > li:not(:first-child) {
+  .lp-main-point .lp-main-point-list > li:not(:first-child) {
     margin-top: 64px;
   }
-  .lp-main-merit .lp-main-merit-list > li:nth-child(even) .lp-main-merit-list-image {
+  .lp-main-point .lp-main-point-list > li:nth-child(even) .lp-main-point-list-image {
     float: left;
     text-align: left;
   }
-  .lp-main-merit .lp-main-merit-list > li:nth-child(even) .lp-main-merit-list-description {
+  .lp-main-point .lp-main-point-list > li:nth-child(even) .lp-main-point-list-description {
     padding-left: 470px;
   }
-  .lp-main-merit .lp-main-merit-list > li:nth-child(odd) .lp-main-merit-list-image {
+  .lp-main-point .lp-main-point-list > li:nth-child(odd) .lp-main-point-list-image {
     float: right;
     text-align: right;
   }
-  .lp-main-merit .lp-main-merit-list-description {
+  .lp-main-point .lp-main-point-list-description {
     margin-top: 60px;
   }
-  .lp-main-merit .lp-main-merit-list-number {
+  .lp-main-point .lp-main-point-list-number {
     color: #01D4B3;
     position: relative;
     font-size: 28px;
   }
-  .lp-main-merit .lp-main-merit-list-number .lp-main-merit-list-number-strong {
+  .lp-main-point .lp-main-point-list-number .lp-main-point-list-number-strong {
     font-size: 42px;
   }
-  .lp-main-merit .lp-main-merit-list-number::after {
+  .lp-main-point .lp-main-point-list-number::after {
     content: '';
     position: absolute;
     bottom: -16px;
@@ -602,16 +602,16 @@ p {
     width: 32px;
     border-bottom: 4px solid #01D4B3;
   }
-  .lp-main-merit .lp-main-merit-list-image {
+  .lp-main-point .lp-main-point-list-image {
     width: 350px;
   }
-  .lp-main-merit .lp-main-merit-list-title {
+  .lp-main-point .lp-main-point-list-title {
     font-size: 21px;
     font-weight: bold;
     margin-top: 32px;
     margin-bottom: 16px;
   }
-  .lp-main-merit .lp-main-merit-list-description-example li {
+  .lp-main-point .lp-main-point-list-description-example li {
     list-style: disc;
     list-style-position: inside;
     line-height: 1.6;
@@ -619,29 +619,29 @@ p {
 }
 
 @media only screen and (max-width: 750px) {
-  .lp-main-merit-list {
+  .lp-main-point-list {
     margin-bottom: 40px;
   }
-  .lp-main-merit {
+  .lp-main-point {
     background-color: #F7F7F7;
     padding: 54px 0;
   }
-  .lp-main-merit img {
+  .lp-main-point img {
     width: 100%;
     margin-top: 32px;
   }
-  .lp-main-merit .lp-main-merit-list-description {
+  .lp-main-point .lp-main-point-list-description {
     width: calc(100vw - 128px);
     margin: 0 auto;
   }
-  .lp-main-merit .lp-main-merit-list-number {
+  .lp-main-point .lp-main-point-list-number {
     color: #01D4B3;
     position: relative;
     font-size: 21px;
     font-weight: bold;
     margin-top: 16px;
   }
-  .lp-main-merit .lp-main-merit-list-number::after {
+  .lp-main-point .lp-main-point-list-number::after {
     content: '';
     position: absolute;
     bottom: -16px;
@@ -649,16 +649,16 @@ p {
     width: 36px;
     border-bottom: 4px solid #01D4B3;
   }
-  .lp-main-merit .lp-main-merit-list-number-strong {
+  .lp-main-point .lp-main-point-list-number-strong {
     font-size: 28px;
   }
-  .lp-main-merit .lp-main-merit-list-title {
+  .lp-main-point .lp-main-point-list-title {
     font-size: 16px;
     font-weight: bold;
     margin-top: 32px;
     margin-bottom: 16px;
   }
-  .lp-main-merit-list-description-example li {
+  .lp-main-point-list-description-example li {
     list-style: disc;
     list-style-position: inside;
     line-height: 1.6;
