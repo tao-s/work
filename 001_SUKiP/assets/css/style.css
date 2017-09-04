@@ -389,8 +389,8 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-main-catch {
-    padding-top: 134px;
-    padding-bottom: 80px;
+    padding-top: 114px;
+    padding-bottom: 60px;
     text-align: center;
   }
 }
@@ -404,7 +404,7 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-main-catch h2 {
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
   }
 }
@@ -481,6 +481,9 @@ p {
     text-align: left;
     margin-bottom: 40px;
   }
+  .lp-main-recommend ul img {
+    width: 92px;
+  }
 }
 
 .lp-main-recommend ul li {
@@ -527,6 +530,7 @@ p {
 @media only screen and (max-width: 750px) {
   .lp-main-recommend .lp-inner-sub-description {
     border-radius: 12px;
+    padding: 12px 16px;
   }
 }
 
@@ -662,6 +666,7 @@ p {
     list-style: disc;
     list-style-position: inside;
     line-height: 1.6;
+    font-size: 14px;
   }
 }
 
@@ -793,6 +798,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .lp-main-activity img {
+    width: 100px;
+  }
+}
+
 .lp-main-activity li {
   display: inline-block;
 }
@@ -842,9 +853,13 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-footer h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 16px;
   }
+}
+
+.lp-footer img {
+  width: 117px;
 }
 
 .lp-footer .lp-footer-button {
