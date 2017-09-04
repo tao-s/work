@@ -180,6 +180,11 @@ p {
   }
 }
 
+.lp-inner-700 {
+  width: 700px;
+  margin: auto;
+}
+
 .lp-button-white {
   color: $main-color;
   background-color: #FFF;
@@ -217,16 +222,17 @@ p {
   border-radius: 30px;
   display: block;
 
+  @media #{$pc} {
+    height: 40px;
+    width: 112px;
+    line-height:38px;
+    font-size: 16px;
+  }
+
   @media #{$sp} {
     height: 32px;
     width: 95px;
     line-height: 32px;
-  }
-
-  @media #{$pc} {
-    height: 40px;
-    width: 100px;
-    line-height:40px;
   }
 }
 
@@ -297,7 +303,6 @@ p {
 /***********************
 02_HEADER
 ************************/
-
 // main の計算で使用するので、ヘッダースコープ外
 $height-header-pc: 86px;
 $height-header-sp: 54px;
@@ -321,8 +326,8 @@ $height-header-sp: 54px;
 
   img {
     position: absolute;
-    top: 26px;
-    height: 32px;
+    top: 23px;
+    height: 42px;
 
     @media #{$sp} {
       height: 24px;
@@ -374,7 +379,7 @@ $height-header-sp: 54px;
   h2 {
     color: #FFF;
     text-align: left;
-    font-size: 42px;
+    font-size: 50px;
     display: inline-block;
 
     @media #{$sp} {
@@ -417,6 +422,10 @@ $height-header-sp: 54px;
     @media #{$sp} {
       width: 100%;
       float: none;
+    }
+
+    @media #{$pc} {
+      margin-top: -122px;
     }
 
     width: 640px;
@@ -486,7 +495,7 @@ $height-header-sp: 54px;
 
   .lp-inner-sub-description {
     background-color: $gray;
-    padding: 24px 16px;
+    padding: 24px 20px;
     border-radius: 24px;
     position: relative;
     margin-top: 24px;
@@ -517,149 +526,42 @@ $height-header-sp: 54px;
       }
     }
   }
+
+  .lp-button-ghost {
+    border: 2px solid $main-color;
+  }
 }
 
 /***********************
-06_MERIT
+06_POINT
 ************************/
-@media #{$pc} {
-  .lp-main-point {
-    background-color: $gray;
-    padding: 80px 0;
+.lp-main-point {
+  background-color: $gray;
+  padding: 80px 0;
 
-    $list-width: 700px;
-
-    .lp-main-point-list {
-      display: block;
-      margin: 64px auto 56px auto;
-      width: $list-width;
-
-      & > li {
-        position: relative;
-
-        &:not(:first-child) {
-          margin-top: 64px;
-        }
-
-        &:nth-child(even) {
-          .lp-main-point-list-image {
-            float: left;
-            text-align: left;
-          }
-
-          .lp-main-point-list-description {
-            padding-left: 470px;
-          }
-        }
-
-        &:nth-child(odd) {
-          .lp-main-point-list-image {
-            float: right;
-            text-align: right;
-          }
-        }
-      }
-    }
-
-    .lp-main-point-list-description {
-      margin-top: 60px;
-    }
-
-    .lp-main-point-list-number {
-      color: $main-color;
-      position: relative;
-      font-size: 28px;
-
-      .lp-main-point-list-number-strong {
-        font-size: 42px;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -16px;
-        left: 0;
-        width: 32px;
-        border-bottom: 4px solid $main-color;
-      }
-    }
-
-    .lp-main-point-list-image {
-      width: $list-width / 2;
-    }
-
-    .lp-main-point-list-title {
-      font-size: 21px;
-      font-weight: bold;
-      margin-top: 32px;
-      margin-bottom: 16px;
-    }
-
-    .lp-main-point-list-description-example {
-      li {
-        list-style: disc;
-        list-style-position: inside;
-        line-height: 1.6;
-      }
-    }
-  }
-}
-
-@media #{$sp} {
-
-  .lp-main-point-list {
-    margin-bottom: 40px;
+  .lp-button-ghost {
+    margin-top: 54px;
+    border: 2px solid $main-color;
   }
 
-  .lp-main-point {
-    background-color: $gray;
-    padding: 54px 0;
+  ol {
+    margin-top: 54px;
+  }
+
+  li {
+    display: inline-block;
+    width: 311px;
+
+    &:nth-child(2n + 1) {
+      margin-right: 72px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 54px;
+    }
 
     img {
       width: 100%;
-      margin-top: 32px;
-    }
-
-    .lp-main-point-list-description {
-      width: calc(100vw - 128px);
-      margin: 0 auto;
-    }
-
-    .lp-main-point-list-number {
-      color: $main-color;
-      position: relative;
-      font-size: 21px;
-      font-weight: bold;
-      margin-top: 16px;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -16px;
-        left: calc(50% - 18px);
-        width: 36px;
-        border-bottom: 4px solid $main-color;
-      }
-    }
-
-    .lp-main-point-list-number-strong {
-      font-size: 28px;
-    }
-
-    .lp-main-point-list-title {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 32px;
-      margin-bottom: 16px;
-    }
-  }
-
-  .lp-main-point-list-description-example {
-    li {
-      list-style: disc;
-      list-style-position: inside;
-      line-height: 1.6;
-      font-size: 14px;
     }
   }
 }
@@ -721,7 +623,7 @@ $height-header-sp: 54px;
           border-top: $list-height/2 solid transparent;
           border-right: $list-margin solid transparent;
           border-bottom: $list-height/2 solid transparent;
-          border-left: $list-margin solid $gray;
+          border-left: ($list-margin/2 + 10px) solid $gray;
 
           position: absolute;
         }
@@ -730,6 +632,7 @@ $height-header-sp: 54px;
       img {
         margin-top: 50px;
         margin-bottom: 70px;
+        height: 80px;
       }
     }
 
@@ -825,7 +728,7 @@ $height-header-sp: 54px;
 09_FOOTER
 ************************/
 .lp-footer {
-  padding: 80px 0 50px 0;
+  padding-top: 80px;
   background-color: $main-color;
 
   @media #{$sp} {
@@ -867,7 +770,7 @@ $height-header-sp: 54px;
     @media #{$pc} {
       height: $height-header-pc;
       p {
-        margin-top: 64px;
+        margin-top: 32px;
         a {
           font-size: 16px;
           color: #FFF;
