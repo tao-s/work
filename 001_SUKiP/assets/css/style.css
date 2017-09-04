@@ -116,6 +116,10 @@ p {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-small {
   font-size: 12px;
 }
@@ -286,7 +290,7 @@ p {
   width: 0;
   height: 0;
   border-style: solid;
-  border-color: #F7F7F7 transparent transparent #01D4B3;
+  border-color: #EEE transparent transparent #01D4B3;
 }
 
 @media only screen and (min-width: 751px) {
@@ -521,17 +525,19 @@ p {
 }
 
 .lp-main-recommend .lp-inner-sub-description {
-  background-color: #F7F7F7;
+  background-color: #EEE;
   padding: 24px 16px;
   border-radius: 24px;
   position: relative;
   margin-top: 24px;
+  line-height: 1.3;
 }
 
 @media only screen and (max-width: 750px) {
   .lp-main-recommend .lp-inner-sub-description {
     border-radius: 12px;
-    padding: 12px 16px;
+    padding: 12px 6px;
+    font-size: 12px;
   }
 }
 
@@ -547,14 +553,14 @@ p {
 @media only screen and (min-width: 751px) {
   .lp-main-recommend .lp-inner-sub-description::before {
     border: 20px solid transparent;
-    border-bottom: 24px solid #F7F7F7;
+    border-bottom: 24px solid #EEE;
   }
 }
 
 @media only screen and (max-width: 750px) {
   .lp-main-recommend .lp-inner-sub-description::before {
     border: 15px solid transparent;
-    border-bottom: 15px solid #F7F7F7;
+    border-bottom: 15px solid #EEE;
   }
 }
 
@@ -563,7 +569,7 @@ p {
 ************************/
 @media only screen and (min-width: 751px) {
   .lp-main-point {
-    background-color: #F7F7F7;
+    background-color: #EEE;
     padding: 80px 0;
   }
   .lp-main-point .lp-main-point-list {
@@ -628,7 +634,7 @@ p {
     margin-bottom: 40px;
   }
   .lp-main-point {
-    background-color: #F7F7F7;
+    background-color: #EEE;
     padding: 54px 0;
   }
   .lp-main-point img {
@@ -706,7 +712,7 @@ p {
 @media only screen and (min-width: 751px) {
   .lp-main-flow ol li {
     display: inline-block;
-    background-color: #F7F7F7;
+    background-color: #EEE;
     width: 202px;
     vertical-align: top;
     padding: 40px 20px;
@@ -726,7 +732,7 @@ p {
     border-top: 170px solid transparent;
     border-right: 48px solid transparent;
     border-bottom: 170px solid transparent;
-    border-left: 48px solid #F7F7F7;
+    border-left: 48px solid #EEE;
     position: absolute;
   }
   .lp-main-flow ol img {
@@ -737,10 +743,10 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-main-flow ol li {
-    background-color: #F7F7F7;
+    background-color: #EEE;
     position: relative;
     margin-bottom: 48px;
-    padding: 12px 0 24px 0;
+    padding: 10px 0 24px 0;
     height: 215px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -752,15 +758,15 @@ p {
     position: absolute;
     border-right: calc(50vw - 12px) solid transparent;
     border-left: calc(50vw - 12px) solid transparent;
-    border-top: 25px solid #F7F7F7;
+    border-top: 25px solid #EEE;
     left: 0;
     bottom: -24px;
   }
   .lp-main-flow ol .lp-main-flow-step {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .lp-main-flow ol img {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 }
 
@@ -768,7 +774,7 @@ p {
 08_ACTIVITY
 ************************/
 .lp-main-activity {
-  background-color: #F7F7F7;
+  background-color: #EEE;
 }
 
 @media only screen and (min-width: 751px) {
@@ -838,7 +844,7 @@ p {
 
 @media only screen and (max-width: 750px) {
   .lp-footer {
-    padding: 55px 0 50px 0;
+    padding: 55px 0 0 0;
   }
 }
 
@@ -871,5 +877,36 @@ p {
 @media only screen and (max-width: 750px) {
   .lp-footer .lp-footer-button {
     margin-top: 40px;
+  }
+}
+
+.lp-footer .lp-footer-company {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFF;
+}
+
+@media only screen and (min-width: 751px) {
+  .lp-footer .lp-footer-company {
+    height: 86px;
+  }
+  .lp-footer .lp-footer-company p {
+    margin-top: 64px;
+  }
+  .lp-footer .lp-footer-company p a {
+    font-size: 16px;
+    color: #FFF;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lp-footer .lp-footer-company {
+    height: 54px;
+  }
+  .lp-footer .lp-footer-company p {
+    margin-top: 16px;
+  }
+  .lp-footer .lp-footer-company p a {
+    font-size: 16px;
+    color: #FFF;
   }
 }
