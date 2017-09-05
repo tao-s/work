@@ -499,12 +499,14 @@ p {
 }
 
 .lp-main-recommend ul {
+  margin-top: 56px;
   margin-bottom: 56px;
 }
 
 @media only screen and (max-width: 750px) {
   .lp-main-recommend ul {
     text-align: left;
+    margin-top: 56px;
     margin-bottom: 40px;
   }
   .lp-main-recommend ul img {
@@ -522,6 +524,9 @@ p {
   .lp-main-recommend ul li {
     width: 216px;
     margin-top: 40px;
+  }
+  .lp-main-recommend ul li img {
+    width: 142px;
   }
   .lp-main-recommend ul li:not(:nth-child(4n)) {
     margin-right: 40px;

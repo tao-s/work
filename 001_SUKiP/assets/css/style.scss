@@ -467,10 +467,12 @@ $height-header-sp: 54px;
   }
 
   ul {
+    margin-top: 56px;
     margin-bottom: 56px;
 
     @media #{$sp} {
       text-align: left;
+      margin-top: 56px;
       margin-bottom: 40px;
 
       img {
@@ -486,6 +488,10 @@ $height-header-sp: 54px;
       @media #{$pc} {
         width: 216px;
         margin-top: 40px;
+
+        img {
+          width: 142px;
+        }
 
         &:not(:nth-child(4n)) {
           margin-right: 40px;
