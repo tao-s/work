@@ -469,16 +469,16 @@ p {
   float: right;
 }
 
+@media only screen and (min-width: 751px) {
+  .lp-main-catch img {
+    margin-top: -122px;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .lp-main-catch img {
     width: 100%;
     float: none;
-  }
-}
-
-@media only screen and (min-width: 751px) {
-  .lp-main-catch img {
-    margin-top: -122px;
   }
 }
 

@@ -1,3 +1,4 @@
+
 // 00_RESET
 // 01_COMMON
 // 02_HEADER
@@ -18,7 +19,6 @@ $gray: #EEE;
 
 $pc: "only screen and (min-width: 751px)";
 $sp: "only screen and (max-width: 750px)";
-
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -437,13 +437,13 @@ $height-header-sp: 54px;
   }
 
   img {
+    @media #{$pc} {
+      margin-top: -122px;
+    }
+
     @media #{$sp} {
       width: 100%;
       float: none;
-    }
-
-    @media #{$pc} {
-      margin-top: -122px;
     }
 
     width: 640px;
@@ -552,6 +552,7 @@ $height-header-sp: 54px;
   }
 
   .lp-button-ghost {
+    // 枠線がないタイプのボタンなので、オーバーライドする。
     border: 2px solid $main-color;
   }
 }
