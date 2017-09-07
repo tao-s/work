@@ -1,0 +1,423 @@
+@import "./_sprite";
+@import "./_variables";
+@import "./_functions";
+@import "base/_base";
+@import "layout/_layout";
+@import "theme/_theme",
+        "theme/_header",
+        "theme/_footer";
+@import "module/_animations",
+        "module/_button",
+        "module/_form",
+        "module/_table",
+        "module/_tabs",
+        "module/_typography",
+        "module/_icon",
+        "module/_label",
+        "module/_list",
+        "module/_card",
+        "module/_message";
+@import "tools/_helpers";
+
+.jumbotron {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  width: 1200px;
+  margin: 0 auto;
+
+  &__caption {
+    padding: 60px 3.5% 60px 0;
+  }
+}
+
+.advancedSearch {
+  padding: 20px 25px;
+  background: nth($monochrome, 3);
+  border: 1px solid #ccc;
+
+  &.advancedSearch--hook {
+    border-top: none;
+  }
+}
+
+.topSearchForm {
+  @extend .clearfix;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.linkPanelArea {
+  padding: 20px 0;
+}
+
+.linkPanel {
+  padding: 20px;
+  background: nth($monochrome, 4);
+  border: 1px solid #ccc;
+
+  &__job {
+    @extend .linkPanel;
+    width: 49.5%;
+    margin-bottom: 12px;
+    margin-right: 1%;
+    float: left;
+
+    .link-sub-area {
+      color: #676a6c;
+      font-size: 95%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__area {
+    @extend .linkPanel;
+    width: 49.5%;
+    margin-bottom: 12px;
+    float:right;
+
+    .area-link-area {
+      margin-bottom: 15px;
+
+      .area-link-sub-area {
+        margin-bottom: 13px;
+      }
+    }
+
+    label {
+      display:inline-block;
+      margin-right: 15px;
+      margin-bottom: 9px;
+      user-select: none;
+    }
+  }
+
+  &__biz {
+    @extend .linkPanel;
+    clear: both;
+    width: 100%;
+    margin-bottom: 12px;
+
+    label {
+      display:inline-block;
+      margin-right: 10px;
+      margin-bottom: 6px;
+      user-select: none;
+    }
+  }
+
+  &__style {
+    @extend .linkPanel;
+    width: 49.5%;
+    height: 176px;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    float:left;
+
+    label {
+      display:inline-block;
+      margin-right: 10px;
+      user-select: none;
+    }
+  }
+
+  &__freeword {
+    @extend .linkPanel;
+    width: 49.5%;
+    height: 176px;
+    margin-bottom: 20px;
+    float:right;
+  }
+
+  .link-area {
+    margin-bottom: 10px;
+
+    .link-sub-area {
+      margin-left: 30px;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    user-select: none;
+  }
+
+}
+
+.search-button {
+  bottom: 0;
+  width: 100%;
+  background: #9ed366;
+  font-weight: bold;
+  line-height: 3;
+  display: block;
+  color: #fff;
+  border-radius: 2px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border-bottom: 2px solid #88b558;
+}
+
+.pickySearch {
+  background: #fff;
+
+  &__button {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+
+    a {
+      width: 25%;
+    }
+
+    > * {
+      display: table-cell;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+    }
+  }
+
+  .pickySearch__button__close {
+    display: none;
+  }
+
+  &.is-active {
+    display: block;
+
+    .pickySearch__button__open {
+      display: none;
+    }
+
+    .pickySearch__button__close {
+      display: block;
+    }
+
+    .pickySearch__contents {
+      display: block;
+    }
+  }
+
+  &__contents {
+    display: none;
+    padding: 15px 15px 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+
+    label {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 5px 10px 0;
+      line-height: 1;
+      cursor: pointer;
+
+      &.is-checked {
+        background: nth($color, 1);
+        color: #fff;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+// detail
+.bigBanner {
+  @include viewport();
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: 20px;
+    right: 3.5%;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 31%;
+    padding-right: 3.5%;
+  }
+}
+
+.httpStatus {
+  text-align: center;
+
+  &__code {
+    font-size: 120px;
+    font-weight: bold;
+  }
+}
+
+// static
+.messageUnit {
+  background: url(/images/bg-unit.png) no-repeat top center;
+  height: 400px;
+  padding: 75px 0;
+  color: #fff;
+  text-align: center;
+  p {
+    font-size: 16px;
+  }
+}
+
+.featureUnit {
+  padding: 50px 0;
+
+  &__icon {
+    vertical-align: middle;
+    height: 100px;
+  }
+
+  &__table {
+    th, td {
+      padding: 15px;
+      border: 1px solid #f2f2f2;
+    }
+
+    thead th {
+      color: #fff;
+      &:nth-child(2) {
+        background: #99a4af;
+      }
+      &:nth-child(3) {
+        background: nth($color, 2);
+      }
+      &:nth-child(4) {
+        background: nth($color, 1);
+      }
+    }
+
+    tbody th {
+      background: #f2f2f2;
+    }
+  }
+}
+
+.cvUnit {
+  padding: 50px 0;
+  background: #f5f5f5;
+}
+
+.pagination {
+  text-align: center;
+
+  ul, ol, li {
+    display: inline-block;
+  }
+
+  ol {
+    margin: 0 30px;
+  }
+
+  li {
+    margin: 0 10px;
+
+    a {
+      color: nth($color, 1);
+    }
+
+    &.disabled {
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+.jobCard {
+  border: 1px solid #ccc;
+  &__header {
+    background: #99a4af;
+    padding: 10px 15px;
+    color: #fff;
+
+    &__heading {
+      float: left;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    &__update {
+      float: right;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+
+  &__company {
+    padding: 10px 15px;
+  }
+
+  &__body {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+  }
+
+  &__profile {
+    td {
+      padding: 10px;
+    }
+
+    th {
+      width: 100px;
+      span {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        border-radius: 1px;
+        border: 1px solid #99a4af;
+        padding: 2px 5px;
+        font-size: 12px;
+      }
+    }
+
+    th, td {
+      border-top: 1px solid #ccc;
+    }
+
+    tr {
+      &:first-child {
+        th, td {
+          border-top: none;
+        }
+      }
+    }
+  }
+
+  &__cv {
+    background: #fafafa;
+    padding: 20px 15px;
+    border-top: 1px solid #ccc;
+  }
+}
+
+.related-jobs, .other-jobs, .interview-articles {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > div {
+    margin: 10px;
+    width: 45%;
+  }
+}
+
+
+
+

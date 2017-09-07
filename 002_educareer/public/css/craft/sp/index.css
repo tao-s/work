@@ -1,0 +1,49 @@
+@charset "utf-8";
+.mainCatch {
+  padding: 10px 10px 20px;
+}
+.mainCatch__img {
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.mainCatch__img::before {
+  content: "PICK\AUP!";
+  display: block;
+  width: 120px;
+  height: 42px;
+  position: absolute;
+  top: -21px;
+  left: -60px;
+  padding-top: 18px;
+  background: #fe6e4c;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  white-space: pre;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg) translateY(17px);
+          transform: rotate(-45deg) translateY(17px);
+}
+.mainCatch__text {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.mainAtclList {
+  padding: 0 10px;
+}
+.mainAtclList > li {
+  padding: 10px 0 15px;
+  border-top: solid 1px #ddd;
+}
+.mainAtclInfo__img {
+  margin-bottom: 5px;
+  height: 250px;
+  overflow:hidden;
+}
+.mainAtclInfo__text {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.4;
+}

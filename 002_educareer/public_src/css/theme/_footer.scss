@@ -1,0 +1,19 @@
+.globalFooter {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 100px;
+
+  > div {
+    @include viewport();
+  }
+  ul {
+    float: left;
+  }
+  li {
+    float: left;
+    margin-right: 30px;
+  }
+  .copyright {
+    float: right;
+  }
+}

@@ -1,0 +1,355 @@
+{% extends "_layout.html" %}
+
+{% block head %}
+{{ parent() }}
+<link rel="stylesheet" href="/css/craft/detail.css" media="only screen and (min-width: 641px)">
+<link rel="stylesheet" href="/css/craft/sp/detail.css" media="only screen and (max-width: 640px)">
+{% endblock %}
+
+{% block title %}{{ entry.title }}{% endblock %}
+{% block description %}{{ entry.description }}{% endblock %}
+{% block og %}
+<meta property="og:title" content="{{ entry.title }}">
+<meta property="og:description" content="{{ entry.description }}">
+<meta property="og:image" content="{{ entry.thumbnail.first().url }}">
+<meta property="og:url" content="https://education-career.jp/{{ entry.uri }}">
+<meta property="og:type" content="website">
+{% endblock %}
+
+
+{% block side_content %}
+<div class="main__item mainInfoWrap">
+    <div class="mainInfo detail">
+        <section class="mainInfo__share">
+            <h3 class="mainInfo__share__head">この記事をシェア</h3>
+            <ul class="mainInfo__share__list">
+                <a href="https://twitter.com/share" class="custom-twitter-share-button1 open-twitter"
+                   data-url="https://education-career.jp/magazine/{{ entry.uri }}" data-lang="ja">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="fb-custom-share-page" href="javascript: void(0)" style="margin-left: 20px">
+                    <li class="fb"><img src="/images/craft/icn_facebook.png" alt="facebook"></li>
+                </a>
+            </ul>
+        </section>
+        <section class="mainInfo__save">
+            <h3 class="mainInfo__save__head">あとで読む</h3>
+            <ul class="mainInfo__save__list">
+                <li class="save1">
+                    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://education-career.jp/magazine/{{ entry.uri }}&title={{ entry.title }}"
+                       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                        <img src="/images/craft/icn_hatena.png" alt="はてなブックマーク">
+                    </a>
+                </li>
+                <li class="save2">
+                    <a href="http://getpocket.com/edit?url=https://education-career.jp/magazine/{{ entry.uri }}&title={{ entry.title }}"
+                       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                        <img src="/images/craft/icn_pocket.png" alt="Pocket">
+                    </a>
+
+                </li>
+            </ul>
+        </section>
+        <section class="mainInfo__member detail">
+            <h3 class="mainInfo__member__head">この記事の筆者</h3>
+
+            <div class="memberInfo single">
+                <div class="memberInfo__img"><img src="{{ entry.author.photoUrl }}"
+                                                  alt="{{ entry.author.lastName }} {{ entry.author.firstName }}"></div>
+                <div class="memberInfo__prof">
+                    <p class="memberInfo__prof__name">{{ entry.author.lastName }} {{ entry.author.firstName }}</p>
+
+                    {% if entry.author.author_profile is defined %}
+                    <p class="memberInfo__prof__comment">
+                        {{ entry.author.author_profile }}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block main_content %}
+<article class="mainArticle">
+    <p class="mainArticle__date">
+        <time datetime="{{ entry.postDate }}" pubdate>{{ entry.postDate }}</time>
+    </p>
+    <h1 class="mainArticle__head">
+        {{ entry.title }}
+    </h1>
+
+    <div class="mainArticle__share">
+        <ul class="mainArticle__share__list">
+            <li class="entry-main-twitter-button">
+                <a class="open-twitter" href="https://twitter.com/share"
+                   data-url="https://education-career.jp/magazine/{{ entry.uri }}" data-lang="ja">
+                    <img src="/images/craft/twitter_atclshare.png">
+                </a>
+            </li>
+            <li>
+                <div class="fb-share-button" data-layout="box_count"></div>
+            </li>
+            <li>
+                <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false"
+                     data-share="false"></div>
+            </li>
+            <li>
+                <div class="g-plus" data-action="share" data-annotation="vertical-bubble"
+                     data-height="60"></div>
+            </li>
+            <li>
+                <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button"
+                   data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja"
+                   title="このエントリーをはてなブックマークに追加"><img
+                        src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+                        alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+                        style="border: none;"/></a>
+            </li>
+            <li>
+                <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn"
+                   data-lang="en"></a>
+            </li>
+            <li>
+                <span>
+                    <script type="text/javascript"
+                            src="//media.line.me/js/line-button.js?v=20140411"></script>
+                    <script type="text/javascript">
+                        new media_line_me.LineButton({"pc": false, "lang": "ja", "type": "d"});
+                    </script>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <section class="atclSec">
+        <div class="atclSec__body">
+            {{ entry.body }}
+        </div>
+    </section>
+
+</article>
+
+<div class="atclShare">
+    <ul class="atclShare__list">
+        <a href="javascript: void(0)" class="fb-custom-share-page">
+            <li class="fb">
+                <div class="inner"><img src="/images/craft/facebook_pattern1.png" alt="Facebokkでシェア"></div>
+            </li>
+        </a>
+        <a href="javascript: void(0)">
+            <div class="inner">
+                <a href="https://twitter.com/share" data-url="https://education-career.jp/magazine/{{ entry.uri }}"
+                   onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+                   target="_blank" data-lang="ja" style="margin-right:10px;">
+                    <img src="/images/craft/twitter_pattern1.png" alt="Twitterでツイート">
+                </a>
+            </div>
+        </a>
+        <a href="javascript: void(0)">
+            <div class="inner">
+                <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://education-career.jp/magazine/{{ entry.uri }}&title={{ entry.title }}"
+                   onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                    <img src="/images/craft/hatena_pattern1.png" alt="はてなブックマーク">
+                </a>
+            </div>
+        </a>
+        <a href="javascript: void(0)">
+            <div class="sp-show line inner">
+                <a href="http://line.me/R/msg/text/?<?php the_title(); ?>%0D%0A<?php the_permalink(); ?>">
+                    <a href="http://line.me/R/msg/text/?{{ entry.title }}https://education-career.jp/magazine/{{ entry.uri}}">
+                        <img src="/images/craft/sp-line_pattern1.png" alt="LINEで送る">
+                    </a>
+                </a>
+            </div>
+        </a>
+    </ul>
+</div>
+
+<div class="followApl">
+    <p class="followApl__head"><img src="/images/craft/logo.png"
+                                    alt="Education Carrer"><span>をフォロー</span></p>
+    <ul class="followApl__list">
+        <li class="fb facebook-follow">
+            <a href="https://www.facebook.com/educationcareerjp/" target="_blank">
+                <img src="/images/craft/facebook_pattern2.png" alt="Facebook Page">
+            </a>
+        </li>
+        <li class="tw">
+            <a href="https://twitter.com/intent/follow?screen_name=educareer_tw"><img
+                    src="/images/craft/twitter_pattern2.png" alt="Twitter Follow"/></a>
+            <img src="">
+        </li>
+        <!--<li class="rss"><img src="/images/craft/rss_pattern2.png" alt="RSS Feed"></li>-->
+    </ul>
+</div>
+
+<div class="atclActionWrap">
+    <ul class="atclAction">
+        <li>
+            <a href="https://education-career.jp/agent" class="btnPrimary">
+                <span class="btnPrimary__desc">エージェントに</span>
+                <span class="btnPrimary__main">転職相談《無料》</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://education-career.jp/" class="btnSecondary">
+                <span class="btnSecondary__main">教育業界の求人を探す</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section class="sp-show atclAuth">
+    <h3 class="atclAuth__head">この記事の筆者</h3>
+
+    <div class="authInfo">
+        <div class="authInfo__img"><img src="{{ entry.author.photoUrl }}"
+                                        alt="{{ entry.author.lastName }} {{ entry.author.firstName }}"></div>
+        <div class="authInfo__prof">
+            <p class="authInfo__prof__name">{{ entry.author.lastName }} {{ entry.author.firstName }}</p>
+
+            {% if entry.author.author_profile is defined %}
+            <p class="authInfo__prof__comment">
+                {{ entry.author.author_profile }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="relationKey">
+    <h3 class="relationKey__head">関連キーワード</h3>
+
+    <div class="relationKey__listWrap">
+        <ul class="relationKey__list">
+            {% for tag in entry.tags.find() %}
+            <li>{{ tag.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+{% set related_entries = craft.entries.relatedTo(entry.tags).id('not ' ~ entry.id).order('score').find() %}
+{% if related_entries|length > 0 %}
+<section class="relationAtcl">
+    <h3 class="relationAtcl__head">関連記事</h3>
+
+    <div class="relationAtcl__listWrap">
+        <ul class="relationAtcl__list">
+            {% for related_entry in related_entries %}
+            <li>
+                <a href="/magazine/{{ related_entry.uri }}">
+                    <div class="atclInfo">
+                        <div class="atclInfo__img"><img
+                                src="{{ related_entry.thumbnail.first().url }}"
+                                alt="{{ related_entry.thumbnail.first().title }}">
+                        </div>
+                        <p class="atclInfo__text">
+                            {{ related_entry.title }}
+                        </p>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block below_footer %}
+<div class="sp-show fixBar sp-isReverse">
+    <div class="fixBar__follow">
+        <div class="fb-like" data-href="https://education-career.jp" data-layout="button_count" data-action="like"
+             data-show-faces="false" data-share="false"></div>
+    </div>
+    <ul class="fixBar__shareList">
+        <li class="fb">
+            <a class="fb-custom-share-page" href="javascript: void(0)">
+                <img src="/images/craft/icn_facebook.png" alt="facebook">
+            </a>
+        </li>
+        <li class="tw">
+            <a class="open-twitter" href="https://twitter.com/share"
+                          data-url="https://education-career.jp/magazine/{{ entry.uri }}">
+                <img src="/images/craft/icn_twitter.png" alt="twitter">
+            </a>
+        </li>
+        <li class="htn">
+            <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://education-career.jp/magazine/{{ entry.uri }}&title={{ entry.title }}"
+               onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                <img src="/images/craft/icn_hatena.png" alt="twitter">
+            </a>
+        </li>
+        <li class="line">
+            <span>
+                <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
+                <script type="text/javascript">
+                    new media_line_me.LineButton({"pc": false, "lang": "ja", "type": "c"});
+                </script>
+            </span>
+        </li>
+    </ul>
+</div>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=1760237594207977";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+    {
+        lang: 'ja'
+    }
+</script>
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
+        async="async"></script>
+<script type="text/javascript">!function (d, i) {
+    if (!d.getElementById(i)) {
+        var j = d.createElement("script");
+        j.id = i;
+        j.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
+        var w = d.getElementById(i);
+        d.body.appendChild(j);
+    }
+}(document, "pocket-btn-js");</script>
+<script>window.twttr = (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function (f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+<script type="text/javascript">
+    $('.fb-custom-share-page').click(function () {
+        FB.ui({
+            method: 'share',
+            href: 'https://education-career.jp{{ siteUrl }}{{ entry.uri }}'
+        }, function (response) {
+        });
+    });
+    $('.open-twitter').click(function (e) {
+        var url = $(this)[0].href;
+        window.open(url, '_blank', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=470');
+        e.preventDefault();
+    });
+    $('.follow-twitter').click(function (e) {
+        var url = $(this)[0].href;
+        window.open(url, '_blank', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=470');
+        e.preventDefault();
+    });
+</script>
+{% endblock %}

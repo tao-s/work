@@ -1,0 +1,7 @@
+.icon--plus {
+  @include sprite($plus);
+}
+
+.icon--minus {
+  @include sprite($plus);
+}

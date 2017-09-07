@@ -1,0 +1,348 @@
+@charset "utf-8";
+.mainArticle {
+  margin-bottom: 30px;
+  padding: 15px 10px 0;
+}
+.mainArticle__date {
+  margin-bottom: 10px;
+  color: #99a4af;
+  font-size: 10px;
+}
+.mainArticle__head {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.mainArticle__share {
+  margin-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.mainArticle__share__list {
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.mainArticle__share__list > li {
+  display: inline-block;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.mainArticle__share__list > li img {
+  width: auto;
+  height: 100%;
+}
+.mainArticle__intro {
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.atclSec {
+  margin-bottom: 30px;
+}
+.atclSec__head {
+  margin: 0 -10px 20px;
+  padding: 10px 10px 10px 15px;
+  border-left: solid 5px #1abb99;
+  background: #f5f5f5;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.atclSec__catch {
+  margin-bottom: 30px;
+}
+.atclSec__catch > img {
+  vertical-align: top;
+}
+.atclSec__catch__caption {
+  padding: 10px;
+  background: #f5f5f5;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.atclSec__body h2 {
+  margin-bottom: 10px;
+  padding: 20px;
+  border-left: solid 5px #1abb99;
+  background: #f5f5f5;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.atclSec__body ul {
+  list-style: disc;
+  padding-left: 40px;
+  font-size: 14px;
+}
+.atclSec__body p {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+.atclSec__body blockquote {
+  font-style: italic;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+.atclSec__body blockquote::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 29px;
+  background: url("/images/craft/icn_quotes.png") no-repeat;
+}
+.atclSec__body__question {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.atclSec__body__write {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.atclSec__body__voice {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 42px;
+  background: #f5f5f5;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.atclSec__body__voice.icn-quotes::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.atclShare {
+  margin: 0 10px 20px;
+}
+.atclShare__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+.atclShare__list > li {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  position: relative;
+  /*padding-left: 5px;*/
+  padding-top: 5px;
+}
+.atclShare__list > li > .inner {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.atclShare__list > li img {
+  /*opacity: 0;*/
+}
+.atclShare__list > li.sp-show img {
+  opacity: 1;
+}
+@media screen and (max-width: 640px) {
+  .inner {
+    width: 250px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 526px) {
+  .inner {
+    width: 200px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .inner {
+    width: 180px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 384px) {
+  .inner {
+    width: 165px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .inner {
+    width: 160px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 346px) {
+  .inner {
+    width: 140px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .inner {
+    width: 130px;
+    margin: 3px;
+  }
+}
+
+.followApl {
+  margin: 0 10px 20px;
+  padding: 10px 15px 15px;
+  border: solid 1px #ddd;
+  background: #f5f5f5;
+}
+.followApl__head {
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.followApl__head img {
+  width: 170px;
+  margin-right: 10px;
+}
+.followApl__head span {
+  position: relative;
+  top: -3px;
+}
+.followApl__list > li {
+  width: 270px;
+  height: 34px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.followApl__list > li img {
+  opacity: 0;
+}
+.followApl__list > li + li {
+  margin-top: 5px;
+}
+.followApl__list > .fb {
+  background-image: url("/images/craft/sp-facebook.png");
+}
+.followApl__list > .tw {
+  background-image: url("/images/craft/sp-twitter.png");
+}
+.followApl__list > .rss {
+  background-image: url("/images/craft/sp-rss.png");
+}
+.atclActionWrap {
+  margin: 0 10px 20px;
+}
+.atclAction > li + li {
+  margin-top: 12px;
+}
+.atclAction .btnPrimary {
+  padding: 11px 0;
+}
+.atclAction .btnSecondary {
+  padding: 20px 0;
+}
+.atclAuth {
+  margin: 0 10px 20px;
+  padding: 12px 10px 10px;
+  border: solid 1px #ddd;
+  background: #f5f5f5;
+}
+.atclAuth__head {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.authInfo::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.authInfo__img {
+  float: left;
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.authInfo__prof {
+  overflow: hidden;
+}
+.authInfo__prof__name {
+  margin-bottom: 10px;
+  color: #3f9eff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.authInfo__prof__comment {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.relationKey {
+  margin-bottom: 20px;
+}
+.relationKey__head,
+.relationAtcl__head {
+  height: 40px;
+  padding-left: 10px;
+  background: #1abb99;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+}
+.relationKey__head {
+  margin-bottom: 15px;
+}
+.relationKey__listWrap {
+  margin: 0 10px;
+  overflow: hidden;
+}
+.relationKey__list {
+  display: inline-block;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.relationKey__list > li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 0 10px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.relationAtcl__list {
+  padding: 0 10px;
+}
+.relationAtcl__list > li {
+  padding: 10px 0;
+}
+.relationAtcl__list > li:last-child {
+  padding-bottom: 0;
+}
+.relationAtcl__list > li + li {
+  border-top: solid 1px #ddd;
+}
+.atclInfo {
+  content: "";
+  display: table;
+  clear: both;
+}
+.atclInfo__img {
+  float: left;
+  width: 90px;
+  margin-right: 10px;
+}
+.atclInfo__text {
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+.mainInfoWrap {
+  display: none;
+}

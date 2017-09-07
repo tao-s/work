@@ -1,0 +1,54 @@
+/* CSS Document */
+/*
+	layout.css
+	ブラウザの癖のリセット用CSS
+*/
+@charset 'SHIFT-JIS';
+
+/*margin,padding*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+	margin : 0;
+	padding : 0;
+}
+
+/* a */
+a, a:hover{
+	overflow : hidden;
+	outline : none;
+}
+
+/**/
+h1, h2, h3, h4, h5, h6 {
+	font-size : 100%;
+}
+
+/*ol,ul*/
+ol, ul{
+	list-style : none;
+}
+
+/*font-style,font-weight*/
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style : normal;
+	font-weight : normal;
+}
+
+/*table cell*/
+table {
+	border-collapse : collapse; border-spacing : 0;
+}
+
+/*fieldset, img*/
+fieldset, img {
+	border : 0;
+}
+
+/*caption,th*/
+caption, th {
+	text-align : left;
+}
+
+/*q*/
+q:before, q:after {
+	content : '';
+}

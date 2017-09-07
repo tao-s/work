@@ -1,0 +1,136 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arrow-down-name: 'arrow-down';
+$arrow-down-x: 24px;
+$arrow-down-y: 92px;
+$arrow-down-offset-x: -24px;
+$arrow-down-offset-y: -92px;
+$arrow-down-width: 12px;
+$arrow-down-height: 7px;
+$arrow-down-total-width: 122px;
+$arrow-down-total-height: 112px;
+$arrow-down-image: '/images/sprite.png';
+$arrow-down: (24px, 92px, -24px, -92px, 12px, 7px, 122px, 112px, '/images/sprite.png', 'arrow-down', );
+$hamburger-name: 'hamburger';
+$hamburger-x: 40px;
+$hamburger-y: 53px;
+$hamburger-offset-x: -40px;
+$hamburger-offset-y: -53px;
+$hamburger-width: 44px;
+$hamburger-height: 25px;
+$hamburger-total-width: 122px;
+$hamburger-total-height: 112px;
+$hamburger-image: '/images/sprite.png';
+$hamburger: (40px, 53px, -40px, -53px, 44px, 25px, 122px, 112px, '/images/sprite.png', 'hamburger', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 0px;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-width: 122px;
+$logo-height: 49px;
+$logo-total-width: 122px;
+$logo-total-height: 112px;
+$logo-image: '/images/sprite.png';
+$logo: (0px, 0px, 0px, 0px, 122px, 49px, 122px, 112px, '/images/sprite.png', 'logo', );
+$minus-name: 'minus';
+$minus-x: 88px;
+$minus-y: 53px;
+$minus-offset-x: -88px;
+$minus-offset-y: -53px;
+$minus-width: 20px;
+$minus-height: 20px;
+$minus-total-width: 122px;
+$minus-total-height: 112px;
+$minus-image: '/images/sprite.png';
+$minus: (88px, 53px, -88px, -53px, 20px, 20px, 122px, 112px, '/images/sprite.png', 'minus', );
+$plus-name: 'plus';
+$plus-x: 0px;
+$plus-y: 92px;
+$plus-offset-x: 0px;
+$plus-offset-y: -92px;
+$plus-width: 20px;
+$plus-height: 20px;
+$plus-total-width: 122px;
+$plus-total-height: 112px;
+$plus-image: '/images/sprite.png';
+$plus: (0px, 92px, 0px, -92px, 20px, 20px, 122px, 112px, '/images/sprite.png', 'plus', );
+$search-name: 'search';
+$search-x: 0px;
+$search-y: 53px;
+$search-offset-x: 0px;
+$search-offset-y: -53px;
+$search-width: 36px;
+$search-height: 35px;
+$search-total-width: 122px;
+$search-total-height: 112px;
+$search-image: '/images/sprite.png';
+$search: (0px, 53px, 0px, -53px, 36px, 35px, 122px, 112px, '/images/sprite.png', 'search', );
+$spritesheet-width: 122px;
+$spritesheet-height: 112px;
+$spritesheet-image: '/images/sprite.png';
+$spritesheet-sprites: ($arrow-down, $hamburger, $logo, $minus, $plus, $search, );
+$spritesheet: (122px, 112px, '/images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

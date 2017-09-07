@@ -1,0 +1,643 @@
+@import "./_sprite";
+@import "./_variables";
+@import "./_functions";
+@import "base/_base";
+@import "layout/_layout";
+@import "theme/_theme",
+        "theme/_header",
+        "theme/_footer";
+@import "module/_animations",
+        "module/_button",
+        "module/_form",
+        "module/_table",
+        "module/_tabs",
+        "module/_typography",
+        "module/_icon",
+        "module/_label",
+        "module/_list",
+        "module/_message",
+        "module/_card";
+@import "tools/_helpers";
+
+
+//sidebar
+.sidemenu {
+  background-color: nth($monochrome, 3) !important;
+
+  &__list {
+    padding: 20px 30px;
+
+    &.is-active {
+      padding-left: 25px;
+      border-left: 5px solid nth($color, 1);
+
+      a {
+        color: nth($color, 1);
+      }
+    }
+  }
+}
+
+
+.pickySearch {
+  background: #fff;
+
+  &__button {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+
+    a {
+      width: 25%;
+    }
+
+    > * {
+      display: table-cell;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+    }
+
+    &__icon {
+      width: 20px;
+      margin-right: 5px;
+      transform: none !important;
+      -webkit-transform: none !important;
+    }
+  }
+
+  .pickySearch__button__close {
+    display: none;
+  }
+
+  &.is-active {
+    display: block;
+
+    .pickySearch__button__open {
+      display: none;
+    }
+
+    .pickySearch__button__close {
+      display: block;
+    }
+
+    .pickySearch__contents {
+      display: block;
+    }
+  }
+
+  &__contents {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+
+    label {
+      border-bottom: 1px solid #ccc;
+      display: block;
+      padding: 15px;
+      line-height: 1;
+
+      &.is-checked {
+        background: nth($color, 1);
+        color: #fff;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+
+//
+.slider {
+  margin: 0 auto 10px;
+
+  &__box {
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
+}
+
+.globalContents {
+  overflow: hidden;
+  margin-top: 0;
+
+  &__titleBox {
+    height: 35px;
+    line-height: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    h2 {
+      font-size: 16px;
+    }
+    .num {
+      color: nth($color, 3);
+    }
+    .edit {
+      text-align: right;
+
+      a{
+        color: nth($color, 1);
+      }
+    }
+  }
+}
+
+.searchLinks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #00BC99;
+
+  a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    text-decoration: none;
+
+    p {
+      color: white;
+
+      span {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.keyword-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10px 0;
+
+  input {
+    width: 60%;
+  }
+
+  button {
+    width: 30%;
+  }
+
+}
+
+.search-box {
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .form-area {
+    padding: 0px 10px 10px 10px;
+  }
+
+  .sub-form-area {
+    padding: 5px;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+}
+
+.floating-button {
+  overflow: hidden;
+}
+.search-button {
+  background: #9ed366;
+  font-weight: bold;
+  line-height: 3;
+  display: block;
+  color: #fff;
+  border-radius: 2px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border-bottom: 2px solid #88b558;
+  width: 100%;
+
+  &.floating {
+    transform: none !important;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+
+    &.static {
+      transform: none !important;
+      position:static;
+    }
+  }
+}
+
+
+.search-base {
+  padding: 10px;
+  input[type="checkbox"] {
+    display: inline;
+    width: 18px;
+  }
+}
+
+.job-search {
+  @extend .search-base;
+
+}
+
+.area-search {
+  @extend .search-base;
+
+  .sub-title {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+.biz-search {
+  @extend .search-base;
+  .sub-title {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .link-sub-area {
+    margin-left: 20px;
+  }
+}
+
+.work-style-search {
+  @extend .search-base;
+
+}
+
+// job
+.jobList {
+  margin-top: 10px;
+  padding: 0 10px;
+
+  > li {
+    border: 1px solid #ccc;
+    a {
+      width: 100%;
+    }
+  }
+}
+
+.pager {
+  padding: 20px 10px;
+
+  &__hit {
+    margin-bottom: 15px;
+
+    span {
+      padding-right: 5px;
+      color: nth($color, 3);
+    }
+  }
+
+  .pagination {
+    position: relative;
+    height: 25px;
+    text-align: center;
+
+    img {
+      width: 25px;
+    }
+
+    li {
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+
+      a {
+        padding: 0 10px;
+        color: nth($color, 1);
+      }
+      span {
+        padding: 0 10px;
+      }
+      &:first-child {
+        position: absolute;
+        left: 0;
+        text-indent: -9999px;
+        a{
+          display: block;
+          width: 25px;
+          background: url("/mobile/images/page-first.png") no-repeat 0 0;
+          background-size: 25px 25px;
+        }
+      }
+      &:last-child {
+        position: absolute;
+        right: 0;
+        text-indent: -9999px;
+        a{
+          display: block;
+          width: 25px;
+          background: url("/mobile/images/page-last.png") no-repeat 0 0;
+          background-size: 25px 25px;
+        }
+      }
+    }
+  }
+}
+
+//job_detail
+.detailMain {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+
+  &__company {
+    color: nth($color, 1);
+  }
+  &__catch {
+    font-size: 20px;
+  }
+
+  a {
+    width: 100%;
+  }
+}
+.jobInfo {
+  &__tabBtn {
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+
+    > div {
+      text-align: center;
+
+      span {
+        display: block;
+        border-top: 4px solid #fff;
+      }
+
+      a {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        color: nth($color, 1);
+      }
+
+      &.is-active {
+        span {
+          border-top: 4px solid nth($color, 1);
+        }
+        a {
+          margin-bottom: -1px;
+          color: nth($monochrome, 1);
+          border: 1px solid #ccc;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+  &__tabMain {
+    padding: 30px 10px 15px;
+
+    > div {
+      display: none;
+    }
+    .is-active {
+      display: block;
+    }
+  }
+}
+.secretJob {
+  position: relative;
+  margin: 10px;
+  border: 1px solid #ccc;
+
+  a {
+    display: block;
+    padding: 15px 15px 15px 35px;
+  }
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 14px;
+    height: 18px;
+    margin-top: -10px;
+    background: url(/mobile/images/icon-key.png) no-repeat 0 0;
+    background-size: 14px 18px;
+  }
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 6px;
+    height: 6px;
+    margin: -4px 0 0 0;
+    border-top: solid 2px #1abb99;
+    border-right: solid 2px #1abb99;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+
+//mypage
+.forgotPass {
+  text-align: center;
+  a {
+    color: nth($color, 1);
+    text-decoration: underline;
+  }
+}
+
+
+//login
+.formInput {
+  padding: 10px;
+
+  > * {
+    margin-top: 15px;
+  }
+  &__email {
+    label {color: nth($monochrome, 2);}
+  }
+  &__pass {
+    label {color: nth($monochrome, 2);}
+  }
+  &__label {
+    label {color: nth($monochrome, 2);}
+  }
+}
+
+.snslogin {
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  a {
+    width: 100%;
+  }
+}
+.m-button {
+
+  &.facebook {
+    background: #4060a0;
+    border-bottom: 2px solid #334d80;
+  }
+  &.googleplus {
+    background: #dd4b39;
+    border-bottom: 2px solid #bb3f30;
+  }
+}
+.newRegister {
+  padding: 15px 10px;
+  
+  p {
+    text-align: center;
+  }
+  a {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+
+//mypage
+.profile {
+  padding: 15px;
+  background-color: #fafafa;
+
+  &__author {
+    img {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    font-size: 16px;
+  }
+  &__info {
+    font-size: 12px;
+  }
+}
+
+//about
+
+.about {
+  position: relative;
+
+  &__education-career {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
+    h1 {
+      padding-bottom: 15px;
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  &__register {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+  }
+}
+
+.feature {
+  padding-bottom: 30px;
+
+  > div {
+    padding: 40px 10px 10px;
+    text-align: center;
+
+    img {
+      width: 100px;
+    }
+    h3 {
+      padding-top: 30px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    p {
+      padding-top: 15px;
+      font-size: 12px;
+    }
+  }
+}
+
+.flow {
+  padding: 15px 10px;
+
+  &__step {
+    padding: 15px 20px;
+    border: 1px solid nth($color, 1);
+    font-size: 20px;
+    font-weight: bold;
+    color: nth($color, 1);
+  }
+  &__arrow {
+    text-align: center;
+
+    img {width: 18px;}
+  }
+  &__note {
+    color: nth($monochrome, 2);
+  }
+}
+
+
+//recuiter
+.contact {
+  padding: 30px 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  a {
+    color: nth($color, 1);
+    text-decoration: underline;
+  }
+}
+
+//errorページ
+.httpStatus {
+  padding: 10px 10px 30px;
+  text-align: center;
+
+  &__code {
+    font-size: 100px;
+    font-weight: bold;
+  }
+}
+
+
+
+

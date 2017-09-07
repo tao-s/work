@@ -1,0 +1,10 @@
+@import "../_mixins";
+
+.m-card {
+  border: 1px solid #ccc;
+  display: block;
+
+  &__caption {
+    padding: 20px;
+  }
+}

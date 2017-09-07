@@ -1,0 +1,40 @@
+.m-tabs {
+  position: relative;
+
+  .m-tabs__tab {
+    font-size: 20px;
+
+    li {
+      width: 180px;
+      float: left;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+
+      &.is-active {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+
+        strong {
+          border-top: 4px solid nth($color, 1);
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+
+    strong {
+      padding: 10px;
+      display: block;
+      border-top: 4px solid #fff;
+    }
+  }
+
+  .m-tabs__body {
+    border-top: 1px solid #ccc;
+    padding-top: 25px;
+    margin-top: -1px;
+  }
+}
+

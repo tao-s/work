@@ -1,0 +1,25 @@
+.m-label {
+  padding: 5px;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+
+  &.m-label--primary {
+    background: #f6bb33;
+    border-radius: 1px;
+    color: #fff;
+  }
+
+  &.m-label--require {
+    padding: 2px 5px;
+    background: #fe6e4c;
+    color: #fff;
+  }
+  &.m-label--status {
+    padding: 2px 5px;
+    background: #fe6e4c;
+    border-radius: 1px;
+    color: #fff;
+  }
+}

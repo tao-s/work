@@ -1,0 +1,111 @@
+{% extends "_layout.html" %}
+
+{% block head %}
+{{ parent() }}
+<link rel="stylesheet" href="/css/craft/index.css" media="only screen and (min-width: 641px)">
+<link rel="stylesheet" href="/css/craft/sp/index.css" media="only screen and (max-width: 640px)">
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+{% endblock %}
+
+{% block side_content %}
+<div class="mainInfo">
+    <section class="mainInfo__share">
+        <h3 class="mainInfo__share__head">このサイトをシェア</h3>
+        <ul class="mainInfo__share__list">
+            <a href="https://twitter.com/share" class="custom-twitter-share-button1 open-twitter" data-url="https://education-career.jp/magazine/" data-lang="ja">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a class="fb-custom-share-page" href="javascript: void(0)" style="margin-left: 20px">
+                <li class="fb"><img src="/images/craft/icn_facebook.png" alt="facebook"></li>
+            </a>
+        </ul>
+    </section>
+    <section class="mainInfo__save">
+        <h3 class="mainInfo__save__head">あとで読む</h3>
+        <ul class="mainInfo__save__list">
+            <li class="save1">
+                <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://education-career.jp/magazine/" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                    <img src="/images/craft/icn_hatena.png" alt="はてなブックマーク">
+                </a>
+            </li>
+            <li class="save2">
+                <a href="http://getpocket.com/edit?url=https://education-career.jp/magazine/" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                    <img src="/images/craft/icn_pocket.png" alt="Pocket">
+                </a>
+
+            </li>
+        </ul>
+    </section>
+    <section class="mainInfo__member">
+        <h3 class="mainInfo__member__head">メンバー</h3>
+        <ul class="mainInfo__member__list">
+            {% for author in craft.users %}
+            <li>
+                <div class="memberInfo">
+                    <div class="memberInfo__img"><img
+                            src="{{ author.photoUrl }}" alt="{{ author.lastName }} {{ author.firstName }}"></div>
+                    <div class="memberInfo__prof">
+                        <p class="memberInfo__prof__name">{{ author.lastName }} {{ author.firstName }}</p>
+
+                        {% if author.author_profile is defined %}
+                        <p class="memberInfo__prof__comment">
+                            {{ author.author_profile }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+{% endblock %}
+
+{% block main_content %}
+{% paginate craft.entries.article.order('postDate desc').limit(11) as pageInfo, pageEntries %}
+<div class="mainCatch">
+    <a href="/magazine/{{ pageEntries[0].uri }}">
+        {% set image = pageEntries[0].thumbnail.first() %}
+        <div class="mainCatch__img"><img src="{{ image ? image.url : '#' }}" alt="{{ image ? image.title : '' }}"></div>
+        <p class="mainCatch__text">
+            {{ pageEntries[0].title }}
+        </p>
+    </a>
+</div>
+
+<div class="mainAtclListWrap">
+    <ul class="mainAtclList">
+        {% for entry in pageEntries[1:] %}
+        <li>
+            <a href="/magazine/{{ entry.uri }}">
+                <div class="mainAtclInfo">
+                    {% set image = entry.thumbnail.first() %}
+                    <div class="mainAtclInfo__img"><img
+                            src="{{ image ? image.url : '#' }}" alt="{{ image ? image.title : '' }}"></div>
+                    <p class="mainAtclInfo__text">
+                        {{ entry.title }}
+                    </p>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="mainPaginateWrap">
+    <ul class="mainPaginate">
+        <li class="first"><a href="{{ pageInfo.firstUrl }}"></a></li>
+        <li class="prev"><a href="{{ pageInfo.prevUrl }}"></a></li>
+
+        {% for page, url in pageInfo.getPrevUrls(5) %}
+            <li><a href="{{ url }}">{{page}}</a></li>
+        {% endfor %}
+
+        <li class="current"><a href="{{ pageInfo.getPageUrl(pageInfo.currentPage) }}">{{pageInfo.currentPage}}</a></li>
+
+        {% for page, url in pageInfo.getNextUrls(5) %}
+        <li><a href="{{ url }}">{{page}}</a></li>
+        {% endfor %}
+
+        <li class="next"><a href="{{ pageInfo.nextUrl }}"></a></li>
+        <li class="last"><a href="{{ pageInfo.lastUrl }}"></a></li>
+    </ul>
+</div>
+{% endblock %}

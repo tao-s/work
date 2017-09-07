@@ -1,0 +1,59 @@
+.fz-s {
+}
+
+.fz-m {
+}
+
+.fz-l {
+}
+
+.fz-xl {
+}
+
+.m-heading {
+  font-weight: bold;
+
+  &.m-heading--h1 {
+    font-size: 32px;
+
+    @include media-query {
+      font-size: 16px;
+    }
+  }
+
+  &.m-heading--h2 {
+    font-size: 20px;
+
+    @include media-query {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      background: #f5f5f5;
+      padding: 5px 10px;
+    }
+  }
+
+  &.m-heading--h3 {
+    font-size: 16px;
+    color: nth($color, 1);
+  }
+}
+
+
+.m-text {
+  &.m-text--bold {
+    font-weight: bold;
+  }
+
+  &.m-text--sub {
+    color: nth($monochrome, 2);
+  }
+
+  &.m-text--primary {
+    color: nth($color, 1);
+  }
+
+  &.m-text--small {
+    font-size: 12px;
+  }
+}

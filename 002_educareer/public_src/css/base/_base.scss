@@ -1,0 +1,176 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+
+/* 
+ * extended style of the nib/global-reset
+ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: nth($monochrome, 1);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+input[type=text],
+input[type=password],
+input[type=submit] {
+  display: inline-block;
+  width: 100%;
+  font-size: 100%;
+  border-radius: 3px;
+}
+
+input[type=text],
+input[type=password] {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+select {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/images/arrow-select.png) no-repeat right center #fff;
+  padding: 10px 55px 10px 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+textarea {
+  font-size: 100%;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  min-height: 8em;
+}
