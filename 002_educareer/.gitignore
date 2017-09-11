@@ -1,0 +1,13 @@
+/vendor
+/node_modules
+.env
+.idea/*
+_ide_helper.php
+_ide_helper_models.php
+.DS_Store
+.log
+/educareer
+/public/sitemap.xml
+/public/jobs.xml
+/public/companies.xml
+/public/search*.xml
