@@ -1,0 +1,150 @@
+.globalHeader {
+  border-bottom: 1px solid #ccc;
+
+  &__sub {
+    color: #000;
+    font-size: 12px;
+
+    > div {
+      @include viewport();
+      padding: 15px 30px;
+    }
+
+    p {
+      float: left;
+    }
+
+    ul {
+      float: right;
+      margin-top: 7px;
+    }
+
+    li {
+      float: left;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    img {
+      height: 30px;
+      width: auto;
+      display: inline-block;
+    }
+
+  }
+
+  &__main {
+    > div {
+      @include viewport();
+      padding: 30px 20px 0;
+    }
+
+    .logo {
+      float: left;
+      margin-right: 80px;
+    }
+
+    .nav {
+      font-size: 16px;
+      float: left;
+      li {
+        margin-right: 35px;
+        padding: 5px 0 30px 0;
+        margin-right: 20px;
+        float: left;
+        &.is-active {
+          border-bottom: 4px solid nth($color, 1);
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
+          color: nth($color, 1);
+        }
+      }
+    }
+
+    .signin {
+      float: right;
+
+      li {
+        margin-right: 20px;
+        float: left;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .user {
+      float: right;
+      display: table;
+      position: relative;
+
+      .user__profile {
+        font-size: 16px;
+
+        li {
+          display: table-cell;
+          vertical-align: middle;
+          padding-right: 20px;
+          &.user__profile__avatar {
+            width: 60px;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        a {
+          &:hover {
+            text-decoration: none;
+            color: nth($color, 1);
+          }
+        }
+
+        i {
+          margin-left: 20px;
+        }
+
+        img {
+          border-radius: 20px;
+          border: 1px solid nth($monochrome, 2);
+        }
+      }
+
+      .user__nav {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        width: 200px;
+        background: #fff;
+        z-index: 10;
+        border: 1px solid #ccc;
+        display: none;
+
+        li {
+          a {
+            display: block;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            &:hover {
+              background: nth($color, 2);
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+
+          &:first-child {
+            a {
+              border-top: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

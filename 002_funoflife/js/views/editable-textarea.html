@@ -1,0 +1,16 @@
+<div class="inPlaceEditor l-group l-group--xs">
+  <div class="inPlaceEditor__header clearfix">
+    <p class="m-heading m-heading--h2">(% title %)</p>
+    <a href="#" v-on="click: editStart"><i class="icon--edit"></i>編集する</a>
+  </div>
+  <div class="inPlaceEditor__body" v-show="!isEdit">
+    <p>((% setting | nl2br %))</p>
+  </div>
+  <div class="inPlaceEditor__body" v-show="isEdit">
+    <textarea name="(% name %)" v-show="isEdit" v-model="setting">((% setting | br2nl %))</textarea>
+    <ul class="l-row" style="width: 360px; margin: 10px auto 0;">
+      <li class="col-6"><a href="#" class="m-button is-disable" v-on="click: editEnd">戻る</a></li>
+      <li class="col-6"><input type="submit" value="変更する" class="m-button m-button--default col-3--rtl" /></li>
+    </ul>
+  </div>
+</div>

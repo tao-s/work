@@ -1,0 +1,54 @@
+.m-button {
+  font-weight: bold;
+  line-height: 1;
+  display: inline-block;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 2px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, .4);
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.default {
+    background: nth($color, 2);
+    border-bottom: 2px solid #88b558;
+    &:hover {
+      background: #88b558;
+      border-color: #739949;
+    }
+  }
+
+  &.primary {
+    background: nth($color, 1);
+    border-bottom: 2px solid #199c80;
+    &:hover {
+      background: #199c80;
+      border-color: #147f68;
+    }
+  }
+
+  &.secondary {
+    background: nth($color, 4);
+    border-bottom: 2px solid #d7992d;
+    &:hover {
+      background: #d7992d;
+      border-color: #d7992d;
+    }
+  }
+
+  &.negative {
+    background: nth($monochrome, 2);
+    border-bottom: 2px solid #858f99;
+    &:hover {
+      background: #858f99;
+      border-color: #707880;
+    }
+  }
+  &.is-disable {
+    background: nth($monochrome, 2);
+    border-bottom: 2px solid #858f99;
+  }
+}

@@ -1,0 +1,82 @@
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  min-width: 1200px;
+}
+
+.globalViewport {
+  @include viewport();
+}
+
+.globalMain {
+  margin-top: 25px !important;
+
+  &.globalMain--hook {
+    margin-top: 0 !important;
+  }
+
+  &.globalMain--narrow {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.globalSide {
+  margin-top: 25px !important;
+
+  &.globalSide--separator {
+    margin-top: 0 !important;
+  }
+}
+
+.breadcrumbs {
+  //@include viewport();
+  font-size: 12px;
+  padding: 15px 0;
+  a {
+    color: nth($color, 1);
+    text-decoration: underline;
+  }
+  > * {
+    margin-right: 5px;
+  }
+}
+
+.profileCard {
+  //padding: 30px;
+  //text-align: center;
+  padding: 30px 15px;
+
+  &__avatar {
+    display: inline-block;
+    width: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+  }
+}
+
+.localNav {
+  ul {
+    border-bottom: 1px solid #ccc;
+  }
+  li {
+    a {
+      display: block;
+      padding: 10px 15px;
+      border-top: 1px solid #ccc;
+      text-decoration: none;
+      &:hover {
+        color: nth($color, 1);
+      }
+    }
+    &.is-active {
+      a {
+        background: nth($color, 2);
+        color: #fff;
+      }
+    }
+  }
+}
