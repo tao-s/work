@@ -1075,4 +1075,62 @@ _contact
   }
 }
 
+/*********************
+_login
+*********************/
+.login {
+  background-color: #F0F0F0;
+  text-align: center;
 
+  .button {
+    display: block;
+    color: #FFF;
+    background-color: #649E00;
+    width: 335px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+}
+
+.login-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  margin-bottom: 50px !important;
+}
+
+.login-form {
+  margin-top: 30px;
+
+  input {
+    display: block;
+    width: 340px;
+    height: 44px;
+    margin: 15px auto;
+  }
+}
+
+.login-form-sns {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  img {
+    width: 45%;
+  }
+}
+
+.login-forget {
+  display: inline-block;
+  margin-top: 15px;
+  color: #375FB1;
+  text-decoration: underline;
+}
