@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="369px" height="126px" viewBox="0 0 369 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC-求人詳細" transform="translate(-451.000000, -2314.000000)">
+            <g id="Group-12-Copy" transform="translate(451.000000, 2313.000000)">
+                <text id="一度入力・登録いただくと、今後の入力は不" font-family="YuGo-Medium, YuGothic" font-size="14" font-weight="400" fill="#333333">
+                    <tspan x="0" y="125">一度入力・登録いただくと、今後の入力は不要になります。</tspan>
+                </text>
+                <text id="この求人に応募する" font-family="YuGo-Bold, YuGothic" font-size="20" font-weight="bold" fill="#333333">
+                    <tspan x="99" y="18">この求人に応募する</tspan>
+                </text>
+                <g id="Group-13" transform="translate(99.000000, 40.000000)">
+                    <g id="Group-14">
+                        <rect id="Rectangle-9-Copy-2" fill="#649E00" x="0" y="41" width="180" height="2"></rect>
+                        <path d="M0,22 L180,22" id="Line" stroke="#649E00" stroke-linecap="square" stroke-dasharray="4"></path>
+                        <path d="M0,1 L180,1" id="Line-Copy" stroke="#649E00" stroke-linecap="square" stroke-dasharray="4"></path>
+                        <text id="APPLY" stroke="#649E00" stroke-width="2" font-family="Futura-Bold, Futura" font-size="40" font-weight="bold" line-spacing="30" fill="#FFFFFF">
+                            <tspan x="22" y="48">APPLY</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

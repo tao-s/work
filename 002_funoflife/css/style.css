@@ -1488,6 +1488,25 @@ input[type=password].is-error {
   font-weight: bold;
 }
 
+.breadcrumbs {
+  background-color: #F0F0F0;
+}
+
+.breadcrumbs a {
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.breadcrumbs span {
+  margin: 0 10px;
+}
+
+.breadcrumbs-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .kibo {
   background-color: #F8F8F8;
   height: 40px;
@@ -2145,6 +2164,206 @@ input[type=password].is-error {
   display: block;
   border-bottom: 3px solid #649E00;
   font-size: 20px;
+}
+
+.detail {
+  background-color: #FAFAFA;
+}
+
+.detail h3 {
+  display: block;
+  border-left: 6px solid #649E00;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.detail h3 + * {
+  margin-top: 10px;
+}
+
+.detail .main-table {
+  border-spacing: 00px 10px;
+  border-collapse: separate;
+}
+
+.detail .main-table th {
+  background-color: #649E00;
+  color: #FFF;
+  border: none;
+}
+
+.detail .main-table td {
+  border: none;
+  background-color: #F0F0F0;
+}
+
+.detail .detail-inner {
+  padding: 20px;
+  background-color: #FFF;
+  margin: 20px auto;
+}
+
+.detail-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #649E00;
+}
+
+.detail-title img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.detail-subinfo {
+  margin-top: 10px;
+}
+
+.detail-subinfo p {
+  display: inline-block;
+}
+
+.detail-subinfo-name {
+  color: #9B9B9B;
+}
+
+.detail-subinfo-category {
+  color: #649E00;
+}
+
+.detail-subinfo-category span {
+  background-color: #649E00;
+  font-size: 8px;
+  color: #FFF;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0px 8px;
+}
+
+.detail-description {
+  margin-top: 13px;
+}
+
+.detail-description p {
+  padding: 10px 20px;
+  background-color: #F0F0F0;
+  border-radius: 4px;
+  line-height: 1.5;
+  border: 1px solid #EEE;
+}
+
+.detail-description h3 + p {
+  margin-top: 10px;
+}
+
+.detail-youkou {
+  margin-top: 20px;
+}
+
+.detail-profile {
+  margin-top: 20px;
+}
+
+.detail-kanren {
+  margin-top: 20px;
+}
+
+.detail-kanren .syokusyu {
+  width: 10%;
+}
+
+.detail-kanren .naiyou {
+  width: 87%;
+}
+
+.detail-kanren .new-job-list {
+  padding: 10px 20px;
+}
+
+.detail-form {
+  padding: 30px 0;
+  background-color: #fafafa;
+  text-align: center;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.detail-form a.kiyaku {
+  color: #375FB1;
+  text-decoration: underline;
+}
+
+.detail-form p {
+  margin-bottom: 10px;
+}
+
+.detail-form .m-button--default {
+  border-bottom: none;
+  background-color: #649E00;
+}
+
+.detail-form .m-button--primary {
+  width: 220px;
+}
+
+.detail-apply {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.detail-apply .detail-apply-title {
+  text-align: center;
+}
+
+.detail-apply .detail-apply-title img {
+  width: 378px;
+}
+
+.detail-apply .m-table {
+  width: 70%;
+  margin: 30px auto 0;
+}
+
+.detail-apply .m-table input {
+  height: 50px;
+}
+
+.detail-apply .m-table th, .detail-apply .m-table td {
+  background-color: transparent;
+  border: none;
+}
+
+.detail-apply .m-table .w100 {
+  width: 100%;
+}
+
+.detail-apply .m-table input, .detail-apply .m-table select, .detail-apply .m-table textarea {
+  border-radius: 5px;
+}
+
+.detail-apply .m-table input {
+  background-color: #F8F8F8;
+}
+
+.detail-apply a.kiyaku {
+  color: #375FB1;
+  text-decoration: underline;
+}
+
+.detail-apply p {
+  margin-bottom: 10px;
+}
+
+.detail-apply .m-button--default {
+  border-bottom: none;
+  background-color: #649E00;
+}
+
+.detail-apply .m-button--primary {
+  width: 220px;
 }
 
 .error {
