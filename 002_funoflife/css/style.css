@@ -2366,6 +2366,117 @@ input[type=password].is-error {
   width: 220px;
 }
 
+/*********************
+_agent
+*********************/
+.agent > a {
+  display: block;
+}
+
+.agent-merit {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+}
+
+.agent-merit h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.agent-merit h2 img {
+  width: 380px;
+}
+
+.agent-merit-image {
+  width: 757px;
+  margin: 0 auto;
+}
+
+/*********************
+recruiter
+*********************/
+.recruiter-feature {
+  background-color: #FAFAFA;
+  display: block;
+}
+
+.recruiter-feature-inner {
+  width: 1024px;
+  display: block;
+  margin: 0 auto;
+}
+
+.recruiter-flow {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.recruiter-flow-inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/*********************
+_contact
+*********************/
+.contact {
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.contact .m-table {
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.contact .m-table input {
+  height: 50px;
+}
+
+.contact .m-table th {
+  font-weight: bold;
+}
+
+.contact .m-table th, .contact .m-table td {
+  background-color: transparent;
+  border: none;
+}
+
+.contact .m-table .w100 {
+  width: 100%;
+}
+
+.contact .m-table input, .contact .m-table select, .contact .m-table textarea {
+  border-radius: 5px;
+}
+
+.contact .m-table input, .contact .m-table textarea {
+  background-color: #F8F8F8;
+}
+
+.contact .m-button--default {
+  background-color: #F6AC00;
+  border-bottom: none;
+}
+
+.contact-form {
+  margin-bottom: 30px;
+}
+
+.contact-form h2 {
+  width: 240px;
+  margin: 0 auto;
+}
+
+.contact-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  margin-bottom: 50px !important;
+}
+
 .error {
   background-color: #F0F0F0;
 }

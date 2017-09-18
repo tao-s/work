@@ -4,19 +4,19 @@
 @import "base/_base";
 @import "layout/_layout";
 @import "theme/_theme",
-        "theme/_header",
-        "theme/_footer";
+"theme/_header",
+"theme/_footer";
 @import "module/_animations",
-        "module/_button",
-        "module/_form",
-        "module/_table",
-        "module/_tabs",
-        "module/_typography",
-        "module/_icon",
-        "module/_label",
-        "module/_list",
-        "module/_card",
-        "module/_message";
+"module/_button",
+"module/_form",
+"module/_table",
+"module/_tabs",
+"module/_typography",
+"module/_icon",
+"module/_label",
+"module/_list",
+"module/_card",
+"module/_message";
 @import "tools/_helpers";
 
 .text-bold {
@@ -70,7 +70,7 @@
   overflow: inherit;
   max-width: 1260px;
   margin: 0 auto;
-  
+
   .catch-copy {
     position: absolute;
     height: 100px;
@@ -78,20 +78,20 @@
     z-index: 100;
     top: 150px;
   }
-  
+
   .support {
     width: 450px;
     height: auto;
     float: left;
     margin-top: 24px;
   }
-  
+
   .form {
     height: 406px;
     margin-bottom: 51px;
     position: relative;
     z-index: 1000;
-    
+
     form {
       background-color: #FFF;
       width: 520px;
@@ -101,24 +101,24 @@
       border: 10px solid rgba(0, 0, 0, .5);
       padding: 20px 10px;
     }
-    
+
     .or {
       margin: 10px 0;
     }
-    
+
     select {
       width: 100%;
       border-radius: 5px;
     }
-    
+
     p + p {
       margin-top: 15px;
     }
-    
+
     p:last-child {
       margin-top: 25px;
     }
-    
+
     .submit {
       display: block;
       width: 80%;
@@ -135,14 +135,14 @@
     width: 50%;
     float: left;
     position: relative;
-    
+
     img {
       height: 265px;
     }
-    
+
     &:nth-of-type(3) {
       float: right;
-      
+
       .career-support-section-text {
         position: absolute;
         left: 146px;
@@ -150,19 +150,19 @@
       }
     }
   }
-  
+
   .career-support-section-text:nth-of-type(1) {
     position: absolute;
     right: 146px;
     top: 60px;
   }
-  
+
   .midashi {
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 10px;
   }
-  
+
   .support-button {
     margin-top: 40px;
     display: block;
@@ -203,7 +203,7 @@
 
 .topSearchForm {
   @extend .clearfix;
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -235,7 +235,7 @@
     @extend .linkPanel;
     width: 49.5%;
     margin-bottom: 12px;
-    float:right;
+    float: right;
 
     .area-link-area {
       margin-bottom: 15px;
@@ -246,7 +246,7 @@
     }
 
     label {
-      display:inline-block;
+      display: inline-block;
       margin-right: 15px;
       margin-bottom: 9px;
       user-select: none;
@@ -260,7 +260,7 @@
     margin-bottom: 12px;
 
     label {
-      display:inline-block;
+      display: inline-block;
       margin-right: 10px;
       margin-bottom: 6px;
       user-select: none;
@@ -273,10 +273,10 @@
     height: 176px;
     margin-bottom: 20px;
     margin-right: 1%;
-    float:left;
+    float: left;
 
     label {
-      display:inline-block;
+      display: inline-block;
       margin-right: 10px;
       user-select: none;
     }
@@ -287,7 +287,7 @@
     width: 49.5%;
     height: 176px;
     margin-bottom: 20px;
-    float:right;
+    float: right;
   }
 
   .link-area {
@@ -564,7 +564,7 @@
 }
 
 .related-jobs, .other-jobs, .interview-articles {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
@@ -580,11 +580,11 @@
     margin-top: 15px;
     width: 100%;
   }
-  
+
   select {
     width: 100%;
   }
-  
+
   form {
     padding-left: 10px;
   }
@@ -621,7 +621,7 @@
   width: 15%;
   text-align: center;
   margin-right: 3%;
-  
+
   img {
     width: 90%;
   }
@@ -652,7 +652,7 @@
     vertical-align: top;
     padding: 2px 0;
   }
-  
+
   td {
     vertical-align: top;
     padding: 2px 0;
@@ -664,7 +664,7 @@
   a:hover {
     text-decoration: none;
   }
-  
+
   padding: 10px 0;
   border-bottom: 1px solid #F0F0F0;
 
@@ -701,8 +701,8 @@
 
 // 検索結果ページ
 .search-result-page {
-  margin-top: 40px!important;
-  
+  margin-top: 40px !important;
+
   .search-result-title {
     display: block;
     border-bottom: 3px solid #649E00;
@@ -860,7 +860,7 @@
 
 .detail-apply {
 
-  padding: 30px 0 ;
+  padding: 30px 0;
 
   .detail-apply-title {
     text-align: center;
@@ -895,7 +895,6 @@
       background-color: #F8F8F8;
     }
 
-
   }
 
   text-align: center;
@@ -919,6 +918,120 @@
   }
 }
 
+/*********************
+_agent
+*********************/
+.agent {
+
+  > a {
+    display: block;
+  }
+}
+
+.agent-merit {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+
+    img {
+      width: 380px;
+    }
+  }
+}
+
+.agent-merit-image {
+  width: 757px;
+  margin: 0 auto;
+}
+
+/*********************
+recruiter
+*********************/
+.recruiter-feature {
+  background-color: #FAFAFA;
+  display: block;
+}
+
+.recruiter-feature-inner {
+  width: 1024px;
+  display: block;
+  margin: 0 auto;
+}
+
+.recruiter-flow {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.recruiter-flow-inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/*********************
+_contact
+*********************/
+.contact {
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #DFDFDF;
+
+  .m-table {
+    width: 80%;
+    margin: 30px auto 0;
+
+    input {
+      height: 50px;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    th, td {
+      background-color: transparent;
+      border: none;
+    }
+
+    .w100 {
+      width: 100%;
+    }
+
+    input, select, textarea {
+      border-radius: 5px;
+    }
+
+    input, textarea {
+      background-color: #F8F8F8;
+    }
+
+  }
+
+  .m-button--default {
+    background-color: #F6AC00;
+    border-bottom: none;
+  }
+
+}
+
+.contact-form {
+  h2 {
+    width: 240px;
+    margin: 0 auto;
+  }
+  margin-bottom: 30px;
+}
+
+.contact-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  margin-bottom: 50px !important;
+}
 
 ///////////////////////////////////
 ///////////// 404 /////////////
@@ -949,13 +1062,13 @@
 .error-inner {
   background-color: #FFF;
   padding: 50px 0;
-  margin-bottom: 50px!important;
+  margin-bottom: 50px !important;
 }
 
 .httpStatus {
   width: 600px;
   margin: 0 auto;
-  
+
   img {
     margin-top: 50px;
     width: 335px;
