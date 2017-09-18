@@ -898,8 +898,6 @@
 
   }
 
-
-
   text-align: center;
 
   a.kiyaku {
@@ -922,9 +920,24 @@
 }
 
 
-// 404ページ
+///////////////////////////////////
+///////////// 404 /////////////
+///////////////////////////////////
 .error {
   background-color: #F0F0F0;
+
+  .button {
+    display: block;
+    color: #FFF;
+    background-color: #649E00;
+    width: 335px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
 }
 
 .error-inner {
@@ -939,6 +952,8 @@
   
   img {
     margin-top: 50px;
-    width: 50%;
+    width: 335px;
   }
 }
+
+
