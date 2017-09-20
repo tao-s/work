@@ -1506,10 +1506,22 @@ _edit
   padding: 30px 0;
 
   textarea {
-    width: calc( 100% - 20px);
-    margin: 15px auto;
+    // width: calc( 100% - 20px);
+    // margin: 15px auto;
     display: block;
     background-color: #FAFAFA;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input {
+    height: 34px;
+  }
+
+  select, input, textarea {
+    border-radius: 5px;
   }
 
 }
@@ -1575,6 +1587,10 @@ _edit
   padding-bottom: 5px;
 }
 
+.edit-main-resume-inner {
+  padding: 10px;
+}
+
 .edit-main-resume-table {
   margin: 10px auto;
 
@@ -1630,6 +1646,7 @@ _edit
 .edit-main-summary, .edit-main-topic {
   background-color: #FFF;
   padding-bottom: 10px;
+  margin-top: 10px;
 
   p {
     border: 1px solid #F0F0F0;
@@ -1641,6 +1658,10 @@ _edit
 .edit {
   background-color: #F0F0F0;
   padding: 30px 0;
+}
+
+.edit-main-summary-inner, .edit-main-topic-inner {
+  padding: 10px;
 }
 
 .edit-header {
@@ -1771,6 +1792,7 @@ _edit
   background-color: #FFF;
   text-align: center;
   padding: 30px 0;
+  margin-top: 10px;
 
   .delete {
     display: inline-block;
@@ -1781,6 +1803,7 @@ _edit
     color: #FFF;
     text-align: center;
     border-radius: 4px;
+    vertical-align: top;
 
     &:hover {
       text-decoration: none;
