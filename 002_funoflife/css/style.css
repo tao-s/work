@@ -903,43 +903,27 @@ body {
 .m-button {
   line-height: 1.5;
   padding: 10px 20px;
-  color: #fff;
-  border-radius: 2px;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  border-radius: 4px;
   text-align: center;
   display: block;
 }
 
 .m-button:hover {
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .m-button.m-button--default {
-  background: #9ed366;
-  border-bottom: 2px solid #88b558;
-}
-
-.m-button.m-button--default:hover {
-  background: #88b558;
-  border-color: #739949;
+  background-color: #649E00;
 }
 
 .m-button.m-button--primary {
   background-color: #F6AC00;
 }
 
-.m-button.m-button--primary:hover {
-  background-color: rgba(246, 172, 0, 0.7);
-}
-
 .m-button.m-button--negative {
-  background: #99a4af;
-  border-bottom: 2px solid #858f99;
-}
-
-.m-button.m-button--negative:hover {
-  background: #858f99;
-  border-color: #707880;
+  background: #999999;
 }
 
 .m-button.is-disable {
@@ -1472,6 +1456,57 @@ input[type=password].is-error {
   margin-right: auto;
 }
 
+.quit {
+  background-color: #F0F0F0;
+}
+
+.quit p {
+  font-size: 14px;
+  color: #333333;
+}
+
+.quit .button {
+  display: block;
+  color: #FFF;
+  background-color: #649E00;
+  width: 335px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.quit h2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #CCCCCC;
+  width: 580px;
+  margin: 0 auto;
+}
+
+.quit .m-button {
+  display: inline-block;
+  width: 160px;
+  margin-right: 15px;
+}
+
+.quit-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  margin-bottom: 50px !important;
+}
+
+.quit-form {
+  width: 410px;
+  margin: 50px auto 0;
+}
+
+.quit-form-button-area {
+  margin-top: 40px;
+}
+
 .text-bold {
   font-weight: bold;
 }
@@ -1486,6 +1521,10 @@ input[type=password].is-error {
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .w100 {
@@ -1527,6 +1566,11 @@ input[type=password].is-error {
 
 .breadcrumbs span {
   margin: 0 10px;
+}
+
+.button-green {
+  background-color: #649E00;
+  display: inline-block;
 }
 
 .breadcrumbs-inner {
@@ -2504,6 +2548,9 @@ _contact
   margin-bottom: 50px !important;
 }
 
+/*********************
+_error _404
+*********************/
 .error {
   background-color: #F0F0F0;
 }

@@ -19,6 +19,8 @@
 "module/_message";
 @import "tools/_helpers";
 
+@import "indivisual/quit.scss";
+
 .text-bold {
   font-weight: bold;
 }
@@ -33,6 +35,10 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .w100 {
@@ -75,6 +81,11 @@
   span {
     margin: 0 10px;
   }
+}
+
+.button-green {
+  background-color: #649E00;
+  display: inline-block;
 }
 
 ////////////////////////////////////
@@ -1063,9 +1074,9 @@ _contact
   margin-bottom: 50px !important;
 }
 
-///////////////////////////////////
-///////////// 404 /////////////
-///////////////////////////////////
+/*********************
+_error _404
+*********************/
 .error {
   background-color: #F0F0F0;
 
