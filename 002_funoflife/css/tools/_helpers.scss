@@ -43,3 +43,45 @@
 .stage {
   @include viewport();
 }
+
+.text-bold {
+  font-weight: bold;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+// PCのとき非表示にするコンテンツ
+.pc-none {
+  @include pc() {
+    display: none;
+  }
+}
+
+// SPのとき非表示にするコンテンツ
+.sp-none {
+  @include sp() {
+    display: none;
+  }
+}

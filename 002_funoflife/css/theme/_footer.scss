@@ -1,86 +1,84 @@
 .globalFooter {
 
-  > div {
-    @include viewport();
-  }
-
   .copyright {
     float: right;
   }
-  
+
   .soudan {
     display: block;
   }
-  
+
   .footer-banner {
     width: 1000px;
     margin: 40px auto 40px;
-    
+
     img + img {
       margin-left: 6%;
     }
-    
+
     img {
       width: 46%;
       display: inline-block;
     }
   }
-  
+
   .footer-links {
+
     background-color: #649E00;
     width: 100%;
     height: 136px - 82px;
     padding: 30px 0;
     text-align: center;
     padding-bottom: 50px;
+
+
   }
-  
+
   .footer-links-inner {
-    width: 1200px;
+
     margin: 0 auto;
-    
-    
+
     li {
       display: inline-block;
-      
+
       & + li {
         margin-left: 40px;
       }
-      
+
       a {
         color: white;
         font-weight: normal;
       }
     }
   }
-  
+
   .footer-info {
     height: 82px;
     padding: 20px;
     box-sizing: border-box;
-    
+
     img {
       width: 156px;
       height: auto;
     }
   }
-  
+
   .footer-info-company {
     font-size: 10px;
     color: #555555;
     display: inline-block;
     margin-top: 4px;
   }
-  
+
   .footer-info-logo {
     margin-right: 20px;
     margin-top: 4px;
   }
-  
+
   .footer-button-area {
     float: right;
   }
-  
+
   .footer-button {
     line-height: 20px;
     height: 30px;
@@ -90,10 +88,51 @@
     border: 1px solid #F6AC00;
     padding: 4px 10px;
   }
-  
+
   .small {
     font-size: 9px;
     color: #555555;
     margin-top: 4px;
+  }
+
+  // SP-STYLE
+  @include sp() {
+    width: 100%;
+
+    .sp-footer-info {
+      color: $orange;
+      padding: 15px 0;
+    }
+
+    .footer-links {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      text-align: left;
+    }
+
+    .footer-links-inner {
+      li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #CCCCCC;
+
+        + li {
+          margin-left: 0;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          line-height: 40px;
+          height: 40px;
+          padding-left: 30px;
+        }
+      }
+
+      .footer-links {
+        height: auto;
+      }
+    }
   }
 }

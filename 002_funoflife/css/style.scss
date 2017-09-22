@@ -1,6 +1,7 @@
 @import "./_sprite";
 @import "./_variables";
 @import "./_functions";
+@import "./_mixins";
 @import "base/_base";
 @import "layout/_layout";
 @import "theme/_theme",
@@ -22,38 +23,6 @@
 @import "indivisual/quit.scss";
 @import "indivisual/company.scss";
 
-.text-bold {
-  font-weight: bold;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.w50 {
-  width: 50%;
-}
-
-.select {
-  border-radius: 5px;
-}
-
 .select-sub {
   display: inline-block;
   -webkit-appearance: none;
@@ -67,6 +36,10 @@
   font-size: 100%;
   cursor: pointer;
 
+  border-radius: 5px;
+}
+
+.select {
   border-radius: 5px;
 }
 

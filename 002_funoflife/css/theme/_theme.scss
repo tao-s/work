@@ -3,6 +3,11 @@ body {
   line-height: 1.5;
   color: #333;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+
+  @include sp() {
+    min-width: unset;
+  }
+
   min-width: 1200px;
 }
 

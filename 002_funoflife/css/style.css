@@ -541,6 +541,12 @@ body {
   min-width: 1200px;
 }
 
+@media screen and (max-width: 640px) {
+  body {
+    min-width: unset;
+  }
+}
+
 .globalViewport {
   width: 1200px;
   margin-left: auto;
@@ -765,12 +771,6 @@ body {
   border-top: none;
 }
 
-.globalFooter > div {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .globalFooter .copyright {
   float: right;
 }
@@ -803,7 +803,6 @@ body {
 }
 
 .globalFooter .footer-links-inner {
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -862,6 +861,40 @@ body {
   font-size: 9px;
   color: #555555;
   margin-top: 4px;
+}
+
+@media screen and (max-width: 640px) {
+  .globalFooter {
+    width: 100%;
+  }
+  .globalFooter .sp-footer-info {
+    color: #F6AC00;
+    padding: 15px 0;
+  }
+  .globalFooter .footer-links {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    text-align: left;
+  }
+  .globalFooter .footer-links-inner li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  .globalFooter .footer-links-inner li + li {
+    margin-left: 0;
+  }
+  .globalFooter .footer-links-inner li a {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 30px;
+  }
+  .globalFooter .footer-links-inner .footer-links {
+    height: auto;
+  }
 }
 
 @-webkit-keyframes fadeOut {
@@ -1456,6 +1489,46 @@ input[type=password].is-error {
   margin-right: auto;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+@media screen and (min-width: 640px) {
+  .pc-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sp-none {
+    display: none;
+  }
+}
+
 .quit {
   background-color: #F0F0F0;
 }
@@ -1614,38 +1687,6 @@ input[type=password].is-error {
   margin-left: 10px;
 }
 
-.text-bold {
-  font-weight: bold;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.w50 {
-  width: 50%;
-}
-
-.select {
-  border-radius: 5px;
-}
-
 .select-sub {
   display: inline-block;
   -webkit-appearance: none;
@@ -1658,6 +1699,10 @@ input[type=password].is-error {
   outline: none;
   font-size: 100%;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.select {
   border-radius: 5px;
 }
 
