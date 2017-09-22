@@ -1,0 +1,112 @@
+.company-profile {
+
+  margin-top: 35px;
+
+  h2 {
+    img {
+      width: 375px;
+    }
+  }
+
+  .main-table {
+    margin-top: 35px;
+    border-spacing: 0px 10px;
+    border-collapse: separate;
+
+    th {
+      background-color: #649E00;
+      color: #FFF;
+      padding: 15px;
+      width: 170px;
+    }
+
+    td {
+      border: none;
+      background-color: #F0F0F0;
+      padding: 15px;
+    }
+  }
+}
+
+.company-profile-inner {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.company-service {
+  padding: 35px 0;
+
+  h2 {
+    img {
+      width: 222px;
+    }
+  }
+}
+
+.company-service-list {
+  text-align: center;
+  margin-top: 20px;
+
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      width: 100%;
+    }
+
+    + li {
+      margin-left: 70px;
+    }
+  }
+}
+
+.company-access {
+  padding: 40px 0;
+  background-color: #FAFAFA;
+
+  h2 {
+    img {
+      width: 144px;
+    }
+  }
+}
+
+.company-access-inner {
+  width: 1000px;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: #F0F0F0;
+}
+
+.company-access-map {
+  width: 980px;
+}
+
+.company-access-map-detail {
+  margin-top: 10px;
+
+  h3 {
+    background-color: $orange;
+    color: #FFF;
+    line-height: 34px;
+    height: 34px;
+    padding-left: 10px;
+  }
+}
+
+.company-access-map-detail-address,
+.company-access-map-detail-access
+ {
+  width: (980px/2 - 10px);
+  background-color: #FFF;
+
+  p {
+    line-height: 34px;
+    height: 34px;
+    padding-left: 20px;
+  }
+}
+
+.company-access-map-detail-access {
+  margin-left: 10px;
+}
