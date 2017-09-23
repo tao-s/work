@@ -1998,6 +1998,72 @@ _contact
   }
 }
 
+.done {
+  background-color: #F0F0F0;
+  padding: 50px 0;
+}
+
+.done p {
+  line-height: 1.7;
+}
+
+.done .button {
+  display: block;
+  color: #FFF;
+  background-color: #649E00;
+  width: 335px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.done .button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.done h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.done .done-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.done .httpStatus {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.done .httpStatus img {
+  margin-top: 50px;
+  width: 335px;
+}
+
+@media screen and (max-width: 640px) {
+  .done {
+    padding: 20px 0;
+  }
+  .done h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .done .done-inner {
+    width: auto;
+    padding: 20px 0;
+  }
+  .done .button {
+    width: calc(100% - 20px);
+  }
+}
+
 .select-sub {
   display: inline-block;
   -webkit-appearance: none;

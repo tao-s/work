@@ -33,36 +33,5 @@
     </div>
   </div>
   <!-- ここにfooter.htmlを挿入してください -->
-  <script>
-  $(function() {
-    $(".jsc-modal-open").click(function() {
-      $(this).blur();
-      $("body").append('<div class="jsc-modal-overlay"></div>');
-      $(".jsc-modal-overlay").fadeIn("slow");
-      $(".jsc-modal-content").fadeIn("slow");
-      $('.header-menu-button').attr('style', 'display: none;');
-      $('.header-menu-close-button').removeAttr('style', 'display: none;');
-    });
-
-    $(".jsc-modal-close").unbind().click(function() {
-      $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow",function() {
-        $(".jsc-#modal-overlay").remove();
-      });
-      $('.header-menu-close-button').attr('style', 'display: none;');
-      $('.header-menu-button').removeAttr('style', 'display: none;');
-    });
-
-    $(document).on("click", ".jsc-modal-overlay", function() {
-
-      $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow",function() {
-
-        $(".jsc-modal-overlay").remove();
-      });
-
-      $('.header-menu-close-button').attr('style', 'display: none;');
-      $('.header-menu-button').removeAttr('style', 'display: none;');
-    });
-  });
-  </script>
 </body>
 </html>
