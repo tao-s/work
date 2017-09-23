@@ -1865,6 +1865,9 @@ input[type=password].is-error {
 }
 
 @media screen and (max-width: 640px) {
+  .error {
+    padding: 20px 0;
+  }
   .error .globalViewport {
     width: auto;
   }
