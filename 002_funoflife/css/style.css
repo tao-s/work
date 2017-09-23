@@ -900,8 +900,8 @@ body {
   margin: 40px auto 40px;
 }
 
-.globalFooter .footer-banner img + img {
-  margin-left: 6%;
+.globalFooter .footer-banner a + a {
+  margin-left: 20px;
 }
 
 .globalFooter .footer-banner img {
@@ -1010,6 +1010,16 @@ body {
   }
   .globalFooter .footer-links-inner .footer-links {
     height: auto;
+  }
+  .globalFooter .footer-sp-banner {
+    padding: 10px;
+  }
+  .globalFooter .footer-sp-banner a {
+    display: block;
+  }
+  .globalFooter .footer-sp-banner a + a {
+    margin-top: 10px;
+    display: block;
   }
 }
 
@@ -1135,6 +1145,22 @@ body {
 }
 
 .main-button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.sub-button {
+  border-radius: 4px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #F6AC00;
+  color: #FFF;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.sub-button:hover {
   text-decoration: none;
   opacity: 0.8;
 }
@@ -1883,6 +1909,92 @@ input[type=password].is-error {
   }
   .error .button {
     width: calc(100% - 20px);
+  }
+}
+
+/*********************
+_contact
+*********************/
+.contact {
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #DFDFDF;
+  padding: 30px 0;
+}
+
+.contact .m-table {
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.contact .m-table input {
+  height: 50px;
+}
+
+.contact .m-table th {
+  font-weight: bold;
+}
+
+.contact .m-table th, .contact .m-table td {
+  background-color: transparent;
+  border: none;
+}
+
+.contact .m-table .w100 {
+  width: 100%;
+}
+
+.contact .m-table input, .contact .m-table select, .contact .m-table textarea {
+  border-radius: 5px;
+}
+
+.contact .m-table input, .contact .m-table textarea {
+  background-color: #F8F8F8;
+}
+
+.contact .m-button--default {
+  background-color: #F6AC00;
+  border-bottom: none;
+}
+
+.contact .contact-form {
+  margin-bottom: 30px;
+}
+
+.contact .contact-form h2 {
+  width: 240px;
+  margin: 0 auto;
+}
+
+.contact .contact-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.contact .sub-button {
+  width: 240px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  .contact .contact-inner {
+    width: 100%;
+  }
+  .contact .m-table {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+  .contact .m-table tbody, .contact .m-table tr, .contact .m-table th, .contact .m-table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .contact .m-table tr + tr {
+    margin-top: 5px;
+  }
+  .contact .contact-button-area {
+    margin-top: 20px;
   }
 }
 
@@ -2839,64 +2951,6 @@ recruiter
 .recruiter-flow-inner {
   width: 1024px;
   margin: 0 auto;
-}
-
-/*********************
-_contact
-*********************/
-.contact {
-  background-color: #F0F0F0;
-  border-bottom: 1px solid #DFDFDF;
-}
-
-.contact .m-table {
-  width: 80%;
-  margin: 30px auto 0;
-}
-
-.contact .m-table input {
-  height: 50px;
-}
-
-.contact .m-table th {
-  font-weight: bold;
-}
-
-.contact .m-table th, .contact .m-table td {
-  background-color: transparent;
-  border: none;
-}
-
-.contact .m-table .w100 {
-  width: 100%;
-}
-
-.contact .m-table input, .contact .m-table select, .contact .m-table textarea {
-  border-radius: 5px;
-}
-
-.contact .m-table input, .contact .m-table textarea {
-  background-color: #F8F8F8;
-}
-
-.contact .m-button--default {
-  background-color: #F6AC00;
-  border-bottom: none;
-}
-
-.contact-form {
-  margin-bottom: 30px;
-}
-
-.contact-form h2 {
-  width: 240px;
-  margin: 0 auto;
-}
-
-.contact-inner {
-  background-color: #FFF;
-  padding: 50px 0;
-  margin-bottom: 50px !important;
 }
 
 /*********************

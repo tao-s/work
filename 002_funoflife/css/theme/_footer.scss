@@ -12,8 +12,8 @@
     width: 1000px;
     margin: 40px auto 40px;
 
-    img + img {
-      margin-left: 6%;
+    a + a {
+      margin-left: 20px;
     }
 
     img {
@@ -134,5 +134,19 @@
         height: auto;
       }
     }
+
+    .footer-sp-banner {
+      padding: 10px;
+
+      a {
+        display: block;
+
+        & + a {
+          margin-top: 10px;
+          display: block;
+        }
+      }
+    }
   }
+
 }

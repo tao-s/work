@@ -23,6 +23,7 @@
 @import "indivisual/quit.scss";
 @import "indivisual/company.scss";
 @import "indivisual/error.scss";
+@import "indivisual/contact.scss";
 
 .select-sub {
   display: inline-block;
@@ -988,65 +989,6 @@ recruiter
 .recruiter-flow-inner {
   width: 1024px;
   margin: 0 auto;
-}
-
-/*********************
-_contact
-*********************/
-.contact {
-  background-color: #F0F0F0;
-  border-bottom: 1px solid #DFDFDF;
-
-  .m-table {
-    width: 80%;
-    margin: 30px auto 0;
-
-    input {
-      height: 50px;
-    }
-
-    th {
-      font-weight: bold;
-    }
-
-    th, td {
-      background-color: transparent;
-      border: none;
-    }
-
-    .w100 {
-      width: 100%;
-    }
-
-    input, select, textarea {
-      border-radius: 5px;
-    }
-
-    input, textarea {
-      background-color: #F8F8F8;
-    }
-
-  }
-
-  .m-button--default {
-    background-color: #F6AC00;
-    border-bottom: none;
-  }
-
-}
-
-.contact-form {
-  h2 {
-    width: 240px;
-    margin: 0 auto;
-  }
-  margin-bottom: 30px;
-}
-
-.contact-inner {
-  background-color: #FFF;
-  padding: 50px 0;
-  margin-bottom: 50px !important;
 }
 
 /*********************

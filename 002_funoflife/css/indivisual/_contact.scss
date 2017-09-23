@@ -1,0 +1,93 @@
+
+/*********************
+_contact
+*********************/
+.contact {
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #DFDFDF;
+  padding: 30px 0;
+
+  .m-table {
+    width: 80%;
+    margin: 30px auto 0;
+
+    input {
+      height: 50px;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    th, td {
+      background-color: transparent;
+      border: none;
+    }
+
+    .w100 {
+      width: 100%;
+    }
+
+    input, select, textarea {
+      border-radius: 5px;
+    }
+
+    input, textarea {
+      background-color: #F8F8F8;
+    }
+
+  }
+
+  .m-button--default {
+    background-color: #F6AC00;
+    border-bottom: none;
+  }
+
+
+  .contact-form {
+    h2 {
+      width: 240px;
+      margin: 0 auto;
+    }
+    margin-bottom: 30px;
+  }
+
+  .contact-inner {
+    background-color: #FFF;
+    padding: 50px 0;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .sub-button {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  @include sp() {
+    .contact-inner {
+      width: 100%;
+    }
+
+    .m-table {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+
+      tbody, tr, th, td {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      tr + tr {
+        margin-top: 5px;
+      }
+    }
+
+    .contact-button-area {
+      margin-top: 20px;
+    }
+  };
+
+
+}
