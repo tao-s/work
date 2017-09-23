@@ -879,8 +879,8 @@ body {
     width: 100%;
     color: #FFF;
     font-size: 18px;
-    height: 62px;
-    line-height: 62px;
+    height: 52px;
+    line-height: 52px;
   }
   .globalHeader .header-menu-list-area li a :hover {
     text-decoration: none;
@@ -1817,6 +1817,70 @@ input[type=password].is-error {
 
 .company-access-map-detail-access {
   margin-left: 10px;
+}
+
+.error {
+  background-color: #F0F0F0;
+  padding: 50px 0;
+}
+
+.error .button {
+  display: block;
+  color: #FFF;
+  background-color: #649E00;
+  width: 335px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.error .button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.error h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.error .error-inner {
+  background-color: #FFF;
+  padding: 50px 0;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.error .httpStatus {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.error .httpStatus img {
+  margin-top: 50px;
+  width: 335px;
+}
+
+@media screen and (max-width: 640px) {
+  .error .globalViewport {
+    width: auto;
+  }
+  .error .httpStatus {
+    width: auto;
+  }
+  .error .httpStatus img {
+    width: 215px;
+  }
+  .error .error-inner {
+    width: auto;
+    padding: 20px 0;
+  }
+  .error .button {
+    width: calc(100% - 20px);
+  }
 }
 
 .select-sub {
@@ -2830,47 +2894,6 @@ _contact
   background-color: #FFF;
   padding: 50px 0;
   margin-bottom: 50px !important;
-}
-
-/*********************
-_error _404
-*********************/
-.error {
-  background-color: #F0F0F0;
-}
-
-.error .button {
-  display: block;
-  color: #FFF;
-  background-color: #649E00;
-  width: 335px;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.error h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.error-inner {
-  background-color: #FFF;
-  padding: 50px 0;
-  margin-bottom: 50px !important;
-}
-
-.httpStatus {
-  width: 600px;
-  margin: 0 auto;
-}
-
-.httpStatus img {
-  margin-top: 50px;
-  width: 335px;
 }
 
 /*********************
