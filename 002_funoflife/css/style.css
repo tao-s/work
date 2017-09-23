@@ -533,10 +533,6 @@ textarea {
   margin-right: auto;
 }
 
-.sidebar {
-  position: fixed;
-}
-
 .side-profile {
   background-color: #FFF;
   padding: 10px 10px 8px 10px;
@@ -2407,10 +2403,6 @@ _contact
   position: relative;
 }
 
-.mypage .mypage-main {
-  margin-left: 29.875%;
-}
-
 .mypage .mypage-main-resume {
   background-color: #FFF;
   padding-bottom: 5px;
@@ -2453,6 +2445,7 @@ _contact
 
 .mypage .mypage-edit:hover {
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .mypage .mypage-edit:before {
@@ -2478,87 +2471,23 @@ _contact
   margin: 10px;
 }
 
-.mypage .mypage {
-  background-color: #F0F0F0;
-  padding: 30px 0;
-}
-
-.mypage .mypage-header {
-  background-color: #649E00;
-  color: #FFF;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 15px;
-  font-size: 20px;
-  position: relative;
-}
-
-.mypage .mypage-main-resume {
-  background-color: #FFF;
-  padding-bottom: 5px;
-}
-
-.mypage .mypage-main-resume-table {
-  margin: 10px auto;
-  border: 1px solid #E8E8E8;
-  width: calc(95% - 20px);
-}
-
-.mypage .mypage-main-resume-table th {
-  background-color: #FAFAFA;
-  width: 25%;
-  border-right: 1px solid #E8E8E8;
-  line-height: 3;
-  padding-left: 15px;
-}
-
-.mypage .mypage-main-resume-table td {
-  padding-left: 15px;
-}
-
-.mypage .mypage-main-resume-table tr {
-  border-bottom: 1px solid #E8E8E8;
-}
-
-.mypage .mypage-edit {
-  background-color: #FFF;
-  color: #649E00;
-  line-height: 28px;
-  height: 28px;
-  border-radius: 5px;
-  padding: 0 20px 0 40px;
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 6px;
-}
-
-.mypage .mypage-edit:hover {
-  text-decoration: none;
-}
-
-.mypage .mypage-edit:before {
-  content: '';
-  background: url(../images/icon-pencil.svg);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  left: 0px;
-  top: -2px;
-}
-
-.mypage .mypage-main-summary, .mypage .mypage-main-topic {
-  background-color: #FFF;
-  padding-bottom: 10px;
-}
-
-.mypage .mypage-main-summary p, .mypage .mypage-main-topic p {
-  border: 1px solid #F0F0F0;
-  padding: 10px 20px;
-  margin: 10px;
+@media screen and (max-width: 640px) {
+  .mypage .mypage-main {
+    width: 100%;
+  }
+  .mypage .mypage-inner {
+    width: 100%;
+  }
+  .mypage .mypage-header {
+    font-size: 16px;
+  }
+  .mypage .mypage-main-resume-table th {
+    line-height: 1.5;
+    padding: 15px;
+  }
+  .mypage .mypage-main-resume-table td {
+    padding: 10px 15px;
+  }
 }
 
 .select-sub {

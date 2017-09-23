@@ -18,10 +18,6 @@
     position: relative;
   }
 
-  .mypage-main {
-    margin-left: 29.875%;
-  }
-
   .mypage-main-resume {
     background-color: #FFF;
     padding-bottom: 5px;
@@ -64,6 +60,7 @@
 
     &:hover {
       text-decoration: none;
+      opacity: 0.8;
     }
 
     &:before {
@@ -90,90 +87,29 @@
     }
   }
 
-  .mypage {
-    background-color: #F0F0F0;
-    padding: 30px 0;
-  }
-
-  .mypage-header {
-    background-color: #649E00;
-    color: #FFF;
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    // font-weight: bold;
-    padding-left: 15px;
-    font-size: 20px;
-    position: relative;
-  }
-
-
-
-  .mypage-main-resume {
-    background-color: #FFF;
-    padding-bottom: 5px;
-  }
-
-  .mypage-main-resume-table {
-    margin: 10px auto;
-
-    border: 1px solid #E8E8E8;
-    width: calc(95% - 20px);
-
-    th {
-      background-color: #FAFAFA;
-      width: 25%;
-      border-right: 1px solid #E8E8E8;
-      line-height: 3;
-      padding-left: 15px;
+  @include sp() {
+    .mypage-main {
+      width: 100%;
     }
 
-    td {
-      padding-left: 15px;
+    .mypage-inner {
+      width: 100%;
     }
 
-    tr {
-      border-bottom: 1px solid #E8E8E8;
-    }
-  }
-
-  .mypage-edit {
-    background-color: #FFF;
-    color: #649E00;
-    line-height: 28px;
-    height: 28px;
-    border-radius: 5px;
-    padding: 0 20px 0 40px;
-    display: inline-block;
-    position: absolute;
-    right: 20px;
-    top: 6px;
-
-    &:hover {
-      text-decoration: none;
+    .mypage-header {
+      font-size: 16px;
     }
 
-    &:before {
-      content: '';
-      background: url(../images/icon-pencil.svg);
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 30px;
-      height: 30px;
-      left: 0px;
-      top: -2px;
-    }
-  }
+    .mypage-main-resume-table {
+      th {
+        line-height: 1.5;
+        padding: 15px;
+      }
 
-  .mypage-main-summary, .mypage-main-topic {
-    background-color: #FFF;
-    padding-bottom: 10px;
-
-    p {
-      border: 1px solid #F0F0F0;
-      padding: 10px 20px;
-      margin: 10px;
+      td {
+        padding: 10px 15px;
+      }
     }
-  }
+
+  };
 }
