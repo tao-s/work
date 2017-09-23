@@ -1,0 +1,220 @@
+.account {
+  background-color: #F0F0F0;
+  padding: 30px 0;
+
+  textarea {
+    width: calc(100% - 20px);
+    margin: 15px auto;
+    display: block;
+    background-color: #FAFAFA;
+  }
+
+  select {
+    border-radius: 5px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .account-inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .account-header {
+    background-color: #649E00;
+    color: #FFF;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    // font-weight: bold;
+    padding-left: 15px;
+    font-size: 20px;
+    position: relative;
+  }
+
+  .account-main-resume {
+    background-color: #FFF;
+    padding-bottom: 5px;
+  }
+
+  .account-main-resume-table {
+    margin: 10px auto;
+
+    border: 1px solid #E8E8E8;
+    width: calc(95% - 20px);
+
+    th {
+      background-color: #FAFAFA;
+      width: 25%;
+      border-right: 1px solid #E8E8E8;
+      line-height: 3;
+      padding-left: 15px;
+    }
+
+    td {
+      padding-left: 15px;
+    }
+
+    tr {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  .account-account {
+    background-color: #FFF;
+    color: #649E00;
+    line-height: 28px;
+    height: 28px;
+    border-radius: 5px;
+    padding: 0 20px 0 40px;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+      background: url(../images/icon-pencil.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      left: 0px;
+      top: -2px;
+    }
+  }
+
+  .account-main-summary, .account-main-topic {
+    background-color: #FFF;
+    padding-bottom: 10px;
+
+    p {
+      border: 1px solid #F0F0F0;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  }
+
+  .account-header {
+    background-color: #649E00;
+    color: #FFF;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    // font-weight: bold;
+    padding-left: 15px;
+    font-size: 20px;
+    position: relative;
+  }
+
+  .account-side-profile {
+    background-color: #FFF;
+    padding: 10px 10px 8px 10px;
+  }
+
+  .account-side-profile-table {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 2;
+
+    th {
+      background-color: #999999;
+      color: #FFF;
+      width: 30%;
+      text-align: center;
+    }
+
+    td {
+      background-color: #F0F0F0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    tr {
+      border-bottom: 1px solid #FFF;
+    }
+  }
+
+  .account-side-link {
+    background-color: #FFF;
+  }
+
+  .account-side-link-list {
+
+    li {
+      padding: 8px 20px;
+      border-bottom: 1px solid #E3E3E3;
+    }
+
+    span {
+      float: right;
+    }
+  }
+
+  .account-main-button-area {
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+
+    .negative-button, .sub-button {
+      width: 160px;
+      vertical-align: middle;
+    }
+  }
+
+  @include sp() {
+    form {
+      padding: 0;
+    }
+
+    select {
+      // overwrite width: 50%;
+      width: 100%;
+    }
+
+    .select-sub {
+      width: auto;
+    }
+
+    .account-inner, .account-main {
+      width: 100%;
+    }
+
+    .account-main {
+      table {
+        tr, td, th {
+          display: block;
+          width: 100%;
+          border: none;
+        }
+
+        td, th {
+          padding: 10px 15px;
+        }
+      }
+    }
+
+    .account-main-button-area {
+      background-color: #FAFAFA;
+
+      .negative-button {
+        width: 30%;
+      }
+
+      .sub-button {
+        width: 60%;
+      }
+    }
+
+    .account .account-main-resume {
+      padding-bottom: 0;
+    }
+  };
+}

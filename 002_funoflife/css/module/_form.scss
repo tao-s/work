@@ -14,3 +14,28 @@ input[type=password] {
     }
   }
 }
+
+input[type=text] {
+  padding: 10px 10px;
+  border: 1px solid #CCC;
+}
+
+.select-sub {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/arrow-select-sub.png) no-repeat right 10px center #FFF;
+  padding: 10px 45px 10px 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 100%;
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+.select {
+  border-radius: 5px;
+}

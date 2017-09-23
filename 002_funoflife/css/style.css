@@ -1252,6 +1252,30 @@ input[type=password].is-error {
   margin-right: 0;
 }
 
+input[type=text] {
+  padding: 10px 10px;
+  border: 1px solid #CCC;
+}
+
+.select-sub {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/arrow-select-sub.png) no-repeat right 10px center #FFF;
+  padding: 10px 45px 10px 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select {
+  border-radius: 5px;
+}
+
 .m-table {
   text-indent: 0;
 }
@@ -2690,23 +2714,205 @@ _contact
   }
 }
 
-.select-sub {
-  display: inline-block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(../images/arrow-select-sub.png) no-repeat right 10px center #FFF;
-  padding: 10px 55px 10px 15px;
-  border-radius: 0;
-  border: 1px solid #ccc;
-  outline: none;
-  font-size: 100%;
-  cursor: pointer;
+.account {
+  background-color: #F0F0F0;
+  padding: 30px 0;
+}
+
+.account textarea {
+  width: calc(100% - 20px);
+  margin: 15px auto;
+  display: block;
+  background-color: #FAFAFA;
+}
+
+.account select {
   border-radius: 5px;
 }
 
-.select {
+.account form {
+  padding: 10px;
+}
+
+.account .account-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.account .account-header {
+  background-color: #649E00;
+  color: #FFF;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: 20px;
+  position: relative;
+}
+
+.account .account-main-resume {
+  background-color: #FFF;
+  padding-bottom: 5px;
+}
+
+.account .account-main-resume-table {
+  margin: 10px auto;
+  border: 1px solid #E8E8E8;
+  width: calc(95% - 20px);
+}
+
+.account .account-main-resume-table th {
+  background-color: #FAFAFA;
+  width: 25%;
+  border-right: 1px solid #E8E8E8;
+  line-height: 3;
+  padding-left: 15px;
+}
+
+.account .account-main-resume-table td {
+  padding-left: 15px;
+}
+
+.account .account-main-resume-table tr {
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.account .account-account {
+  background-color: #FFF;
+  color: #649E00;
+  line-height: 28px;
+  height: 28px;
   border-radius: 5px;
+  padding: 0 20px 0 40px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 6px;
+}
+
+.account .account-account:hover {
+  text-decoration: none;
+}
+
+.account .account-account:before {
+  content: '';
+  background: url(../images/icon-pencil.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: -2px;
+}
+
+.account .account-main-summary, .account .account-main-topic {
+  background-color: #FFF;
+  padding-bottom: 10px;
+}
+
+.account .account-main-summary p, .account .account-main-topic p {
+  border: 1px solid #F0F0F0;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.account .account-header {
+  background-color: #649E00;
+  color: #FFF;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: 20px;
+  position: relative;
+}
+
+.account .account-side-profile {
+  background-color: #FFF;
+  padding: 10px 10px 8px 10px;
+}
+
+.account .account-side-profile-table {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 2;
+}
+
+.account .account-side-profile-table th {
+  background-color: #999999;
+  color: #FFF;
+  width: 30%;
+  text-align: center;
+}
+
+.account .account-side-profile-table td {
+  background-color: #F0F0F0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.account .account-side-profile-table tr {
+  border-bottom: 1px solid #FFF;
+}
+
+.account .account-side-link {
+  background-color: #FFF;
+}
+
+.account .account-side-link-list li {
+  padding: 8px 20px;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.account .account-side-link-list span {
+  float: right;
+}
+
+.account .account-main-button-area {
+  background-color: #FFF;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.account .account-main-button-area .negative-button, .account .account-main-button-area .sub-button {
+  width: 160px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 640px) {
+  .account form {
+    padding: 0;
+  }
+  .account select {
+    width: 100%;
+  }
+  .account .select-sub {
+    width: auto;
+  }
+  .account .account-inner, .account .account-main {
+    width: 100%;
+  }
+  .account .account-main table tr, .account .account-main table td, .account .account-main table th {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  .account .account-main table td, .account .account-main table th {
+    padding: 10px 15px;
+  }
+  .account .account-main-button-area {
+    background-color: #FAFAFA;
+  }
+  .account .account-main-button-area .negative-button {
+    width: 30%;
+  }
+  .account .account-main-button-area .sub-button {
+    width: 60%;
+  }
+  .account .account .account-main-resume {
+    padding-bottom: 0;
+  }
 }
 
 .breadcrumbs {
@@ -2723,14 +2929,14 @@ _contact
   margin: 0 10px;
 }
 
-.button-green {
-  background-color: #649E00;
-  display: inline-block;
-}
-
 .breadcrumbs-inner {
   width: 1200px;
   margin: 0 auto;
+}
+
+.button-green {
+  background-color: #649E00;
+  display: inline-block;
 }
 
 .kibo {
@@ -3955,310 +4161,6 @@ _edit
 }
 
 .edit-main-button-area .detail:hover {
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-/*********************
-_account
-*********************/
-.account {
-  background-color: #F0F0F0;
-  padding: 30px 0;
-}
-
-.account textarea {
-  width: calc( 100% - 20px);
-  margin: 15px auto;
-  display: block;
-  background-color: #FAFAFA;
-}
-
-.account select {
-  border-radius: 5px;
-}
-
-.account-header {
-  background-color: #649E00;
-  color: #FFF;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 15px;
-  font-size: 20px;
-  position: relative;
-}
-
-.account-side-profile {
-  background-color: #FFF;
-  padding: 10px 10px 8px 10px;
-}
-
-.account-side-profile-table {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 2;
-}
-
-.account-side-profile-table th {
-  background-color: #999999;
-  color: #FFF;
-  width: 30%;
-  text-align: center;
-}
-
-.account-side-profile-table td {
-  background-color: #F0F0F0;
-  font-weight: bold;
-  text-align: center;
-}
-
-.account-side-profile-table tr {
-  border-bottom: 1px solid #FFF;
-}
-
-.account-side-link {
-  background-color: #FFF;
-}
-
-.account-side-link-list li {
-  padding: 8px 20px;
-  border-bottom: 1px solid #E3E3E3;
-}
-
-.account-side-link-list span {
-  float: right;
-}
-
-.account-main-resume {
-  background-color: #FFF;
-  padding-bottom: 5px;
-}
-
-.account-main-resume-table {
-  margin: 10px auto;
-  border: 1px solid #E8E8E8;
-  width: calc(95% - 20px);
-}
-
-.account-main-resume-table th {
-  background-color: #FAFAFA;
-  width: 25%;
-  border-right: 1px solid #E8E8E8;
-  line-height: 3;
-  padding-left: 15px;
-}
-
-.account-main-resume-table td {
-  padding-left: 15px;
-}
-
-.account-main-resume-table tr {
-  border-bottom: 1px solid #E8E8E8;
-}
-
-.account-account {
-  background-color: #FFF;
-  color: #649E00;
-  line-height: 28px;
-  height: 28px;
-  border-radius: 5px;
-  padding: 0 20px 0 40px;
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 6px;
-}
-
-.account-account:hover {
-  text-decoration: none;
-}
-
-.account-account:before {
-  content: '';
-  background: url(../images/icon-pencil.svg);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  left: 0px;
-  top: -2px;
-}
-
-.account-main-summary, .account-main-topic {
-  background-color: #FFF;
-  padding-bottom: 10px;
-}
-
-.account-main-summary p, .account-main-topic p {
-  border: 1px solid #F0F0F0;
-  padding: 10px 20px;
-  margin: 10px;
-}
-
-.account {
-  background-color: #F0F0F0;
-  padding: 30px 0;
-}
-
-.account form {
-  padding: 10px;
-}
-
-.account-header {
-  background-color: #649E00;
-  color: #FFF;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 15px;
-  font-size: 20px;
-  position: relative;
-}
-
-.account-side-profile {
-  background-color: #FFF;
-  padding: 10px 10px 8px 10px;
-}
-
-.account-side-profile-table {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 2;
-}
-
-.account-side-profile-table th {
-  background-color: #999999;
-  color: #FFF;
-  width: 30%;
-  text-align: center;
-}
-
-.account-side-profile-table td {
-  background-color: #F0F0F0;
-  font-weight: bold;
-  text-align: center;
-}
-
-.account-side-profile-table tr {
-  border-bottom: 1px solid #FFF;
-}
-
-.account-side-link {
-  background-color: #FFF;
-}
-
-.account-side-link-list li {
-  padding: 8px 20px;
-  border-bottom: 1px solid #E3E3E3;
-}
-
-.account-side-link-list span {
-  float: right;
-}
-
-.account-main-resume {
-  background-color: #FFF;
-  padding-bottom: 5px;
-}
-
-.account-main-resume-table {
-  margin: 10px auto;
-  border: 1px solid #E8E8E8;
-  width: calc(95% - 20px);
-}
-
-.account-main-resume-table th {
-  background-color: #FAFAFA;
-  width: 25%;
-  border-right: 1px solid #E8E8E8;
-  line-height: 3;
-  padding-left: 15px;
-}
-
-.account-main-resume-table td {
-  padding-left: 15px;
-}
-
-.account-main-resume-table tr {
-  border-bottom: 1px solid #E8E8E8;
-}
-
-.account-account {
-  background-color: #FFF;
-  color: #649E00;
-  line-height: 28px;
-  height: 28px;
-  border-radius: 5px;
-  padding: 0 20px 0 40px;
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 6px;
-}
-
-.account-account:hover {
-  text-decoration: none;
-}
-
-.account-account:before {
-  content: '';
-  background: url(../images/icon-pencil.svg);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  left: 0px;
-  top: -2px;
-}
-
-.account-main-summary, .account-main-topic {
-  background-color: #FFF;
-  padding-bottom: 10px;
-}
-
-.account-main-summary p, .account-main-topic p {
-  border: 1px solid #F0F0F0;
-  padding: 10px 20px;
-  margin: 10px;
-}
-
-.account-main-button-area {
-  background-color: #FFF;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.account-main-button-area .delete {
-  display: inline-block;
-  width: 150px;
-  line-height: 34px;
-  height: 34px;
-  background-color: #999999;
-  color: #FFF;
-  text-align: center;
-  border-radius: 4px;
-}
-
-.account-main-button-area .delete:hover {
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-.account-main-button-area .detail {
-  display: inline-block;
-  width: 150px;
-  line-height: 34px;
-  height: 34px;
-  background-color: #F6AC00;
-  color: #FFF;
-  text-align: center;
-  border-radius: 4px;
-}
-
-.account-main-button-area .detail:hover {
   text-decoration: none;
   opacity: 0.8;
 }
