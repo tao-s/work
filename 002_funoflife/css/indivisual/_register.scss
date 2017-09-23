@@ -1,0 +1,130 @@
+.register {
+  background-color: #F0F0F0;
+  text-align: center;
+  padding: 30px 0;
+
+  .button {
+    display: block;
+    color: #FFF;
+    background-color: #649E00;
+    width: 335px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 30px;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .register-inner {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 50px 0;
+  }
+
+  .register-form {
+    width: 383px;
+    margin: 30px auto 0;
+
+    input {
+      display: block;
+      width: 100%;
+      height: 44px;
+      margin: 15px auto;
+    }
+
+    // SNSボタンと横幅をあわせるために微調整
+    form {
+      width: 98%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+
+  .register-form-sns {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+
+      img {
+        width: 189px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .register-form-caution {
+    font-size: 10px;
+    color: #999999;
+    text-align: left;
+    margin-top: -10px;
+
+  }
+
+  .register-form-kiyaku {
+    font-size: 12px;
+    color: #555555;
+    margin-top: 10px;
+
+    a {
+      color: #375FB1;
+      text-decoration: underline;
+    }
+  }
+
+  @include sp(){
+    h2 {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #F0F0F0;
+      margin-bottom: 20px;
+    }
+
+    .register-inner {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .register-form {
+      width: 100%;
+
+      form {
+        width: 335px;
+      }
+    }
+
+    .register-form-sns {
+      display: block;
+
+      a {
+        display: block;
+
+        img {
+          width: 335px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        & + a {
+          margin-top: 20px;
+        }
+      }
+    }
+
+  };
+}

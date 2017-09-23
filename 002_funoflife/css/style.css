@@ -2078,6 +2078,126 @@ _contact
   }
 }
 
+.register {
+  background-color: #F0F0F0;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.register .button {
+  display: block;
+  color: #FFF;
+  background-color: #649E00;
+  width: 335px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.register .button:hover {
+  opacity: 0.8;
+}
+
+.register h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.register .register-inner {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 50px 0;
+}
+
+.register .register-form {
+  width: 383px;
+  margin: 30px auto 0;
+}
+
+.register .register-form input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin: 15px auto;
+}
+
+.register .register-form form {
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.register .register-form-sns {
+  display: inline-block;
+}
+
+.register .register-form-sns a {
+  display: inline-block;
+}
+
+.register .register-form-sns a img {
+  width: 189px;
+}
+
+.register .register-form-sns a:hover {
+  opacity: 0.8;
+}
+
+.register .register-form-caution {
+  font-size: 10px;
+  color: #999999;
+  text-align: left;
+  margin-top: -10px;
+}
+
+.register .register-form-kiyaku {
+  font-size: 12px;
+  color: #555555;
+  margin-top: 10px;
+}
+
+.register .register-form-kiyaku a {
+  color: #375FB1;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) {
+  .register h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 20px;
+  }
+  .register .register-inner {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .register .register-form {
+    width: 100%;
+  }
+  .register .register-form form {
+    width: 335px;
+  }
+  .register .register-form-sns {
+    display: block;
+  }
+  .register .register-form-sns a {
+    display: block;
+  }
+  .register .register-form-sns a img {
+    width: 335px;
+  }
+  .register .register-form-sns a:hover {
+    opacity: 0.8;
+  }
+  .register .register-form-sns a + a {
+    margin-top: 20px;
+  }
+}
+
 .select-sub {
   display: inline-block;
   -webkit-appearance: none;
@@ -3087,75 +3207,6 @@ _login
 .login-forget {
   display: inline-block;
   margin-top: 15px;
-  color: #375FB1;
-  text-decoration: underline;
-}
-
-/*********************
-_register
-*********************/
-.register {
-  background-color: #F0F0F0;
-  text-align: center;
-}
-
-.register .button {
-  display: block;
-  color: #FFF;
-  background-color: #649E00;
-  width: 335px;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.register h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.register-inner {
-  background-color: #FFF;
-  padding: 50px 0;
-  margin-bottom: 50px !important;
-}
-
-.register-form {
-  width: 340px;
-  margin: 30px auto 0;
-}
-
-.register-form input {
-  display: block;
-  width: 340px;
-  height: 44px;
-  margin: 15px auto;
-}
-
-.register-form-sns {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.register-form-sns img {
-  width: 49%;
-}
-
-.register-form-caution {
-  font-size: 10px;
-  color: #999999;
-  text-align: left;
-  margin-top: -10px;
-}
-
-.register-form-kiyaku {
-  margin-top: 10px;
-}
-
-.register-form-kiyaku a {
   color: #375FB1;
   text-decoration: underline;
 }

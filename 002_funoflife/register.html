@@ -24,87 +24,36 @@
 </head>
 
 <body>
-<div class="globalContainer">
-  <div class="globalHeader">
-    <div class="globalHeader__sub">
-      <div class="clearfix">
-        <a href="http://fun-of-life-nikke1925.c9users.io"><img src="/images/logo.png"></img></a>
-        <ul>
-          <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/job">求人を探す</a></li>
-          <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
-          <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
-          <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
-          <li class="signin">
-            <ul class="clearfix register">
-              <li><a href="http://fun-of-life-nikke1925.c9users.io/register">ログイン</a></li>
-              <li><a href="http://fun-of-life-nikke1925.c9users.io/register">会員登録</a></li>
-            </ul>
-          </li>
-        </ul>
+<!-- ここにheader.htmlを挿入してください -->
+<div class="register">
+  <div class="register-inner">
+    <div class="register-form">
+      <h2>新規会員登録</h2>
+      <div class="register-form-sns">
+        <a href="https://education-career.jp/auth/facebook">
+          <img src="./images/login_fb_pc.png" alt="" class="sp-none">
+          <img src="./images/login_fb_sp.png" alt="" class="pc-none">
+        </a>
+        <a href="https://education-career.jp/auth/google">
+          <img src="./images/login_google_pc.png" alt="" class="sp-none">
+          <img src="./images/login_google_sp.png" alt="" class="pc-none">
+        </a>
       </div>
+      <form action="https://education-career.jp/register" method="post">
+        <input id="inputEmail" type="text" name="email" value="" placeholder="メールアドレス">
+        <input id="inputpassword" type="password" name="password" value="" placeholder="パスワード">
+        <p class="register-form-caution">※半角英数字8文字以上</p>
+        <input id="inputPasswordConfirmation" type="password" name="password_confirmation" value="" placeholder="パスワード確認用">
+        <p class="register-form-kiyaku">
+          サービス登録前に<a href="/terms">利用規約</a>をお読みいただき、<br>
+          同意された上で登録をお願い致します。
+        </p>
+        <input type="submit" value="会員登録" class="button">
+      </form>
     </div>
   </div>
 </div>
-<div class="globalContents register">
-  <div class="globalViewport l-row ">
-    <div class="globalMain globalMain--narrow register-inner">
-      <div class="register-form">
-        <h2>新規会員登録</h2>
-        <div class="register-form-sns">
-          <a href="/"><img src="./images/login_fb_pc.png" alt=""></a>
-          <a href="/"><img src="./images/login_google_pc.png" alt=""></a>
-        </div>
-        <form action="https://education-career.jp/register" method="post">
-          <input id="inputEmail" type="text" name="email" value="" placeholder="メールアドレス">
-          <input id="inputpassword" type="password" name="password" value="" placeholder="パスワード">
-          <p class="register-form-caution">※半角英数字8文字以上</p>
-          <input id="inputPasswordConfirmation" type="password" name="password_confirmation" value="" placeholder="パスワード（確認用）">
-          <input type="submit" value="会員登録" class="button">
-          <p class="register-form-kiyaku">
-            サービス登録前に<a href="/terms">利用規約</a>をお読みいただき、<br>
-            同意された上で登録をお願い致します。
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="globalFooter">
-  <div class="footer-links">
-    <div class="footer-links-inner">
-      <ul class="clearfix">
-        <li><a href="/job">求人を探す</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者の方へ</a></li>
-        <li><a href="#">コラム</a></li>
-        <li><a href="http://www.funoflife.co.jp/" target="_blank">会社概要</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/contact">お問い合わせ</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/terms">利用規約</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/policy">プライバシーポリシー</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-info">
-    <div class="float-left footer-info-logo">
-      <img src="/images/logo.png"></img>
-    </div>
-    <p class="footer-info-company">
-      株式会社ファンオブライフ<br>
-      〒150-0001　東京都渋谷区神宮前6-19-16 U-natura301
-    </p>
-    <div class="float-right">
-      <div class="footer-button-area">
-        <a href="/register" class="footer-button">会員登録</a>
-        <a href="/register" class="footer-button">ログイン</a>
-      </div>
-      <p class="footer-copyright">
-        <small class="copyright m-text m-text--sub m-text--small">Copyright &copy; | Privacy | All right reserved
-        </small>
-      </p>
-    </div>
-  </div>
-</div>
+<!-- ここにfooter.htmlを挿入してください -->
 </div>
 
 <script src="/js/app.js"></script>
