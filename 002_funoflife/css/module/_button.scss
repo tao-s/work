@@ -66,3 +66,19 @@
     }
   }
 }
+
+.main-button {
+  border-radius: 4px;
+  height: 44px;
+  line-height: 44px;
+  background-color: $green;
+  color: #FFF;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}

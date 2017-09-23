@@ -624,16 +624,25 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.globalHeader .header-list-area {
+  position: absolute;
+  right: 30px;
+  top: 22px;
+}
+
 .globalHeader__sub {
   color: #000;
   font-size: 12px;
 }
 
 .globalHeader__sub > div {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 15px 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .globalHeader__sub > div {
+    padding: 10px 30px;
+  }
 }
 
 .globalHeader__sub p {
@@ -769,6 +778,113 @@ body {
 
 .globalHeader__main .user .user__nav li:first-child a {
   border-top: none;
+}
+
+@media screen and (max-width: 640px) {
+  .globalHeader .globalHeader__sub {
+    position: relative;
+    height: 50px;
+  }
+  .globalHeader .header-menu-button,
+  .globalHeader .header-menu-close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .globalHeader .header-menu-button img {
+    width: 90px;
+  }
+  .globalHeader .header-menu-close-button img {
+    width: 76px;
+  }
+  .globalHeader .jsc-modal-content {
+    z-index: 2;
+    display: none;
+    color: #000000;
+    background-color: #FFFFFF;
+    position: fixed;
+    height: 560px;
+    width: 100%;
+    top: 50px;
+    left: 0px;
+  }
+  .globalHeader .jsc-modal-content form {
+    padding: 10px;
+  }
+  .globalHeader .jsc-modal-overlay {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+  }
+  .globalHeader .button-modal {
+    width: 300px !important;
+    margin: 20px auto;
+  }
+  .globalHeader .modal-close {
+    margin-top: 16px;
+  }
+  .globalHeader input[type="text"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 0px;
+    border-radius: 0;
+    width: 100%;
+    border-bottom: 1px solid #7F7F7F;
+    height: 28px;
+    line-height: 28px;
+  }
+  .globalHeader .header-menu-place, .globalHeader .header-menu-syokusyu {
+    border-radius: 5px;
+    width: calc(50% - 5px);
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .globalHeader .header-menu-syokusyu {
+    margin-left: 6px;
+  }
+  .globalHeader .header-menu-gyosyu {
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .globalHeader .m-button {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+  .globalHeader .header-menu-login-area {
+    padding: 10px;
+  }
+  .globalHeader .header-menu-login-area .main-button {
+    width: calc(50% - 7px);
+  }
+  .globalHeader .header-menu-login-area .main-button + .main-button {
+    margin-left: 10px;
+  }
+  .globalHeader .header-menu-list-area li {
+    display: block;
+    width: 100%;
+    background-color: #649E00;
+    border-bottom: 1px solid #CDE0AE;
+    text-align: center;
+  }
+  .globalHeader .header-menu-list-area li a {
+    display: block;
+    width: 100%;
+    color: #FFF;
+    font-size: 18px;
+    height: 62px;
+    line-height: 62px;
+  }
+  .globalHeader .header-menu-list-area li a :hover {
+    text-decoration: none;
+  }
 }
 
 .globalFooter .copyright {
@@ -1005,6 +1121,22 @@ body {
 .m-button.m-button--googleplus:hover {
   background: #bb3f30;
   border-color: #a13629;
+}
+
+.main-button {
+  border-radius: 4px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #649E00;
+  color: #FFF;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.main-button:hover {
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 input[type=text].is-error,
@@ -2745,7 +2877,6 @@ _error _404
 _login
 *********************/
 .login {
-  background-color: #F0F0F0;
   text-align: center;
 }
 

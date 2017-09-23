@@ -1,13 +1,22 @@
 .globalHeader {
   border-bottom: 1px solid #ccc;
 
+  .header-list-area {
+    position: absolute;
+    right: 30px;
+    top: 22px;
+  }
+
   &__sub {
     color: #000;
     font-size: 12px;
 
     > div {
-      @include viewport();
       padding: 15px 30px;
+
+      @include sp() {
+        padding: 10px 30px;
+      };
     }
 
     p {
@@ -26,7 +35,7 @@
         margin-right: 0;
       }
     }
-    
+
     img {
       height: 30px;
       width: auto;
@@ -148,3 +157,145 @@
     }
   }
 }
+
+
+@include sp() {
+.globalHeader {
+  .globalHeader__sub {
+    position: relative;
+    height: 50px;
+
+    img {
+
+    }
+  }
+
+  .header-menu-button,
+  .header-menu-close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .header-menu-button {
+    img {
+      width: 90px;
+    }
+  }
+
+  .header-menu-close-button {
+    img {
+      width: 76px;
+    }
+  }
+
+  // MODAL
+  .jsc-modal-content {
+    z-index: 2;
+    display: none;
+    color: #000000;
+    background-color: #FFFFFF;
+    position: fixed;
+    height: 560px;
+    width: 100%;
+    top: 50px;
+    left: 0px;
+
+    form {
+      padding: 10px;
+    }
+  }
+
+  .jsc-modal-overlay{
+  	z-index:1;
+  	display:none;
+  	position:fixed;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:120%;
+  }
+
+  .button-modal {
+    width: 300px!important;
+    margin: 20px auto;
+  }
+
+  .modal-close {
+    margin-top: 16px;
+  }
+
+  input[type="text"] {
+    appearance: none;
+    border: 0px;
+    border-radius: 0;
+    width: 100%;
+    border-bottom: 1px solid #7F7F7F;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .header-menu-place, .header-menu-syokusyu {
+    border-radius: 5px;
+    width: calc(50% - 5px);
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .header-menu-syokusyu {
+    margin-left: 6px;
+  }
+
+  .header-menu-gyosyu {
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .m-button {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .header-menu-login-area {
+    padding: 10px;
+
+    .main-button {
+      width: calc(50% - 7px);
+
+      + .main-button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .header-menu-list-area {
+
+    li {
+      display: block;
+      width: 100%;
+      background-color: $green;
+      border-bottom: 1px solid #CDE0AE;
+      text-align: center;
+      a {
+        display: block;
+        width: 100%;
+        color: #FFF;
+        font-size: 18px;
+        height: 62px;
+        line-height: 62px;
+        :hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
+};

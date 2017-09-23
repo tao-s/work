@@ -17,6 +17,7 @@
 
   <link rel="icon" href="/favicon.ico">
   <link href="./css/style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
   <style type="text/css">
   </style>
 </head>
@@ -27,18 +28,137 @@
       <div class="globalHeader__sub">
         <div class="clearfix">
           <a href="http://fun-of-life-nikke1925.c9users.io"><img src="/images/logo.png"></img></a>
-          <ul>
-            <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/job">求人を探す</a></li>
-            <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
-            <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
-            <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
-            <li class="signin">
-              <ul class="clearfix login">
-                <li><a href="http://fun-of-life-nikke1925.c9users.io/login">ログイン</a></li>
-                <li><a href="http://fun-of-life-nikke1925.c9users.io/register">会員登録</a></li>
-              </ul>
-            </li>
-          </ul>
+          <div class="sp-none header-list-area">
+            <ul>
+              <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/job">求人を探す</a></li>
+              <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
+              <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
+              <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
+              <li class="signin">
+                <ul class="clearfix login">
+                  <li><a href="http://fun-of-life-nikke1925.c9users.io/login">ログイン</a></li>
+                  <li><a href="http://fun-of-life-nikke1925.c9users.io/register">会員登録</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="pc-none">
+            <!-- メニュー閉じているとき表示 -->
+            <a href="#" class="jsc-modal-open header-menu-button"><img src="images/header-menu.svg" alt=""></a>
+            <!-- メニュー開いているとき表示 -->
+            <a href="#" class="jsc-modal-close header-menu-close-button" style="display: none;"><img src="images/header-menu-close.svg" alt=""></a>
+            <!-- モーダルコンテンツ -->
+            <div class="jsc-modal-content">
+              <form action="https://education-career.jp/job" method="get">
+                <input type="text" name="keyword" placeholder="希望の求人を探してみましょう。" value="" class="keyword">
+                <select name="job_category" class="header-menu-place">
+                  <option value="">職種を選択</option>
+                  <option value="1">営業職</option>
+                  <option value="2">企画・管理系職</option>
+                  <option value="3">エンジニア・技術関連職</option>
+                  <option value="4">クリエイティブ・クリエイター系職種</option>
+                  <option value="5">講師・教員関連職種</option>
+                  <option value="6">専門職種（コンサルタント・士業系等）</option>
+                  <option value="7">事務系職種</option>
+                  <option value="8">その他</option>
+                </select>
+                <select name="prefecture" class="header-menu-syokusyu">
+                    <option value="">勤務地を選択</option>
+                    <option value="1">東京都</option>
+                    <option value="2">北海道</option>
+                    <option value="3">青森県</option>
+                    <option value="6">秋田県</option>
+                    <option value="4">岩手県</option>
+                    <option value="7">山形県</option>
+                    <option value="5">宮城県</option>
+                    <option value="8">福島県</option>
+                    <option value="9">茨城県</option>
+                    <option value="10">栃木県</option>
+                    <option value="11">群馬県</option>
+                    <option value="14">神奈川県</option>
+                    <option value="12">埼玉県</option>
+                    <option value="13">千葉県</option>
+                    <option value="16">富山県</option>
+                    <option value="17">石川県</option>
+                    <option value="18">福井県</option>
+                    <option value="15">新潟県</option>
+                    <option value="19">山梨県</option>
+                    <option value="20">長野県</option>
+                    <option value="23">愛知県</option>
+                    <option value="22">静岡県</option>
+                    <option value="24">三重県</option>
+                    <option value="21">岐阜県</option>
+                    <option value="26">京都府</option>
+                    <option value="27">大阪府</option>
+                    <option value="28">兵庫県</option>
+                    <option value="25">滋賀県</option>
+                    <option value="29">奈良県</option>
+                    <option value="30">和歌山県</option>
+                    <option value="34">広島県</option>
+                    <option value="33">岡山県</option>
+                    <option value="35">山口県</option>
+                    <option value="31">鳥取県</option>
+                    <option value="32">島根県</option>
+                    <option value="36">徳島県</option>
+                    <option value="37">香川県</option>
+                    <option value="38">愛媛県</option>
+                    <option value="39">高知県</option>
+                    <option value="40">福岡県</option>
+                    <option value="41">佐賀県</option>
+                    <option value="43">熊本県</option>
+                    <option value="44">大分県</option>
+                    <option value="42">長崎県</option>
+                    <option value="45">宮崎県</option>
+                    <option value="46">鹿児島県</option>
+                    <option value="47">沖縄県</option>
+                  </select>
+                <select name="business_type" class="header-menu-gyosyu">
+                    <option value="">業種を選択</option>
+                    <option value="1">大学・大学院</option>
+                    <option value="2">高等学校</option>
+                    <option value="3">専門学校・短期大学・高専</option>
+                    <option value="4">中学校</option>
+                    <option value="5">小学校</option>
+                    <option value="6">保育園・幼稚園・学童保育</option>
+                    <option value="7">フリースクール</option>
+                    <option value="8">その他</option>
+                    <option value="9">英会話スクール・英語塾</option>
+                    <option value="10">中国語・韓国語教室</option>
+                    <option value="11">ドイツ・フランス・スペイン教室</option>
+                    <option value="12">日本語教室</option>
+                    <option value="13">その他語学教室</option>
+                    <option value="14">プログラミング・パソコンスクール</option>
+                    <option value="15">デザインスクール</option>
+                    <option value="16">料理教室、音楽教室、水泳教室</option>
+                    <option value="17">フィットネス・ヨガ・ダンス・スポーツ教室</option>
+                    <option value="18">資格スクール・予備校</option>
+                    <option value="19">予備校</option>
+                    <option value="20">学習塾</option>
+                    <option value="21">幼児教室</option>
+                    <option value="22">出版・コンテンツ制作会社</option>
+                    <option value="23">Webサービス・アプリ開発／運営</option>
+                    <option value="24">留学斡旋・サポート</option>
+                    <option value="25">学校・スクール・教室運営</option>
+                  </select>
+                <input type="submit" value="この条件で検索" class="submit m-button m-button--primary">
+              </form>
+              <hr>
+              <div class="header-menu-login-area">
+                <a href="/login" class="main-button">ログイン</a>
+                <a href="/register" class="main-button">新規会員登録</a>
+              </div>
+              <div class="header-menu-list-area">
+                <ul>
+                  <li><a href="#">求人を探す</a></li>
+                  <li><a href="#">転職エージェントに相談</a></li>
+                  <li><a href="#">採用担当者様へ</a></li>
+                  <li><a href="#">コラム</a></li>
+                  <li><a href="#">会社概要</a></li>
+                  <li><a href="#">お問い合わせ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -53,5 +173,36 @@
       </div>
     </div>
   </div>
+  <script>
+  $(function() {
+    $(".jsc-modal-open").click(function() {
+      $(this).blur();
+      $("body").append('<div class="jsc-modal-overlay"></div>');
+      $(".jsc-modal-overlay").fadeIn("slow");
+      $(".jsc-modal-content").fadeIn("slow");
+      $('.header-menu-button').attr('style', 'display: none;');
+      $('.header-menu-close-button').removeAttr('style', 'display: none;');
+    });
+
+    $(".jsc-modal-close").unbind().click(function() {
+      $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow",function() {
+        $(".jsc-#modal-overlay").remove();
+      });
+      $('.header-menu-close-button').attr('style', 'display: none;');
+      $('.header-menu-button').removeAttr('style', 'display: none;');
+    });
+
+    $(document).on("click", ".jsc-modal-overlay", function() {
+
+      $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow",function() {
+
+        $(".jsc-modal-overlay").remove();
+      });
+
+      $('.header-menu-close-button').attr('style', 'display: none;');
+      $('.header-menu-button').removeAttr('style', 'display: none;');
+    });
+  });
+  </script>
 </body>
 </html>
