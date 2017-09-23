@@ -4,6 +4,7 @@
 @import "./_mixins";
 @import "base/_base";
 @import "layout/_layout";
+@import "layout/_sidebar";
 @import "theme/_theme",
 "theme/_header",
 "theme/_footer";
@@ -20,6 +21,7 @@
 "module/_message";
 @import "tools/_helpers";
 
+
 // import indivisual
 @import "indivisual/quit.scss";
 @import "indivisual/company.scss";
@@ -28,6 +30,7 @@
 @import "indivisual/signup_done.scss";
 @import "indivisual/register.scss";
 @import "indivisual/login.scss";
+@import "indivisual/mypage.scss";
 
 .select-sub {
   display: inline-block;
@@ -996,267 +999,6 @@ recruiter
 }
 
 /*********************
-_mypage
-*********************/
-.mypage {
-  background-color: #F0F0F0;
-  padding: 30px 0;
-}
-
-.mypage-header {
-  background-color: #649E00;
-  color: #FFF;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  // font-weight: bold;
-  padding-left: 15px;
-  font-size: 20px;
-  position: relative;
-}
-
-.mypage-side-profile {
-  background-color: #FFF;
-  padding: 10px 10px 8px 10px;
-}
-
-.mypage-side-profile-table {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 2;
-
-  th {
-    background-color: #999999;
-    color: #FFF;
-    width: 30%;
-    text-align: center;
-  }
-
-  td {
-    background-color: #F0F0F0;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  tr {
-    border-bottom: 1px solid #FFF;
-  }
-}
-
-.mypage-side-link {
-  background-color: #FFF;
-}
-
-.mypage-side-link-list {
-
-  li {
-    padding: 8px 20px;
-    border-bottom: 1px solid #E3E3E3;
-  }
-
-  span {
-    float: right;
-  }
-}
-
-.mypage-main-resume {
-  background-color: #FFF;
-  padding-bottom: 5px;
-}
-
-.mypage-main-resume-table {
-  margin: 10px auto;
-
-  border: 1px solid #E8E8E8;
-  width: calc(95% - 20px);
-
-  th {
-    background-color: #FAFAFA;
-    width: 25%;
-    border-right: 1px solid #E8E8E8;
-    line-height: 3;
-    padding-left: 15px;
-  }
-
-  td {
-    padding-left: 15px;
-  }
-
-  tr {
-    border-bottom: 1px solid #E8E8E8;
-  }
-}
-
-.mypage-edit {
-  background-color: #FFF;
-  color: #649E00;
-  line-height: 28px;
-  height: 28px;
-  border-radius: 5px;
-  padding: 0 20px 0 40px;
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 6px;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:before {
-    content: '';
-    background: url(../images/icon-pencil.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    left: 0px;
-    top: -2px;
-  }
-}
-
-.mypage-main-summary, .mypage-main-topic {
-  background-color: #FFF;
-  padding-bottom: 10px;
-
-  p {
-    border: 1px solid #F0F0F0;
-    padding: 10px 20px;
-    margin: 10px;
-  }
-}
-
-.mypage {
-  background-color: #F0F0F0;
-  padding: 30px 0;
-}
-
-.mypage-header {
-  background-color: #649E00;
-  color: #FFF;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  // font-weight: bold;
-  padding-left: 15px;
-  font-size: 20px;
-  position: relative;
-}
-
-.mypage-side-profile {
-  background-color: #FFF;
-  padding: 10px 10px 8px 10px;
-}
-
-.mypage-side-profile-table {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 2;
-
-  th {
-    background-color: #999999;
-    color: #FFF;
-    width: 30%;
-    text-align: center;
-  }
-
-  td {
-    background-color: #F0F0F0;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  tr {
-    border-bottom: 1px solid #FFF;
-  }
-}
-
-.mypage-side-link {
-  background-color: #FFF;
-}
-
-.mypage-side-link-list {
-
-  li {
-    padding: 8px 20px;
-    border-bottom: 1px solid #E3E3E3;
-  }
-
-  span {
-    float: right;
-  }
-}
-
-.mypage-main-resume {
-  background-color: #FFF;
-  padding-bottom: 5px;
-}
-
-.mypage-main-resume-table {
-  margin: 10px auto;
-
-  border: 1px solid #E8E8E8;
-  width: calc(95% - 20px);
-
-  th {
-    background-color: #FAFAFA;
-    width: 25%;
-    border-right: 1px solid #E8E8E8;
-    line-height: 3;
-    padding-left: 15px;
-  }
-
-  td {
-    padding-left: 15px;
-  }
-
-  tr {
-    border-bottom: 1px solid #E8E8E8;
-  }
-}
-
-.mypage-edit {
-  background-color: #FFF;
-  color: #649E00;
-  line-height: 28px;
-  height: 28px;
-  border-radius: 5px;
-  padding: 0 20px 0 40px;
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 6px;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:before {
-    content: '';
-    background: url(../images/icon-pencil.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    left: 0px;
-    top: -2px;
-  }
-}
-
-.mypage-main-summary, .mypage-main-topic {
-  background-color: #FFF;
-  padding-bottom: 10px;
-
-  p {
-    border: 1px solid #F0F0F0;
-    padding: 10px 20px;
-    margin: 10px;
-  }
-}
-
-/*********************
 _edit
 *********************/
 .edit {
@@ -1335,9 +1077,6 @@ _edit
     border-bottom: 1px solid #E3E3E3;
   }
 
-  span {
-    float: right;
-  }
 }
 
 .edit-main-resume {

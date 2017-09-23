@@ -1,0 +1,60 @@
+.sidebar {
+  position: fixed;
+}
+
+.side-profile {
+  background-color: #FFF;
+  padding: 10px 10px 8px 10px;
+}
+
+.side-profile-name {
+  font-weight: bold;
+}
+
+.side-profile-table {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 2;
+
+  th {
+    background-color: #999999;
+    color: #FFF;
+    width: 30%;
+    text-align: center;
+  }
+
+  td {
+    background-color: #F0F0F0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  tr {
+    border-bottom: 1px solid #FFF;
+  }
+}
+
+.side-link {
+  background-color: #FFF;
+}
+
+.side-link-list {
+  li {
+    padding: 8px 20px;
+    border-bottom: 1px solid #E3E3E3;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .side-link-list-active {
+    background-color: $green;
+    a {
+      color: #FFF;
+    }
+    span {
+      display: none;
+    }
+  }
+}
