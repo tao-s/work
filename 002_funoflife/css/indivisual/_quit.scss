@@ -1,9 +1,11 @@
 .quit {
   background-color: #F0F0F0;
+  padding: 60px 0;
 
   p {
     font-size: 14px;
     color: #333333;
+    line-height: 1.6;
   }
 
   .button {
@@ -32,20 +34,33 @@
     width: 160px;
     margin-right: 15px;
   }
-}
 
-.quit-inner {
-  background-color: #FFF;
-  padding: 50px 0;
-  margin-bottom: 50px !important;
-}
+  .quit-inner {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 50px 0;
+    margin-bottom: 50px !important;
+  }
 
-.quit-form {
-  width: 410px;
-  margin: 50px auto 0;
+  .quit-form {
+    width: 410px;
+    margin: 50px auto 0;
 
-}
+  }
 
-.quit-form-button-area {
-  margin-top: 40px;
+  .quit-form-button-area {
+    margin-top: 40px;
+  }
+
+  @include sp() {
+    h2 {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    .quit-inner {
+      width: 100%;
+    }
+  };
 }
