@@ -3605,6 +3605,106 @@ _contact
   }
 }
 
+.top .career-support {
+  overflow: hidden;
+}
+
+.top .career-support .career-support-section {
+  height: 265px;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+.top .career-support .career-support-section img {
+  height: 265px;
+}
+
+.top .career-support .career-support-section:nth-of-type(3) {
+  float: right;
+}
+
+.top .career-support .career-support-section:nth-of-type(3) .career-support-section-text {
+  position: absolute;
+  left: 146px;
+  top: 60px;
+}
+
+.top .career-support .career-support-section-text:nth-of-type(1) {
+  position: absolute;
+  right: 146px;
+  top: 60px;
+}
+
+.top .career-support .midashi {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.top .career-support .support-button {
+  margin-top: 40px;
+  display: block;
+  width: 220px;
+  background-color: #649E00;
+  border-radius: 4px;
+  line-height: 24px;
+  height: 24px;
+  text-align: center;
+  color: white;
+}
+
+.top .career-support .support-button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.top .top-main-section {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.top .pagination {
+  margin-top: 10px !important;
+}
+
+.top .top-new-job {
+  padding-top: 0px;
+}
+
+.top .top-new-job li + li {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .top .career-support {
+    background: url(../images/top-bg-sp.png);
+    padding: 20px 0;
+  }
+  .top .career-support h2 img {
+    width: 80%;
+  }
+  .top .career-support-link-area {
+    margin-top: 20px;
+  }
+  .top .top-main-section {
+    width: 100%;
+  }
+  .top .top-new-job {
+    float: none;
+    width: 100%;
+  }
+  .top .job-tag-area p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .top .job-tag-area p + p {
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
 .job-list .syokusyu {
   width: 13%;
   text-align: center;
@@ -3723,11 +3823,6 @@ _contact
 .breadcrumbs-inner {
   width: 1200px;
   margin: 0 auto;
-}
-
-.button-green {
-  background-color: #649E00;
-  display: inline-block;
 }
 
 .kibo {
