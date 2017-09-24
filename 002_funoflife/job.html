@@ -5,63 +5,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>教育関連の求人情報一覧 | 教育業界に特化した就職・転職の求人サービス【Education Career】</title>
-  <meta name="description" content="教育関連の求人一覧。教育業界に特化した求人サービスEducation Career（エデュケーションキャリア）であなたにあった求人を見つけましょう。"/>
-  <meta name="robots" content="noindex">
-
-  <meta property="og:title" content="Education Career 教育業界に特化した求人サービス"/>
-  <meta property="og:description"
-        content="EducationCareerは教育業界に関心のあるすべての方に向けた求人サービスです。正社員や業務委託、インターン、会社を辞めずに手伝えるプロボノやボランティアなど多様な働き方が選べます。"/>
-  <meta property="og:image" content="http://fun-of-life-nikke1925.c9users.io/images/og_image.jpg"/>
-  <meta property="og:url" content="http://fun-of-life-nikke1925.c9users.io"/>
-  <meta property="og:type" content="website"/>
-
+  <meta property="og:type" content="website" />
   <link rel="icon" href="/favicon.ico">
   <link href="./css/style.css" rel="stylesheet">
-  <link media="all" type="text/css" rel="stylesheet" href="http://fun-of-life-nikke1925.c9users.io/css/slick.css">
-
-  <link media="all" type="text/css" rel="stylesheet" href="http://fun-of-life-nikke1925.c9users.io/css/slick-theme.css">
-
-  <link media="all" type="text/css" rel="stylesheet" href="http://fun-of-life-nikke1925.c9users.io/css/bootstrap.css">
-
 </head>
-
 <body>
-<div class="globalContainer">
-  <div class="globalHeader">
-    <div class="globalHeader__sub">
-      <div class="clearfix">
-        <a href="http://fun-of-life-nikke1925.c9users.io"><img src="./images/logo.png"></img></a>
-        <ul>
-          <li class="is-active"><a href="http://fun-of-life-nikke1925.c9users.io/job">求人を探す</a></li>
-          <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
-          <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
-          <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
-          <li class="signin">
-            <ul class="clearfix login">
-              <li><a href="http://fun-of-life-nikke1925.c9users.io/login">ログイン</a></li>
-              <li><a href="http://fun-of-life-nikke1925.c9users.io/register">会員登録</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</div>
-<div class="globalContents">
-
-  <div class="globalViewport l-row search-result-page">
-    <div class="globalMain globalMain--hook l-group col-3">
-      <div class="side-search">
-        <img src="images/search-text.svg" class="side-search-text">
-        <form action="https://education-career.jp/job" method="get">
-          <p>
-            <input type="text" class="kibo" name="keyword" placeholder="希望の求人を探してみましょう。" value="" class="keyword">
-          </p>
-          <img src="/images/search-condition.svg" alt="検索条件指定" class="search-condition">
-          <p>
-            <select name="prefecture">
+  <!-- ここにheader.htmlを挿入してください -->
+  <div class="job">
+    <div class="l-row job-inner">
+      <div class="col-3 sp-none">
+        <div class="side-search">
+          <img src="images/search-text.svg" class="side-search-text">
+          <form action="https://education-career.jp/job" method="get">
+            <p>
+              <input type="text" class="kibo" name="keyword" placeholder="希望の求人を探してみましょう。" value="" class="keyword">
+            </p>
+            <img src="/images/search-condition.svg" alt="検索条件指定" class="search-condition">
+            <p>
+              <select name="prefecture">
               <option value="">勤務地から選ぶ</option>
               <option value="1">東京都</option>
               <option value="2">北海道</option>
@@ -111,9 +72,9 @@
               <option value="46">鹿児島県</option>
               <option value="47">沖縄県</option>
             </select>
-          </p>
-          <p>
-            <select name="job_category">
+            </p>
+            <p>
+              <select name="job_category">
               <option value="">職種検索</option>
               <option value="1">営業職</option>
               <option value="2">企画・管理系職</option>
@@ -124,9 +85,9 @@
               <option value="7">事務系職種</option>
               <option value="8">その他</option>
             </select>
-          </p>
-          <p>
-            <select name="business_type">
+            </p>
+            <p>
+              <select name="business_type">
               <option value="">業種検索</option>
               <option value="1">大学・大学院</option>
               <option value="2">高等学校</option>
@@ -154,194 +115,196 @@
               <option value="24">留学斡旋・サポート</option>
               <option value="25">学校・スクール・教室運営</option>
             </select>
-          </p>
-          <p><input type="submit" value="仕事を探す" class="submit m-button m-button--primary"></p>
-        </form>
-      </div>
-      <div class="side-banner">
-        <a href="/agent">
+            </p>
+            <p><input type="submit" value="仕事を探す" class="submit m-button m-button--primary"></p>
+          </form>
+        </div>
+        <div class="side-banner">
+          <a href="/agent">
           <img src="images/side-banner.png" alt="転職エージェントへ無料相談" width="100%">
         </a>
+        </div>
       </div>
-    </div>
-
-    <div class="globalMain globalMain--hook l-group col-8">
-      <div class="l-group l-group--s new-job">
-        <h2 class="search-result-title text-bold"><!-- TODO の検索結果 -->ダミーの検索結果</h2>
-        <div class="l-group">
-          <ul class="clearfix l-row">
-            <!-- TODO: ダミーデータを何個か入れておくので、
-            サーバーサイドとの繋ぎ込み後削除して頂ければと思います
-            マークアップ変更しない、は無理でしたすみません -->
-            <!-- ダミーデータ ここから -->
-            <li class="new-job-list">
-              <a href="" class="clearfix">
-                <div class="float-left syokusyu">
-                  <img src="/images/job_icon_01.png" alt=""/>
-                  <p class="syokusyu-tag">【ダミー】企画/経営関連</p>
-                </div>
-                <div class="naiyou">
-                  <p class="m-text text-bold new-job-list-catch">【ダミー】客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-                  <p class="m-text m-text--sub new-job-list-companyName">【ダミー】株式会社ファンオブライフ</p>
-                  <table class="naiyou-table">
-                    <tr>
-                      <th class="text-bold">勤務地
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【関東】東京都 新宿区</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">想定給与
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">仕事内容
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案
-                        件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </a>
-              <a href="" class="new-job-list-button">詳細をみる</a>
-            </li>
-            <li class="new-job-list">
-              <a href="" class="clearfix">
-                <div class="float-left syokusyu">
-                  <img src="/images/job_icon_01.png" alt=""/>
-                  <p class="syokusyu-tag">【ダミー】企画/経営関連</p>
-                </div>
-                <div class="naiyou">
-                  <p class="m-text text-bold new-job-list-catch">【ダミー】客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-                  <p class="m-text m-text--sub new-job-list-companyName">【ダミー】株式会社ファンオブライフ</p>
-                  <table class="naiyou-table">
-                    <tr>
-                      <th class="text-bold">勤務地
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【関東】東京都 新宿区</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">想定給与
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">仕事内容
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案
-                        件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </a>
-              <a href="" class="new-job-list-button">詳細をみる</a>
-            </li>
-            <li class="new-job-list">
-              <a href="" class="clearfix">
-                <div class="float-left syokusyu">
-                  <img src="/images/job_icon_01.png" alt=""/>
-                  <p class="syokusyu-tag">【ダミー】企画/経営関連</p>
-                </div>
-                <div class="naiyou">
-                  <p class="m-text text-bold new-job-list-catch">【ダミー】客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-                  <p class="m-text m-text--sub new-job-list-companyName">【ダミー】株式会社ファンオブライフ</p>
-                  <table class="naiyou-table">
-                    <tr>
-                      <th class="text-bold">勤務地
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【関東】東京都 新宿区</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">想定給与
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                    </tr>
-                    <tr>
-                      <th class="text-bold">仕事内容
-                      </td>
-                      <td class="text-bold table-coron">:</td>
-                      <td>【ダミー】【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案
-                        件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </a>
-              <a href="" class="new-job-list-button">詳細をみる</a>
-            </li>
-            <!-- ダミーデータ ここまで -->
+      <div class="col-8 new-job">
+        <h2 class="job-result-title text-bold">
+        WEBエンジニアの検索結果
+      </h2>
+        <ul class="clearfix l-row">
+          <li class="job-list clearfix">
+            <div class="float-left syokusyu sp-none">
+              <img src="/images/job_icon_01.png" alt="" />
+              <p class="job-tag">企画/経営関連</p>
+            </div>
+            <div class="pc-none job-tag-area">
+              <p class="job-tag">企画/経営関連</p>
+              <p class="favorite-job-list-detail-sp-conpany">
+                株式会社ファンオブライフ
+              </p>
+            </div>
+            <div class="job-detail">
+              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
+              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
+              <table>
+                <tr>
+                  <th class="text-bold">勤務地
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【関東】東京都 新宿区</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">想定給与
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">仕事内容
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
+                    </td>
+                </tr>
+              </table>
+            </div>
+            <div class="job-button-area">
+              <a href="detail.html" class="sub-button">詳細をみる</a>
+            </div>
+          </li>
+          <li class="job-list clearfix">
+            <div class="float-left syokusyu sp-none">
+              <img src="/images/job_icon_01.png" alt="" />
+              <p class="job-tag">企画/経営関連</p>
+            </div>
+            <div class="pc-none job-tag-area">
+              <p class="job-tag">企画/経営関連</p>
+              <p class="favorite-job-list-detail-sp-conpany">
+                株式会社ファンオブライフ
+              </p>
+            </div>
+            <div class="job-detail">
+              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
+              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
+              <table>
+                <tr>
+                  <th class="text-bold">勤務地
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【関東】東京都 新宿区</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">想定給与
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">仕事内容
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
+                    </td>
+                </tr>
+              </table>
+            </div>
+            <div class="job-button-area">
+              <a href="detail.html" class="sub-button">詳細をみる</a>
+            </div>
+          </li>
+          <li class="job-list clearfix">
+            <div class="float-left syokusyu sp-none">
+              <img src="/images/job_icon_01.png" alt="" />
+              <p class="job-tag">企画/経営関連</p>
+            </div>
+            <div class="pc-none job-tag-area">
+              <p class="job-tag">企画/経営関連</p>
+              <p class="favorite-job-list-detail-sp-conpany">
+                株式会社ファンオブライフ
+              </p>
+            </div>
+            <div class="job-detail">
+              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
+              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
+              <table>
+                <tr>
+                  <th class="text-bold">勤務地
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【関東】東京都 新宿区</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">想定給与
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">仕事内容
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
+                    </td>
+                </tr>
+              </table>
+            </div>
+            <div class="job-button-area">
+              <a href="detail.html" class="sub-button">詳細をみる</a>
+            </div>
+          </li>
+          <li class="job-list clearfix">
+            <div class="float-left syokusyu sp-none">
+              <img src="/images/job_icon_01.png" alt="" />
+              <p class="job-tag">企画/経営関連</p>
+            </div>
+            <div class="pc-none job-tag-area">
+              <p class="job-tag">企画/経営関連</p>
+              <p class="favorite-job-list-detail-sp-conpany">
+                株式会社ファンオブライフ
+              </p>
+            </div>
+            <div class="job-detail">
+              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
+              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
+              <table>
+                <tr>
+                  <th class="text-bold">勤務地
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【関東】東京都 新宿区</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">想定給与
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
+                </tr>
+                <tr>
+                  <th class="text-bold">仕事内容
+                    </td>
+                    <td class="text-bold table-coron sp-none">:</td>
+                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
+                    </td>
+                </tr>
+              </table>
+            </div>
+            <div class="job-button-area">
+              <a href="detail.html" class="sub-button">詳細をみる</a>
+            </div>
+          </li>
+        </ul>
+        <div class="job-pagination">
+          <ul class="pagination">
+            <li class="active"><span>1</span></li>
+            <li><a href="job.html">2</a></li>
+            <li><a href="job.html">3</a></li>
+            <li><a href="job.html">4</a></li>
+            <li><a href="job.html">5</a></li>
+            <li class="disabled">...</li>
+            <li><a href="job.html" rel="next">»</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="globalViewport l-row">
-
-
-    <div class="l-group">
-      <div class="l-group">
-      </div>
-    </div>
-
-  </div>
-</div>
-<div class="globalFooter">
-  <a hraf="#" class="soudan"><img src="images/soudan.png"></a>
-  <div class="footer-banner">
-    <img src="images/footer-edtech.png">
-    <img src="images/footer-educationcareer.png">
-  </div>
-
-  <div class="footer-links">
-    <div class="footer-links-inner">
-      <ul class="clearfix">
-        <li><a href="/job">求人を探す</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者の方へ</a></li>
-        <li><a href="#">コラム</a></li>
-        <li><a href="http://www.funoflife.co.jp/" target="_blank">会社概要</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/contact">お問い合わせ</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/terms">利用規約</a></li>
-        <li><a href="http://fun-of-life-nikke1925.c9users.io/policy">プライバシーポリシー</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-info">
-    <div class="float-left footer-info-logo">
-      <img src="/images/logo.png"></img>
-    </div>
-    <p class="footer-info-company">
-      株式会社ファンオブライフ<br>
-      〒150-0001　東京都渋谷区神宮前6-19-16 U-natura301
-    </p>
-    <div class="float-right">
-      <div class="footer-button-area">
-        <a href="/register" class="footer-button">会員登録</a>
-        <a href="/login" class="footer-button">ログイン</a>
-      </div>
-      <p class="footer-copyright">
-        <small class="copyright m-text m-text--sub m-text--small">Copyright &copy; | Privacy | All right reserved
-        </small>
-      </p>
-    </div>
-  </div>
-</div>
-
-<script src="/js/app.js"></script>
-<script src="/js/request_sender.js"></script>
-<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-<script src="/js/slick.min.js"></script>
+  <!-- ここにfooter.htmlを挿入してください -->
 </body>
 </html>

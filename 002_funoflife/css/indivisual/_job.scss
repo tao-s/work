@@ -1,0 +1,141 @@
+.job {
+  margin-top: 40px !important;
+
+  .job-inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .job-result-title {
+    display: block;
+    border-bottom: 3px solid #649E00;
+    font-size: 20px;
+  }
+
+  .sub-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0 20px;
+  }
+
+  .syokusyu {
+    width: 15%;
+    text-align: center;
+    margin-right: 3%;
+
+    img {
+      width: 90%;
+    }
+  }
+
+  .job-tag {
+    color: white;
+    font-size: 8px;
+    background-color: #649E00;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+
+  .job-detail {
+    width: 82%;
+    float: right;
+
+    table {
+      font-size: 12px;
+      margin-top: 10px;
+      line-height: 1.6;
+
+      th {
+        width: 65px;
+        vertical-align: top;
+        padding: 2px 0;
+      }
+
+      td {
+        vertical-align: top;
+        padding: 2px 0;
+      }
+    }
+  }
+
+  .job-pagination {
+    margin-top: 10px;
+  }
+
+  @include sp() {
+    .job-inner, .new-job {
+      width: 100%;
+    }
+
+    .job-result-title {
+      padding-bottom: 5px;
+      padding-left: 5px;
+    }
+
+    .job-tag-area {
+      p {
+        display: inline-block;
+      }
+    }
+
+    .job-tag {
+      color: white;
+      font-size: 8px;
+      background-color: #649E00;
+      border-radius: 0px;
+      padding: 4px 8px;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    .job-list-catch {
+      width: 100%;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    .job-detail {
+      width: 100%;
+      float: none;
+      margin-top: 5px;
+
+      table {
+        tr {
+          border-bottom: 2px solid #FFF;
+        }
+
+        th {
+          background-color: #F0F0F0;
+          text-align: center;
+          padding: 15px;
+          width: 25%;
+        }
+
+        td {
+          border-left: 2px solid #FFF;
+          background-color: #FAFAFA;
+          padding: 10px;
+          color: #555555;
+        }
+
+      }
+    }
+
+    .job-button-area {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .sub-button {
+      position: relative;
+      position: relative;
+      right: 0;
+      top: 0;
+      width: calc(90% - 20px);
+    }
+
+  };
+}

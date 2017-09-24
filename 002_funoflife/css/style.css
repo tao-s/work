@@ -1693,6 +1693,49 @@ input[type=text] {
   background: #fe6e4c;
 }
 
+.pagination {
+  text-align: center;
+}
+
+.pagination ul, .pagination ol, .pagination li {
+  display: inline-block;
+}
+
+.pagination ol {
+  margin: 0 30px;
+}
+
+.pagination li {
+  margin: 0 5px;
+  border: 1px solid #F6AC00;
+  background-color: #F6AC00;
+  color: #FFF;
+}
+
+.pagination li.active {
+  padding: 10px;
+  border: 1px solid #F6AC00;
+}
+
+.pagination li a {
+  display: block;
+  width: 100%;
+  background-color: #FFF;
+  color: #F6AC00;
+  padding: 10px;
+}
+
+.pagination li a:hover {
+  text-decoration: none;
+  background-color: #F5F5F5;
+}
+
+.pagination li.disabled {
+  background-color: transparent;
+  color: #F6AC00;
+  border: 0px;
+}
+
 .clearfix:before, .topSearchForm:before, .clearfix:after, .topSearchForm:after {
   content: "";
   display: table;
@@ -3242,6 +3285,132 @@ _contact
   }
 }
 
+.job {
+  margin-top: 40px !important;
+}
+
+.job .job-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.job .job-result-title {
+  display: block;
+  border-bottom: 3px solid #649E00;
+  font-size: 20px;
+}
+
+.job .sub-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0 20px;
+}
+
+.job .syokusyu {
+  width: 15%;
+  text-align: center;
+  margin-right: 3%;
+}
+
+.job .syokusyu img {
+  width: 90%;
+}
+
+.job .job-tag {
+  color: white;
+  font-size: 8px;
+  background-color: #649E00;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.job .job-detail {
+  width: 82%;
+  float: right;
+}
+
+.job .job-detail table {
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.job .job-detail table th {
+  width: 65px;
+  vertical-align: top;
+  padding: 2px 0;
+}
+
+.job .job-detail table td {
+  vertical-align: top;
+  padding: 2px 0;
+}
+
+.job .job-pagination {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .job .job-inner, .job .new-job {
+    width: 100%;
+  }
+  .job .job-result-title {
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+  .job .job-tag-area p {
+    display: inline-block;
+  }
+  .job .job-tag {
+    color: white;
+    font-size: 8px;
+    background-color: #649E00;
+    border-radius: 0px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+  .job .job-list-catch {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .job .job-detail {
+    width: 100%;
+    float: none;
+    margin-top: 5px;
+  }
+  .job .job-detail table tr {
+    border-bottom: 2px solid #FFF;
+  }
+  .job .job-detail table th {
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 15px;
+    width: 25%;
+  }
+  .job .job-detail table td {
+    border-left: 2px solid #FFF;
+    background-color: #FAFAFA;
+    padding: 10px;
+    color: #555555;
+  }
+  .job .job-button-area {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .job .sub-button {
+    position: relative;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: calc(90% - 20px);
+  }
+}
+
 .breadcrumbs {
   background-color: #F0F0F0;
 }
@@ -3695,30 +3864,6 @@ _contact
   background: #f5f5f5;
 }
 
-.pagination {
-  text-align: center;
-}
-
-.pagination ul, .pagination ol, .pagination li {
-  display: inline-block;
-}
-
-.pagination ol {
-  margin: 0 30px;
-}
-
-.pagination li {
-  margin: 0 10px;
-}
-
-.pagination li a {
-  color: #1abb99;
-}
-
-.pagination li.disabled a {
-  color: #000;
-}
-
 .jobCard {
   border: 1px solid #ccc;
 }
@@ -3834,55 +3979,13 @@ _contact
   height: auto;
 }
 
-.syokusyu {
-  width: 15%;
-  text-align: center;
-  margin-right: 3%;
-}
-
-.syokusyu img {
-  width: 90%;
-}
-
-.syokusyu-tag {
-  color: white;
-  font-size: 8px;
-  background-color: #649E00;
-  border-radius: 4px;
-  padding: 4px 8px;
-  margin-top: 10px;
-  font-weight: normal;
-}
-
-.naiyou {
-  width: 82%;
-  float: right;
-}
-
-.naiyou-table {
-  font-size: 12px;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-.naiyou-table th {
-  width: 65px;
-  vertical-align: top;
-  padding: 2px 0;
-}
-
-.naiyou-table td {
-  vertical-align: top;
-  padding: 2px 0;
-}
-
-.new-job-list {
+.job-list {
   position: relative;
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #F0F0F0;
 }
 
-.new-job-list a:hover {
+.job-list a:hover {
   text-decoration: none;
 }
 
@@ -3890,40 +3993,15 @@ _contact
   width: 20px;
 }
 
-.new-job-list-catch {
+.job-list-catch {
   font-size: 14px;
   margin-top: 4px;
   width: 70%;
 }
 
-.new-job-list-companyName {
+.job-list-companyName {
   font-size: 12px;
   color: #999999;
-}
-
-.new-job-list-button {
-  font-size: 12px;
-  background-color: #F6AC00;
-  line-height: 34px;
-  height: 34px;
-  padding: 5px 20px;
-  border-radius: 4px;
-  color: #FFF;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.search-result-page {
-  margin-top: 40px !important;
-}
-
-.search-result-page .search-result-title {
-  display: block;
-  border-bottom: 3px solid #649E00;
-  font-size: 20px;
 }
 
 .detail {
@@ -4039,7 +4117,7 @@ _contact
   width: 87%;
 }
 
-.detail-kanren .new-job-list {
+.detail-kanren .job-list {
   padding: 10px 20px;
 }
 

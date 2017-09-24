@@ -18,7 +18,8 @@
 "module/_label",
 "module/_list",
 "module/_card",
-"module/_message";
+"module/_message",
+"module/_pagination";
 @import "tools/_helpers";
 
 // import indivisual
@@ -35,6 +36,7 @@
 @import "indivisual/edit.scss";
 @import "indivisual/recruiter.scss";
 @import "indivisual/agent.scss";
+@import "indivisual/job.scss";
 
 .breadcrumbs {
   background-color: #F0F0F0;
@@ -476,32 +478,6 @@
   background: #f5f5f5;
 }
 
-.pagination {
-  text-align: center;
-
-  ul, ol, li {
-    display: inline-block;
-  }
-
-  ol {
-    margin: 0 30px;
-  }
-
-  li {
-    margin: 0 10px;
-
-    a {
-      color: nth($color, 1);
-    }
-
-    &.disabled {
-      a {
-        color: #000;
-      }
-    }
-  }
-}
-
 .jobCard {
   border: 1px solid #ccc;
   &__header {
@@ -609,9 +585,6 @@
   margin-top: 30px;
 }
 
-////////////////////
-////////////////////
-
 .main-section {
   margin-top: 50px;
 }
@@ -623,56 +596,13 @@
   }
 }
 
-.syokusyu {
-  width: 15%;
-  text-align: center;
-  margin-right: 3%;
-
-  img {
-    width: 90%;
-  }
-}
-
-.syokusyu-tag {
-  color: white;
-  font-size: 8px;
-  background-color: #649E00;
-  border-radius: 4px;
-  padding: 4px 8px;
-  margin-top: 10px;
-  font-weight: normal;
-}
-
-.naiyou {
-  width: 82%;
-  float: right;
-
-}
-
-.naiyou-table {
-  font-size: 12px;
-  margin-top: 10px;
-  line-height: 1.6;
-
-  th {
-    width: 65px;
-    vertical-align: top;
-    padding: 2px 0;
-  }
-
-  td {
-    vertical-align: top;
-    padding: 2px 0;
-  }
-}
-
-.new-job-list {
+.job-list {
   position: relative;
   a:hover {
     text-decoration: none;
   }
 
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #F0F0F0;
 
 }
@@ -681,40 +611,15 @@
   width: 20px;
 }
 
-.new-job-list-catch {
+.job-list-catch {
   font-size: 14px;
   margin-top: 4px;
   width: 70%;
 }
 
-.new-job-list-companyName {
+.job-list-companyName {
   font-size: 12px;
   color: #999999;
-}
-
-.new-job-list-button {
-  font-size: 12px;
-  background-color: #F6AC00;
-  line-height: 34px;
-  height: 34px;
-  padding: 5px 20px;
-  border-radius: 4px;
-  color: #FFF;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  box-sizing: content-box;
-}
-
-// 検索結果ページ
-.search-result-page {
-  margin-top: 40px !important;
-
-  .search-result-title {
-    display: block;
-    border-bottom: 3px solid #649E00;
-    font-size: 20px;
-  }
 }
 
 ///////////////////////////////////
@@ -834,7 +739,7 @@
     width: 87%;
   }
 
-  .new-job-list {
+  .job-list {
     padding: 10px 20px;
   }
 }
