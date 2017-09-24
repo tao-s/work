@@ -1,0 +1,169 @@
+.edit {
+  background-color: #F0F0F0;
+  padding: 30px 0;
+
+  textarea {
+    display: block;
+    background-color: #FAFAFA;
+  }
+
+  input {
+    height: 34px;
+  }
+
+  select, input, textarea {
+    border-radius: 5px;
+  }
+
+  .edit-inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .edit-header {
+    background-color: #649E00;
+    color: #FFF;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    // font-weight: bold;
+    padding-left: 15px;
+    font-size: 20px;
+    position: relative;
+  }
+
+  .edit-main-resume {
+    background-color: #FFF;
+    padding-bottom: 5px;
+  }
+
+  .edit-main-resume-inner {
+    padding: 10px;
+  }
+
+  .edit-main-resume-table {
+    margin: 10px auto;
+
+    border: 1px solid #E8E8E8;
+    width: calc(95% - 20px);
+
+    th {
+      background-color: #FAFAFA;
+      width: 25%;
+      border-right: 1px solid #E8E8E8;
+      line-height: 3;
+      padding-left: 15px;
+    }
+
+    td {
+      padding-left: 15px;
+    }
+
+    tr {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  .edit-main-summary, .edit-main-topic {
+    background-color: #FFF;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+    p {
+      border: 1px solid #F0F0F0;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  }
+
+  .edit-main-summary-inner, .edit-main-topic-inner {
+    padding: 10px;
+  }
+
+  .edit-main-resume {
+    background-color: #FFF;
+    padding-bottom: 5px;
+  }
+
+  .edit-main-resume-table {
+    margin: 10px auto;
+
+    border: 1px solid #E8E8E8;
+    width: calc(95% - 20px);
+
+    th {
+      background-color: #FAFAFA;
+      width: 25%;
+      border-right: 1px solid #E8E8E8;
+      line-height: 3;
+      padding-left: 15px;
+    }
+
+    td {
+      padding-left: 15px;
+    }
+
+    tr {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  .edit-main-button-area {
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 10px;
+
+    .negative-button, .sub-button {
+      width: 160px;    width: 160px;
+      height: 44px;
+      line-height: 44px;
+      vertical-align: middle;
+    }
+  }
+
+  @include sp() {
+    select {
+      // overwrite width: 50%;
+      width: 100%;
+    }
+
+    .select-sub {
+      width: auto;
+    }
+
+    .edit-inner, .edit-main {
+      width: 100%;
+    }
+
+    .edit-main {
+      table {
+        tr, td, th {
+          display: block;
+          width: 100%;
+          border: none;
+        }
+
+        td, th {
+          padding: 10px 15px;
+        }
+      }
+    }
+
+    .edit-main-resume-inner {
+      padding: 0px;
+    }
+
+    .edit-main-button-area {
+      background-color: #FAFAFA;
+
+      .negative-button {
+        width: 30%;
+      }
+
+      .sub-button {
+        width: 60%;
+      }
+    }
+  };
+}
