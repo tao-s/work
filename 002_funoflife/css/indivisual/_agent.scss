@@ -1,0 +1,54 @@
+.agent {
+
+  > a {
+    display: block;
+  }
+
+  .agent-merit {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+
+      img {
+        width: 380px;
+      }
+    }
+  }
+
+  .agent-merit-list {
+    margin-top: 15px;
+
+    img {
+      width: 757px;
+    }
+  }
+
+  @include sp() {
+    .agent-merit {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: block;
+
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+
+        img {
+          width: 304px;
+        }
+      }
+    }
+
+    .agent-merit-list {
+      margin-top: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

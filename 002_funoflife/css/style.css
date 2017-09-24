@@ -3142,6 +3142,54 @@ _contact
   }
 }
 
+.agent > a {
+  display: block;
+}
+
+.agent .agent-merit {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+}
+
+.agent .agent-merit h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.agent .agent-merit h2 img {
+  width: 380px;
+}
+
+.agent .agent-merit-list {
+  margin-top: 15px;
+}
+
+.agent .agent-merit-list img {
+  width: 757px;
+}
+
+@media screen and (max-width: 640px) {
+  .agent .agent-merit {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+  }
+  .agent .agent-merit h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .agent .agent-merit h2 img {
+    width: 304px;
+  }
+  .agent .agent-merit-list {
+    margin-top: 15px;
+  }
+  .agent .agent-merit-list img {
+    width: 100%;
+  }
+}
+
 .breadcrumbs {
   background-color: #F0F0F0;
 }
@@ -4024,31 +4072,4 @@ _contact
 
 .detail-apply .m-button--primary {
   width: 220px;
-}
-
-/*********************
-_agent
-*********************/
-.agent > a {
-  display: block;
-}
-
-.agent-merit {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  display: block;
-}
-
-.agent-merit h2 {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.agent-merit h2 img {
-  width: 380px;
-}
-
-.agent-merit-image {
-  width: 757px;
-  margin: 0 auto;
 }
