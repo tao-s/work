@@ -1849,89 +1849,89 @@ input[type=text] {
   }
 }
 
-.company-profile {
+.company .company-profile {
   margin-top: 35px;
 }
 
-.company-profile h2 img {
+.company .company-profile h2 img {
   width: 375px;
 }
 
-.company-profile .main-table {
+.company .company-profile table {
   margin-top: 35px;
   border-spacing: 0px 10px;
   border-collapse: separate;
 }
 
-.company-profile .main-table th {
+.company .company-profile table th {
   background-color: #649E00;
   color: #FFF;
   padding: 15px;
   width: 170px;
 }
 
-.company-profile .main-table td {
+.company .company-profile table td {
   border: none;
   background-color: #F0F0F0;
   padding: 15px;
 }
 
-.company-profile-inner {
+.company .company-profile-inner {
   width: 900px;
   margin: 0 auto;
 }
 
-.company-service {
+.company .company-service {
   padding: 35px 0;
 }
 
-.company-service h2 img {
+.company .company-service h2 img {
   width: 222px;
 }
 
-.company-service-list {
+.company .company-service-list {
   text-align: center;
   margin-top: 20px;
 }
 
-.company-service-list li {
+.company .company-service-list li {
   display: inline-block;
 }
 
-.company-service-list li a {
+.company .company-service-list li a {
   display: block;
   width: 100%;
 }
 
-.company-service-list li + li {
+.company .company-service-list li + li {
   margin-left: 70px;
 }
 
-.company-access {
+.company .company-access {
   padding: 40px 0;
   background-color: #FAFAFA;
 }
 
-.company-access h2 img {
+.company .company-access h2 img {
   width: 144px;
 }
 
-.company-access-inner {
+.company .company-access-inner {
   width: 1000px;
   margin: 40px auto;
   padding: 10px;
   background-color: #F0F0F0;
 }
 
-.company-access-map {
+.company .company-access-map {
   width: 980px;
 }
 
-.company-access-map-detail {
+.company .company-access-map-detail {
   margin-top: 10px;
 }
 
-.company-access-map-detail h3 {
+.company .company-access-map-detail h3 {
   background-color: #F6AC00;
   color: #FFF;
   line-height: 34px;
@@ -1939,21 +1939,73 @@ input[type=text] {
   padding-left: 10px;
 }
 
-.company-access-map-detail-address,
-.company-access-map-detail-access {
+.company .company-access-map-detail-address,
+.company .company-access-map-detail-access {
   width: 480px;
   background-color: #FFF;
 }
 
-.company-access-map-detail-address p,
-.company-access-map-detail-access p {
+.company .company-access-map-detail-address p,
+.company .company-access-map-detail-access p {
   line-height: 34px;
   height: 34px;
   padding-left: 20px;
 }
 
-.company-access-map-detail-access {
+.company .company-access-map-detail-access {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .company .company-profile h2 {
+    margin-left: 10px;
+  }
+  .company .company-profile h2 img {
+    width: 156px;
+  }
+  .company .company-profile table tr, .company .company-profile table td, .company .company-profile table th {
+    display: block;
+    width: 100%;
+  }
+  .company .company-profile table td {
+    border-bottom: 2px solod #FFF;
+  }
+  .company .company-profile table th {
+    padding: 10px;
+  }
+  .company .company-profile-inner,
+  .company .company-access-inner,
+  .company .company-access-map,
+  .company .company-access-map-detail-address,
+  .company .company-access-map-detail-access {
+    width: 100%;
+  }
+  .company .company-service-list img {
+    width: 240px;
+  }
+  .company .company-service-list li + li {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  .company .company-access-inner {
+    padding: 0;
+  }
+  .company .company-access-map-detail-access p,
+  .company .company-access-map-detail-address p {
+    padding: 5px 5px 5px 10px;
+    height: auto;
+    font-size: 13px;
+  }
+  .company .company-access-map-detail {
+    padding: 20px 10px;
+  }
+  .company .company-access-map-detail p {
+    line-height: 1.5;
+  }
+  .company .company-access-map-detail-access {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 .error {
