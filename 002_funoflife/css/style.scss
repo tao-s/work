@@ -22,6 +22,7 @@
 "module/_pagination";
 @import "tools/_helpers";
 
+
 // import indivisual
 @import "indivisual/quit.scss";
 @import "indivisual/company.scss";
@@ -37,6 +38,11 @@
 @import "indivisual/recruiter.scss";
 @import "indivisual/agent.scss";
 @import "indivisual/job.scss";
+@import "indivisual/detail.scss";
+
+@import "indivisual/job-list.scss";
+
+
 
 .breadcrumbs {
   background-color: #F0F0F0;
@@ -620,212 +626,4 @@
 .job-list-companyName {
   font-size: 12px;
   color: #999999;
-}
-
-///////////////////////////////////
-///////////// 案件詳細 /////////////
-///////////////////////////////////
-
-.detail {
-
-  background-color: #FAFAFA;
-
-  h3 {
-    display: block;
-    border-left: 6px solid #649E00;
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: bold;
-
-    + * {
-      margin-top: 10px;
-    }
-  }
-
-  .main-table {
-    border-spacing: 00px 10px;
-    border-collapse: separate;
-
-    th {
-      background-color: #649E00;
-      color: #FFF;
-      border: none;
-    }
-
-    td {
-      border: none;
-      background-color: #F0F0F0;
-    }
-  }
-
-  .detail-inner {
-    padding: 20px;
-    background-color: #FFF;
-    margin: 20px auto;
-  }
-}
-
-.detail-title {
-  img {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-  }
-
-  font-size: 20px;
-  font-weight: bold;
-
-  padding-bottom: 8px;
-  border-bottom: 4px solid #649E00;
-}
-
-.detail-subinfo {
-  margin-top: 10px;
-
-  p {
-    display: inline-block;
-  }
-}
-
-.detail-subinfo-name {
-  color: #9B9B9B;
-}
-
-.detail-subinfo-category {
-  color: #649E00;
-  span {
-    background-color: #649E00;
-    font-size: 8px;
-    color: #FFF;
-    display: inline-block;
-    height: 20px;
-    line-height: 20px;
-    padding: 0px 8px;
-  }
-}
-
-.detail-description {
-  margin-top: 13px;
-
-  p {
-    padding: 10px 20px;
-    background-color: #F0F0F0;
-    border-radius: 4px;
-    line-height: 1.5;
-    border: 1px solid #EEE;
-  }
-
-  h3 + p {
-    margin-top: 10px;
-  }
-}
-
-.detail-youkou {
-  margin-top: 20px;
-}
-
-.detail-profile {
-  margin-top: 20px;
-}
-
-.detail-kanren {
-  margin-top: 20px;
-
-  .syokusyu {
-    width: 10%;
-  }
-
-  .naiyou {
-    width: 87%;
-  }
-
-  .job-list {
-    padding: 10px 20px;
-  }
-}
-
-.detail-form {
-  padding: 30px 0;
-  background-color: #fafafa;
-  text-align: center;
-  margin-left: -30px;
-  margin-right: -30px;
-
-  a.kiyaku {
-    color: #375FB1;
-    text-decoration: underline;
-  }
-
-  p {
-    margin-bottom: 10px;
-  }
-
-  .m-button--default {
-    border-bottom: none;
-    background-color: #649E00;
-  }
-
-  .m-button--primary {
-    width: 220px;
-  }
-}
-
-.detail-apply {
-
-  padding: 30px 0;
-
-  .detail-apply-title {
-    text-align: center;
-    img {
-      width: 378px;
-    }
-  }
-
-  .m-table {
-
-    width: 70%;
-    margin: 30px auto 0;
-
-    input {
-      height: 50px;
-    }
-
-    th, td {
-      background-color: transparent;
-      border: none;
-    }
-
-    .w100 {
-      width: 100%;
-    }
-
-    input, select, textarea {
-      border-radius: 5px;
-    }
-
-    input {
-      background-color: #F8F8F8;
-    }
-
-  }
-
-  text-align: center;
-
-  a.kiyaku {
-    color: #375FB1;
-    text-decoration: underline;
-  }
-
-  p {
-    margin-bottom: 10px;
-  }
-
-  .m-button--default {
-    border-bottom: none;
-    background-color: #649E00;
-  }
-
-  .m-button--primary {
-    width: 220px;
-  }
 }
