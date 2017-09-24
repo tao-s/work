@@ -33,6 +33,7 @@
 @import "indivisual/favorite.scss";
 @import "indivisual/account.scss";
 @import "indivisual/edit.scss";
+@import "indivisual/recruiter.scss";
 
 .breadcrumbs {
   background-color: #F0F0F0;
@@ -950,31 +951,5 @@ _agent
 
 .agent-merit-image {
   width: 757px;
-  margin: 0 auto;
-}
-
-/*********************
-recruiter
-*********************/
-.recruiter-feature {
-  background-color: #FAFAFA;
-  display: block;
-}
-
-.recruiter-feature-inner {
-  width: 1024px;
-  display: block;
-  margin: 0 auto;
-}
-
-.recruiter-flow {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 30px;
-}
-
-.recruiter-flow-inner {
-  width: 1024px;
   margin: 0 auto;
 }

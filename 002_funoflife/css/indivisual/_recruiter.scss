@@ -1,0 +1,84 @@
+.recruiter {
+
+  .recruiter-main {
+    a {
+      display: block;
+    }
+  }
+
+  .recruiter-main-contact {
+    padding: 35px 0;
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 345px;
+    }
+  }
+
+  .recruiter-feature {
+    background-color: #FAFAFA;
+    display: block;
+  }
+
+  .recruiter-feature-inner {
+    width: 1026px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: content-box;
+
+    img {
+      width: 1026px;
+    }
+  }
+
+  .recruiter-flow {
+    // display: block;
+    margin-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  .recruiter-flow-inner {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  @include sp() {
+    .recruiter-feature-inner {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 30px 5px;
+      box-sizing: border-box;
+
+      img {
+        width: 357px;
+      }
+    }
+
+    .recruiter-contact-bottom {
+      background-color: $orange;
+
+      img {
+        width: 375px;
+      }
+    }
+  }
+
+  // 画像サイズ以下のデバイスでの処理
+  // ピクセルパーフェクトにならない
+  @include sp_min() {
+    .recruiter-main-contact,
+    .recruiter-feature-inner,
+    .recruiter-contact-bottom {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+}

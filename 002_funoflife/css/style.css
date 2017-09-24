@@ -3070,6 +3070,78 @@ _contact
   }
 }
 
+.recruiter .recruiter-main a {
+  display: block;
+}
+
+.recruiter .recruiter-main-contact {
+  padding: 35px 0;
+}
+
+.recruiter .recruiter-main-contact a {
+  display: block;
+}
+
+.recruiter .recruiter-main-contact img {
+  width: 345px;
+}
+
+.recruiter .recruiter-feature {
+  background-color: #FAFAFA;
+  display: block;
+}
+
+.recruiter .recruiter-feature-inner {
+  width: 1026px;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.recruiter .recruiter-feature-inner img {
+  width: 1026px;
+}
+
+.recruiter .recruiter-flow {
+  margin-bottom: 60px;
+  padding-top: 60px;
+}
+
+.recruiter .recruiter-flow-inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  .recruiter .recruiter-feature-inner {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .recruiter .recruiter-feature-inner img {
+    width: 357px;
+  }
+  .recruiter .recruiter-contact-bottom {
+    background-color: #F6AC00;
+  }
+  .recruiter .recruiter-contact-bottom img {
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .recruiter .recruiter-main-contact img,
+  .recruiter .recruiter-feature-inner img,
+  .recruiter .recruiter-contact-bottom img {
+    width: 100%;
+  }
+}
+
 .breadcrumbs {
   background-color: #F0F0F0;
 }
@@ -3978,31 +4050,5 @@ _agent
 
 .agent-merit-image {
   width: 757px;
-  margin: 0 auto;
-}
-
-/*********************
-recruiter
-*********************/
-.recruiter-feature {
-  background-color: #FAFAFA;
-  display: block;
-}
-
-.recruiter-feature-inner {
-  width: 1024px;
-  display: block;
-  margin: 0 auto;
-}
-
-.recruiter-flow {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 30px;
-}
-
-.recruiter-flow-inner {
-  width: 1024px;
   margin: 0 auto;
 }

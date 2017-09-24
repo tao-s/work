@@ -38,6 +38,12 @@
   }
 }
 
+@mixin sp_min() {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
 @mixin pc() {
   @media screen and (min-width: $breakpoint) {
     @content;
