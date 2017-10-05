@@ -166,13 +166,14 @@
         $(this).blur();
         $("body").append('<div class="jsc-modal-overlay"></div>');
         $(".jsc-modal-overlay").fadeIn("slow");
-        $(".jsc-modal-content").fadeIn("slow");
+        $(".jsc-modal-content").slideToggle();
         $('.header-menu-button').attr('style', 'display: none;');
         $('.header-menu-close-button').removeAttr('style', 'display: none;');
       });
 
       $(".jsc-modal-close").unbind().click(function() {
-        $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow", function() {
+        $('.jsc-modal-content').slideToggle();
+        $(".jsc-modal-overlay").fadeOut("slow", function() {
           $(".jsc-#modal-overlay").remove();
         });
         $('.header-menu-close-button').attr('style', 'display: none;');
