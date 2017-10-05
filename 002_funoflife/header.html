@@ -32,6 +32,7 @@
             <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
             <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
             <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
+            <li><a href="http://fun-of-life-nikke1925.c9users.io/company">会社概要</a></li>
             <li class="signin">
               <ul class="clearfix">
                 <li><a href="http://fun-of-life-nikke1925.c9users.io/login">ログイン</a></li>
@@ -161,18 +162,19 @@
     </div>
   </div>
   <script>
-    $(function() {
+$(function() {
       $(".jsc-modal-open").click(function() {
         $(this).blur();
         $("body").append('<div class="jsc-modal-overlay"></div>');
         $(".jsc-modal-overlay").fadeIn("slow");
-        $(".jsc-modal-content").fadeIn("slow");
+        $(".jsc-modal-content").slideToggle();
         $('.header-menu-button').attr('style', 'display: none;');
         $('.header-menu-close-button').removeAttr('style', 'display: none;');
       });
 
       $(".jsc-modal-close").unbind().click(function() {
-        $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow", function() {
+        $('.jsc-modal-content').slideToggle();
+        $(".jsc-modal-overlay").fadeOut("slow", function() {
           $(".jsc-#modal-overlay").remove();
         });
         $('.header-menu-close-button').attr('style', 'display: none;');
