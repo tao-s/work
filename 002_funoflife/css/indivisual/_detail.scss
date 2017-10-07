@@ -2,6 +2,10 @@
 
   background-color: #FAFAFA;
 
+  textarea {
+    background-color: #F8F8F8;
+  }
+
   // 関連求人 override
   .job-detail {
     width: 86%;
@@ -33,6 +37,10 @@
     padding: 4px 8px;
     margin-top: 10px;
     font-weight: normal;
+
+    @include sp() {
+      border-radius: 0px!important;
+    };
   }
 
   .main-table {
@@ -106,6 +114,7 @@
       border-radius: 4px;
       line-height: 1.5;
       border: 1px solid #EEE;
+      color: #333333;
     }
 
     h3 + p {
@@ -172,13 +181,31 @@
 
     .sub-button {
       width: 240px;
+      margin-left: 20px;
     }
   }
 
   .detail-apply-title {
     text-align: center;
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
     img {
-      width: 378px;
+      margin-top: 20px;
+      width: 180px;
+    }
+
+    + p {
+      margin-top: 30px;
+      font-size: 13px;
+
+      @include sp() {
+        line-height: 2;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -193,11 +220,23 @@
 
       input {
         height: 50px;
+        background-color: #F8F8F8;
       }
 
       th, td {
         background-color: transparent;
         border: none;
+      }
+
+      th {
+        font-weight: bold;
+        padding: 10px;
+
+        @include sp() {
+          padding: 0;
+          padding-bottom: 5px;
+          font-size: 13px;
+        };
       }
 
       .w100 {
@@ -206,12 +245,8 @@
 
       input, select, textarea {
         border-radius: 5px;
+        padding-left: 20px;
       }
-
-      input {
-        background-color: #F8F8F8;
-      }
-
     }
 
     text-align: center;
@@ -219,10 +254,6 @@
     a.kiyaku {
       color: #375FB1;
       text-decoration: underline;
-    }
-
-    p {
-      margin-bottom: 10px;
     }
 
     .m-button--default {
@@ -233,12 +264,19 @@
     .m-button--primary {
       width: 220px;
     }
+
+    .detail-apply-confirm {
+      color: #797979;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   @include sp() {
     .detail-inner {
       width: 100%;
       padding: 0;
+      margin-top: 10px;
     }
 
     .detail-title {
@@ -260,6 +298,7 @@
       }
       .sub-button {
         width: 60%;
+        margin-left: 10px;
       }
     }
 
@@ -280,11 +319,16 @@
 
       td {
         border-bottom: 3px solid #FFF;
+        color: #333333;
       }
     }
 
     .detail-kanren {
       margin-top: 0;
+
+      ul {
+        margin: 10px;
+      }
     }
 
     .detail-form {

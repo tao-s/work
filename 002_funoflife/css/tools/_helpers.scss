@@ -75,13 +75,13 @@
 // PCのとき非表示にするコンテンツ
 .pc-none {
   @include pc() {
-    display: none;
+    display: none!important;
   }
 }
 
 // SPのとき非表示にするコンテンツ
 .sp-none {
   @include sp() {
-    display: none;
+    display: none!important;
   }
 }
