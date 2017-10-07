@@ -733,6 +733,12 @@
         // console.log('fixedStartHeight: ' + fixedStartHeight);
         // console.log('fixedEndHeight: ' + fixedEndHeight);
         // console.log('scroll: ' + $(window).scrollTop());
+
+        // SPのとき発火しないように修正
+        if($(window).width() < 640) {
+          return;
+        }
+
         if ($(window).scrollTop() > fixedEndHeight) {
           // console.log('test1');
           $('.l-row div.col-3').attr('style', 'position: absolute; width: 268.5px; top: ' + fixedEndHeight + 'px;');
