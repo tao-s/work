@@ -3514,8 +3514,42 @@ _contact
   }
 }
 
-.agent > a {
+.agent .agent-main-pc {
+  height: 519px;
+  background-image: url("../images/agent-main-bg-pc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.agent .agent-main-title-pc {
   display: block;
+  margin: 0 auto;
+  padding-top: 135px;
+  width: 719px;
+}
+
+.agent .agent-register-button-pc {
+  display: block;
+  margin: 0 auto;
+  width: 404px;
+  padding-top: 45px;
+}
+
+.agent .agent-main-sp {
+  height: 388px;
+  background-image: url("../images/agent-main-bg-sp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.agent .agent-main-title-sp {
+  padding-top: 46px;
+  width: 320px;
+}
+
+.agent .agent-register-button-sp {
+  width: 240px;
+  padding-top: 28px;
 }
 
 .agent .agent-merit {
@@ -3539,6 +3573,53 @@ _contact
 
 .agent .agent-merit-list img {
   width: 757px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: block;
+}
+
+.agent .agent-merit-list img + img {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 640px) {
+  .agent .agent-contact-area {
+    background-image: url("../images/agent-contact-bg-pc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 188px;
+  }
+  .agent .agent-contact-area img {
+    width: 132px;
+    padding-top: 30px;
+  }
+  .agent .agent-contact-area .agent-contact-area-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Yu Mincho", "YuMincho";
+  }
+  .agent .agent-contact-area .sub-button {
+    margin-top: 15px;
+    width: 355px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+.agent .agent-flow {
+  padding-bottom: 20px;
+}
+
+.agent .agent-flow img {
+  width: 1021px;
+  padding-top: 20px;
+}
+
+.agent .agent-flow-title {
+  padding-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
 @media screen and (max-width: 640px) {
@@ -3558,7 +3639,35 @@ _contact
     margin-top: 15px;
   }
   .agent .agent-merit-list img {
+    width: 375px;
+  }
+  .agent .agent-contact-area {
+    background-color: #F6AC00;
+    padding: 20px 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #FFF;
+  }
+  .agent .agent-contact-area img {
+    width: 139px;
+  }
+  .agent .agent-contact-area .agent-contact-area-text {
+    font-family: "Yu Mincho", "YuMincho";
+    margin-top: 10px;
+  }
+  .agent .agent-contact-area .sub-button {
+    background-color: #FFF;
     width: 100%;
+    color: #F6AC00;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .agent .agent-scroll-area-sp {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 }
 
