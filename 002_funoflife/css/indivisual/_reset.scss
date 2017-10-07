@@ -1,0 +1,48 @@
+.reset {
+  background-color: #F0F0F0;
+  padding: 30px 0;
+
+  .reset-inner {
+    width: 600px;
+    margin: 0px auto;
+    background-color: #FFF;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin: 15px auto;
+
+    &[name="email"] {
+      background-image: url('../images/mail-icon.png');
+      background-repeat: no-repeat;
+      background-position: 18px;
+      padding-left: 46px;
+      background-size: 14px;
+    }
+  }
+
+  @include sp(){
+    h2 {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #F0F0F0;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .reset-inner {
+      width: 100%;
+      padding: 20px;
+    }
+
+    input {
+      margin-top: 30px;
+    }
+  };
+}

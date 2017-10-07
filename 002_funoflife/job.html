@@ -1,310 +1,674 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico">
-  <link href="./css/style.css" rel="stylesheet">
-</head>
-<body>
-  <!-- ここにheader.htmlを挿入してください -->
-  <div class="job">
-    <div class="l-row job-inner">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教育関連の求人情報一覧 | 教育業界に特化した就職・転職の求人サービス【Education Career】</title>
+    <meta name="description" content="教育関連の求人一覧。教育業界に特化した求人サービスEducation Career（エデュケーションキャリア）であなたにあった求人を見つけましょう。" />
+          <meta name="robots" content="noindex">
+
+          <meta property="og:title" content="Education Career 教育業界に特化した求人サービス"/>
+      <meta property="og:description" content="EducationCareerは教育業界に関心のあるすべての方に向けた求人サービスです。正社員や業務委託、インターン、会社を辞めずに手伝えるプロボノやボランティアなど多様な働き方が選べます。"/>
+      <meta property="og:image" content="http://local.educareer-tao-s.c9users.io/images/og_image.jpg"/>
+      <meta property="og:url" content="http://local.educareer-tao-s.c9users.io"/>
+      <meta property="og:type" content="website"/>
+
+    <link rel="icon" href="/favicon.ico">
+    <!-- <link href="/css/style.css" rel="stylesheet"> -->
+    <link href="http://local.educareer-tao-s.c9users.io/css/style.css" rel="stylesheet">
+      <link media="all" type="text/css" rel="stylesheet" href="http://local.educareer-tao-s.c9users.io/css/slick.css">
+<link href="./css/style.css" rel="stylesheet">
+      </head>
+
+  <body>
+
+    <!--
+<div class="globalHeader">
+  <div class="globalHeader__sub">
+    <div class="clearfix">
+      <div class="logo"><a href="http://local.educareer-tao-s.c9users.io"><i class="icon--logo">Education Career</i></a></div>
+      <ul>
+          <li class="is-active"><span class="glyphicon glyphicon-chevron-right"></span><a href="http://local.educareer-tao-s.c9users.io/job">求人を探す</a></li>
+        <li class=""><span class="glyphicon glyphicon-chevron-right"></span><a href="http://local.educareer-tao-s.c9users.io/agent">転職エージェントに相談</a></li>
+        <li><span class="glyphicon glyphicon-chevron-right"></span><a href="http://local.educareer-tao-s.c9users.io/recruiter">採用担当者様へ</a></li>
+        <li><span class="glyphicon glyphicon-chevron-right"></span><a href="http://local.educareer-tao-s.c9users.io/magazine">コラム</a></li>
+            <li class="signin">
+          <ul class="clearfix login">
+            <li><a class="m-button m-button--default" href="http://local.educareer-tao-s.c9users.io/login">ログイン</a></li>
+            <li><a class="m-button m-button--primary" href="http://local.educareer-tao-s.c9users.io/register">会員登録</a></li>
+          </ul>
+        </li>
+            </ul>
+    </div>
+  </div>
+
+  </div>
+</div>
+-->
+
+  <div class="globalHeader">
+    <div class="globalHeader__sub">
+      <div class="clearfix">
+        <a href="http://local.educareer-tao-s.c9users.io"><img src="/images/logo.png"></img></a>
+        <div class="sp-none header-list-area">
+          <ul>
+            <li class=""><a href="http://local.educareer-tao-s.c9users.io/job">求人を探す</a></li>
+            <li class=""><a href="http://local.educareer-tao-s.c9users.io/agent">転職エージェントに相談</a></li>
+            <li><a href="http://local.educareer-tao-s.c9users.io/recruiter">採用担当者様へ</a></li>
+            <li><a href="/magazine/">コラム</a></li>
+            <li class="signin">
+              <ul class="clearfix">
+                              <li><a href="http://local.educareer-tao-s.c9users.io/login">ログイン</a></li>
+                <li><a href="http://local.educareer-tao-s.c9users.io/register">会員登録</a></li>
+                            </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="pc-none">
+          <!-- メニュー閉じているとき表示 -->
+          <a href="#" class="jsc-modal-open header-menu-button"><img src="/images/header-menu.svg" alt=""></a>
+          <!-- メニュー開いているとき表示 -->
+          <a href="#" class="jsc-modal-close header-menu-close-button" style="display: none;"><img src="/images/header-menu-close.svg" alt=""></a>
+          <!-- モーダルコンテンツ -->
+          <div class="jsc-modal-content">
+            <form action="http://local.educareer-tao-s.c9users.io/job" method="get">
+              <input type="hidden" name="_token" value="YeElESGETB6w3v2asPidA12uBWWwIP8g9luxpRec">
+              <input type="text" name="keyword" placeholder="希望の求人を探してみましょう。" value="" class="keyword">
+              <select name="job_category" class="header-menu-place">
+                    <option value="">職種を選択</option>
+                    <option value="1">営業関連</option>
+<option value="2">企画/経営関連</option>
+<option value="7">管理/事務関連</option>
+<option value="3">エンジニア/技術関連</option>
+<option value="4">クリエイティブ関連</option>
+<option value="6">専門職（コンサル/士業等）関連</option>
+<option value="5">教師/講師/インストラクター関連</option>
+<option value="8">その他</option>                  </select>
+              <select name="prefecture" class="header-menu-syokusyu">
+                      <option value="">勤務地を選択</option>
+                      <option value="1">東京都</option>
+                      <option value="2">北海道</option>
+                      <option value="3">青森県</option>
+                      <option value="6">秋田県</option>
+                      <option value="4">岩手県</option>
+                      <option value="7">山形県</option>
+                      <option value="5">宮城県</option>
+                      <option value="8">福島県</option>
+                      <option value="9">茨城県</option>
+                      <option value="10">栃木県</option>
+                      <option value="11">群馬県</option>
+                      <option value="14">神奈川県</option>
+                      <option value="12">埼玉県</option>
+                      <option value="13">千葉県</option>
+                      <option value="16">富山県</option>
+                      <option value="17">石川県</option>
+                      <option value="18">福井県</option>
+                      <option value="15">新潟県</option>
+                      <option value="19">山梨県</option>
+                      <option value="20">長野県</option>
+                      <option value="23">愛知県</option>
+                      <option value="22">静岡県</option>
+                      <option value="24">三重県</option>
+                      <option value="21">岐阜県</option>
+                      <option value="26">京都府</option>
+                      <option value="27">大阪府</option>
+                      <option value="28">兵庫県</option>
+                      <option value="25">滋賀県</option>
+                      <option value="29">奈良県</option>
+                      <option value="30">和歌山県</option>
+                      <option value="34">広島県</option>
+                      <option value="33">岡山県</option>
+                      <option value="35">山口県</option>
+                      <option value="31">鳥取県</option>
+                      <option value="32">島根県</option>
+                      <option value="36">徳島県</option>
+                      <option value="37">香川県</option>
+                      <option value="38">愛媛県</option>
+                      <option value="39">高知県</option>
+                      <option value="40">福岡県</option>
+                      <option value="41">佐賀県</option>
+                      <option value="43">熊本県</option>
+                      <option value="44">大分県</option>
+                      <option value="42">長崎県</option>
+                      <option value="45">宮崎県</option>
+                      <option value="46">鹿児島県</option>
+                      <option value="47">沖縄県</option>
+                    </select>
+              <select name="business_type" class="header-menu-gyosyu">
+                      <option value="">業種を選択</option>
+                      <option value="26">教育</option>
+<option value="27">IT/Web/通信</option>
+<option value="28">人材（紹介/派遣/広告）</option>
+<option value="29">コンサルティング</option>
+<option value="30">メーカー</option>
+<option value="31">商社</option>
+<option value="32">サービス/流通/小売</option>
+<option value="33">広告/マスコミ</option>
+<option value="34">金融/保険/不動産</option>
+<option value="8">その他</option>                    </select>
+              <input type="submit" value="この条件で検索" class="submit m-button m-button--primary">
+            </form>
+            <hr>
+            <div class="header-menu-login-area">
+                              <a href="http://local.educareer-tao-s.c9users.io/login" class="main-button">ログイン</a>
+                <a href="http://local.educareer-tao-s.c9users.io/register" class="main-button">新規会員登録</a>
+                          </div>
+            <div class="header-menu-list-area">
+              <ul>
+                <li><a href="http://local.educareer-tao-s.c9users.io/job">求人を探す</a></li>
+                <li><a href="http://local.educareer-tao-s.c9users.io/agent">転職エージェントに相談</a></li>
+                <li><a href="http://local.educareer-tao-s.c9users.io/recruiter">採用担当者様へ</a></li>
+                <li><a href="/magazine/">コラム</a></li>
+                <li><a href="http://local.educareer-tao-s.c9users.io/company">会社概要</a></li>
+                <li><a href="http://local.educareer-tao-s.c9users.io/contact">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="job">
+        <div class="l-row job-inner">
       <div class="col-3 sp-none">
         <div class="side-search">
-          <img src="images/search-text.svg" class="side-search-text">
-          <form action="https://education-career.jp/job" method="get">
+          <img src="http://local.educareer-tao-s.c9users.io/images/search-text.svg" class="side-search-text">
+          <form action="http://local.educareer-tao-s.c9users.io/job" method="get">
+            <input type="hidden" name="_token" value="YeElESGETB6w3v2asPidA12uBWWwIP8g9luxpRec">
             <p>
               <input type="text" class="kibo" name="keyword" placeholder="希望の求人を探してみましょう。" value="" class="keyword">
             </p>
             <img src="/images/search-condition.svg" alt="検索条件指定" class="search-condition">
             <p>
               <select name="prefecture">
-              <option value="">勤務地から選ぶ</option>
-              <option value="1">東京都</option>
-              <option value="2">北海道</option>
-              <option value="3">青森県</option>
-              <option value="6">秋田県</option>
-              <option value="4">岩手県</option>
-              <option value="7">山形県</option>
-              <option value="5">宮城県</option>
-              <option value="8">福島県</option>
-              <option value="9">茨城県</option>
-              <option value="10">栃木県</option>
-              <option value="11">群馬県</option>
-              <option value="14">神奈川県</option>
-              <option value="12">埼玉県</option>
-              <option value="13">千葉県</option>
-              <option value="16">富山県</option>
-              <option value="17">石川県</option>
-              <option value="18">福井県</option>
-              <option value="15">新潟県</option>
-              <option value="19">山梨県</option>
-              <option value="20">長野県</option>
-              <option value="23">愛知県</option>
-              <option value="22">静岡県</option>
-              <option value="24">三重県</option>
-              <option value="21">岐阜県</option>
-              <option value="26">京都府</option>
-              <option value="27">大阪府</option>
-              <option value="28">兵庫県</option>
-              <option value="25">滋賀県</option>
-              <option value="29">奈良県</option>
-              <option value="30">和歌山県</option>
-              <option value="34">広島県</option>
-              <option value="33">岡山県</option>
-              <option value="35">山口県</option>
-              <option value="31">鳥取県</option>
-              <option value="32">島根県</option>
-              <option value="36">徳島県</option>
-              <option value="37">香川県</option>
-              <option value="38">愛媛県</option>
-              <option value="39">高知県</option>
-              <option value="40">福岡県</option>
-              <option value="41">佐賀県</option>
-              <option value="43">熊本県</option>
-              <option value="44">大分県</option>
-              <option value="42">長崎県</option>
-              <option value="45">宮崎県</option>
-              <option value="46">鹿児島県</option>
-              <option value="47">沖縄県</option>
-            </select>
+                <option value="">勤務地から選ぶ</option>
+                <option value="1">東京都</option>
+                <option value="2">北海道</option>
+                <option value="3">青森県</option>
+                <option value="6">秋田県</option>
+                <option value="4">岩手県</option>
+                <option value="7">山形県</option>
+                <option value="5">宮城県</option>
+                <option value="8">福島県</option>
+                <option value="9">茨城県</option>
+                <option value="10">栃木県</option>
+                <option value="11">群馬県</option>
+                <option value="14">神奈川県</option>
+                <option value="12">埼玉県</option>
+                <option value="13">千葉県</option>
+                <option value="16">富山県</option>
+                <option value="17">石川県</option>
+                <option value="18">福井県</option>
+                <option value="15">新潟県</option>
+                <option value="19">山梨県</option>
+                <option value="20">長野県</option>
+                <option value="23">愛知県</option>
+                <option value="22">静岡県</option>
+                <option value="24">三重県</option>
+                <option value="21">岐阜県</option>
+                <option value="26">京都府</option>
+                <option value="27">大阪府</option>
+                <option value="28">兵庫県</option>
+                <option value="25">滋賀県</option>
+                <option value="29">奈良県</option>
+                <option value="30">和歌山県</option>
+                <option value="34">広島県</option>
+                <option value="33">岡山県</option>
+                <option value="35">山口県</option>
+                <option value="31">鳥取県</option>
+                <option value="32">島根県</option>
+                <option value="36">徳島県</option>
+                <option value="37">香川県</option>
+                <option value="38">愛媛県</option>
+                <option value="39">高知県</option>
+                <option value="40">福岡県</option>
+                <option value="41">佐賀県</option>
+                <option value="43">熊本県</option>
+                <option value="44">大分県</option>
+                <option value="42">長崎県</option>
+                <option value="45">宮崎県</option>
+                <option value="46">鹿児島県</option>
+                <option value="47">沖縄県</option>
+              </select>
             </p>
             <p>
               <select name="job_category">
-              <option value="">職種検索</option>
-              <option value="1">営業職</option>
-              <option value="2">企画・管理系職</option>
-              <option value="3">エンジニア・技術関連職</option>
-              <option value="4">クリエイティブ・クリエイター系職種</option>
-              <option value="5">講師・教員関連職種</option>
-              <option value="6">専門職種（コンサルタント・士業系等）</option>
-              <option value="7">事務系職種</option>
-              <option value="8">その他</option>
-            </select>
+                <option value="">職種検索</option>
+                <option value="1">営業関連</option>
+<option value="2">企画/経営関連</option>
+<option value="7">管理/事務関連</option>
+<option value="3">エンジニア/技術関連</option>
+<option value="4">クリエイティブ関連</option>
+<option value="6">専門職（コンサル/士業等）関連</option>
+<option value="5">教師/講師/インストラクター関連</option>
+<option value="8">その他</option>              </select>
             </p>
             <p>
               <select name="business_type">
-              <option value="">業種検索</option>
-              <option value="1">大学・大学院</option>
-              <option value="2">高等学校</option>
-              <option value="3">専門学校・短期大学・高専</option>
-              <option value="4">中学校</option>
-              <option value="5">小学校</option>
-              <option value="6">保育園・幼稚園・学童保育</option>
-              <option value="7">フリースクール</option>
-              <option value="8">その他</option>
-              <option value="9">英会話スクール・英語塾</option>
-              <option value="10">中国語・韓国語教室</option>
-              <option value="11">ドイツ・フランス・スペイン教室</option>
-              <option value="12">日本語教室</option>
-              <option value="13">その他語学教室</option>
-              <option value="14">プログラミング・パソコンスクール</option>
-              <option value="15">デザインスクール</option>
-              <option value="16">料理教室、音楽教室、水泳教室</option>
-              <option value="17">フィットネス・ヨガ・ダンス・スポーツ教室</option>
-              <option value="18">資格スクール・予備校</option>
-              <option value="19">予備校</option>
-              <option value="20">学習塾</option>
-              <option value="21">幼児教室</option>
-              <option value="22">出版・コンテンツ制作会社</option>
-              <option value="23">Webサービス・アプリ開発／運営</option>
-              <option value="24">留学斡旋・サポート</option>
-              <option value="25">学校・スクール・教室運営</option>
-            </select>
+                <option value="">業種検索</option>
+                <option value="26">教育</option>
+<option value="27">IT/Web/通信</option>
+<option value="28">人材（紹介/派遣/広告）</option>
+<option value="29">コンサルティング</option>
+<option value="30">メーカー</option>
+<option value="31">商社</option>
+<option value="32">サービス/流通/小売</option>
+<option value="33">広告/マスコミ</option>
+<option value="34">金融/保険/不動産</option>
+<option value="8">その他</option>              </select>
             </p>
             <p><input type="submit" value="仕事を探す" class="submit m-button m-button--primary"></p>
           </form>
         </div>
         <div class="side-banner">
-          <a href="/agent">
-          <img src="images/side-banner.png" alt="転職エージェントへ無料相談" width="100%">
-        </a>
+          <a href="http://local.educareer-tao-s.c9users.io/agent">
+            <img src="images/side-banner.png" alt="転職エージェントへ無料相談" width="100%">
+          </a>
         </div>
       </div>
       <div class="col-8 new-job">
         <h2 class="job-result-title text-bold">
-          WEBエンジニアの検索結果
+          検索結果
         </h2>
         <ul class="clearfix l-row">
-          <li class="job-list clearfix">
-            <div class="float-left syokusyu sp-none">
-              <img src="/images/job_icon_01.png" alt="" />
-              <p class="job-tag">企画/経営関連</p>
-            </div>
-            <div class="pc-none job-tag-area">
-              <p class="job-tag">企画/経営関連</p>
-              <p class="favorite-job-list-detail-sp-conpany">
-                株式会社ファンオブライフ
-              </p>
-            </div>
-            <div class="job-detail">
-              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
-              <table>
-                <tr>
-                  <th class="text-bold">勤務地
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【関東】東京都 新宿区</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">想定給与
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">仕事内容
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                    </td>
-                </tr>
-              </table>
-            </div>
-            <div class="job-button-area">
-              <a href="detail.html" class="sub-button">詳細をみる</a>
-            </div>
-          </li>
-          <li class="job-list clearfix">
-            <div class="float-left syokusyu sp-none">
-              <img src="/images/job_icon_01.png" alt="" />
-              <p class="job-tag">企画/経営関連</p>
-            </div>
-            <div class="pc-none job-tag-area">
-              <p class="job-tag">企画/経営関連</p>
-              <p class="favorite-job-list-detail-sp-conpany">
-                株式会社ファンオブライフ
-              </p>
-            </div>
-            <div class="job-detail">
-              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
-              <table>
-                <tr>
-                  <th class="text-bold">勤務地
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【関東】東京都 新宿区</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">想定給与
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">仕事内容
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                    </td>
-                </tr>
-              </table>
-            </div>
-            <div class="job-button-area">
-              <a href="detail.html" class="sub-button">詳細をみる</a>
-            </div>
-          </li>
-          <li class="job-list clearfix">
-            <div class="float-left syokusyu sp-none">
-              <img src="/images/job_icon_01.png" alt="" />
-              <p class="job-tag">企画/経営関連</p>
-            </div>
-            <div class="pc-none job-tag-area">
-              <p class="job-tag">企画/経営関連</p>
-              <p class="favorite-job-list-detail-sp-conpany">
-                株式会社ファンオブライフ
-              </p>
-            </div>
-            <div class="job-detail">
-              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
-              <table>
-                <tr>
-                  <th class="text-bold">勤務地
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【関東】東京都 新宿区</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">想定給与
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">仕事内容
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                    </td>
-                </tr>
-              </table>
-            </div>
-            <div class="job-button-area">
-              <a href="detail.html" class="sub-button">詳細をみる</a>
-            </div>
-          </li>
-          <li class="job-list clearfix">
-            <div class="float-left syokusyu sp-none">
-              <img src="/images/job_icon_01.png" alt="" />
-              <p class="job-tag">企画/経営関連</p>
-            </div>
-            <div class="pc-none job-tag-area">
-              <p class="job-tag">企画/経営関連</p>
-              <p class="favorite-job-list-detail-sp-conpany">
-                株式会社ファンオブライフ
-              </p>
-            </div>
-            <div class="job-detail">
-              <p class="m-text text-bold job-list-catch">客先は有名IT企業です！「最新技術に携りたい」という想いを実現できます！</p>
-              <p class="m-text m-text--sub sp-none">株式会社ファンオブライフ</p>
-              <table>
-                <tr>
-                  <th class="text-bold">勤務地
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【関東】東京都 新宿区</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">想定給与
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>■経験、スキル、年齢を考慮の上、同社規定により優遇</td>
-                </tr>
-                <tr>
-                  <th class="text-bold">仕事内容
-                    </td>
-                    <td class="text-bold table-coron sp-none">:</td>
-                    <td>【職務概要】自社システムやアプリ、マーケティング分析ツール、自社メディアなど幅広い案 件の開発・管理全般をお任せします。また、自社開発であるクラウド事業での新サービスの企画、開発業務もご担当頂きます。【職務詳細】・法人向けアプリケーションの開発・インターネット勤怠管理・交通費清算システムの開発・自社メディアの開発・運用・自社サイトの開発
-                    </td>
-                </tr>
-              </table>
-            </div>
-            <div class="job-button-area">
-              <a href="detail.html" class="sub-button">詳細をみる</a>
-            </div>
-          </li>
-        </ul>
-        <div class="job-pagination">
-          <ul class="pagination">
-            <li class="active"><span>1</span></li>
-            <li><a href="job.html">2</a></li>
-            <li><a href="job.html">3</a></li>
-            <li><a href="job.html">4</a></li>
-            <li><a href="job.html">5</a></li>
-            <li class="disabled">...</li>
-            <li><a href="job.html" rel="next">»</a></li>
-          </ul>
-        </div>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_4.svg" alt="" />
+                <p class="job-tag">UXデザイナー</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">UXデザイナー</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テストUXデザイナー</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/1/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_5.svg" alt="" />
+                <p class="job-tag">トレーナー</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">トレーナー</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/5/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_2.svg" alt="" />
+                <p class="job-tag">営業</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">営業</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/2/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_7.svg" alt="" />
+                <p class="job-tag">総務</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">総務</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">総務スタッフ</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/4/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_3.svg" alt="" />
+                <p class="job-tag">プログラマー</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">プログラマー</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/3/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_7.svg" alt="" />
+                <p class="job-tag">営業事務</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">営業事務</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/7/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                      <li class="job-list clearfix">
+              <div class="float-left syokusyu sp-none">
+                <img src="/images/job_icon_6.svg" alt="" />
+                <p class="job-tag">資格コンサルタント</p>
+              </div>
+              <div class="pc-none job-tag-area">
+                <p class="job-tag">資格コンサルタント</p>
+                <p class="favorite-job-list-detail-sp-conpany">
+                  Education Career
+                </p>
+              </div>
+              <div class="job-detail">
+                <p class="m-text text-bold job-list-catch">求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト</p>
+                <p class="m-text m-text--sub sp-none">Education Career</p>
+                <table>
+                  <tr>
+                    <th class="text-bold">勤務地
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>【1】 東京都板橋区板橋1-2-3 123</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">想定給与
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>応相談</td>
+                  </tr>
+                  <tr>
+                    <th class="text-bold">仕事内容
+                      </td>
+                      <td class="text-bold table-coron sp-none">:</td>
+                      <td>求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト
+求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テスト求人テ...</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="job-button-area">
+                <a href="http://local.educareer-tao-s.c9users.io/job/6/detail" class="sub-button">詳細をみる</a>
+              </div>
+            </li>
+                  </ul>
+
       </div>
     </div>
   </div>
-  <!-- ここにfooter.htmlを挿入してください -->
-</body>
+    <div class="globalFooter">
+  <div class="sp-none">
+    <a href="http://local.educareer-tao-s.c9users.io/agent" class="soudan"><img src="/images/soudan.png"></a>
+    <div class="footer-banner">
+      <a href="/magazine/" target="_blank"><img src="/images/footer-edtech.png"></a>
+      <a href="http://local.educareer-tao-s.c9users.io" target="_blank"><img src="/images/footer-educationcareer.png"></a>
+    </div>
+  </div>
+  <div class="pc-none sp-footer-banner-area">
+    <a href="http://local.educareer-tao-s.c9users.io/agent" class="soudan"><img src="/images/sp-soudan.png"></a>
+    <div class="footer-sp-banner">
+      <a href="/magazine/" target="_blank"><img src="/images/sp-footer-edtech.png"></a>
+      <a href="http://local.educareer-tao-s.c9users.io" target="_blank"><img src="/images/sp-footer-educationcareer.png"></a>
+    </div>
+  </div>
+  <div class="footer-links">
+    <div class="footer-links-inner">
+      <ul class="clearfix">
+        <li><a href="http://local.educareer-tao-s.c9users.io/job">求人を探す</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/agent">転職エージェントに相談</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/recruiter">採用担当者の方へ</a></li>
+        <li><a href="/magazine">コラム</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/company">会社概要</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/contact">お問い合わせ</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/terms">利用規約</a></li>
+        <li><a href="http://local.educareer-tao-s.c9users.io/policy">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-info sp-none">
+    <div class="float-left footer-info-logo">
+      <img src="/images/logo.png"></img>
+    </div>
+    <p class="footer-info-company">
+      株式会社ファンオブライフ<br>
+      〒150-0001　東京都渋谷区神宮前6-19-16 U-natura301
+    </p>
+    <div class="float-right">
+      <div class="footer-button-area">
+              <a href="http://local.educareer-tao-s.c9users.io/register" class="footer-button">会員登録</a>
+        <a href="http://local.educareer-tao-s.c9users.io/login" class="footer-button">ログイン</a>
+            </div>
+      <p class="footer-copyright">
+        <small class="copyright m-text m-text--sub m-text--small">Copyright &copy; | Privacy | All right reserved
+        </small>
+      </p>
+    </div>
+  </div>
+  <div class="sp-footer-info pc-none text-center">
+    <p><small>©FUN OF LIFE　2017</small></p>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+      $(function() {
+        $(".jsc-modal-open").click(function() {
+          $(this).blur();
+          $("body").append('<div class="jsc-modal-overlay"></div>');
+          $(".jsc-modal-overlay").fadeIn("slow");
+          $(".jsc-modal-content").fadeIn("slow");
+          $('.header-menu-button').attr('style', 'display: none;');
+          $('.header-menu-close-button').removeAttr('style', 'display: none;');
+        });
+
+        $(".jsc-modal-close").unbind().click(function() {
+          $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow", function() {
+            $(".jsc-#modal-overlay").remove();
+          });
+          $('.header-menu-close-button').attr('style', 'display: none;');
+          $('.header-menu-button').removeAttr('style', 'display: none;');
+        });
+
+        $(document).on("click", ".jsc-modal-overlay", function() {
+
+          $(".jsc-modal-content, .jsc-modal-overlay").fadeOut("slow", function() {
+
+            $(".jsc-modal-overlay").remove();
+          });
+
+          $('.header-menu-close-button').attr('style', 'display: none;');
+          $('.header-menu-button').removeAttr('style', 'display: none;');
+        });
+      });
+    </script>
+
+    <script>
+      $(function() {
+        fixedStartHeight = $('.job').offset().top;
+
+        $(window).on('scroll', function() {
+
+          if( $(window).scrollTop() > fixedStartHeight ) {
+            console.log('test');
+
+          // SPのとき発火しないように修正
+          if($(window).width() < 640) {
+            return;
+          }
+
+          if( $(window).scrollTop() > fixedStartHeight ) {
+            // console.log('test');
+
+            $('.l-row div.col-3').attr('style', 'position: fixed; width: 268.5px; top: 20px;');
+            $('.l-row div.col-8').attr('style', 'margin-left: 310px;');
+          } else {
+            $('.l-row div.col-3').removeAttr('style');
+            $('.l-row div.col-8').removeAttr('style');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

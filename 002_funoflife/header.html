@@ -32,7 +32,6 @@
             <li class=""><a href="http://fun-of-life-nikke1925.c9users.io/agent">転職エージェントに相談</a></li>
             <li><a href="http://fun-of-life-nikke1925.c9users.io/recruiter">採用担当者様へ</a></li>
             <li><a href="http://fun-of-life-nikke1925.c9users.io/magazine">コラム</a></li>
-            <li><a href="http://fun-of-life-nikke1925.c9users.io/company">会社概要</a></li>
             <li class="signin">
               <ul class="clearfix">
                 <li><a href="http://fun-of-life-nikke1925.c9users.io/login">ログイン</a></li>
@@ -161,8 +160,13 @@
       </div>
     </div>
   </div>
+
+  <!-- 動作確認用 -->
+  <div style="width:100vw; height: 1000px;">
+  </div>
+
   <script>
-$(function() {
+    $(function() {
       $(".jsc-modal-open").click(function() {
         $(this).blur();
         $("body").append('<div class="jsc-modal-overlay"></div>');
@@ -170,6 +174,9 @@ $(function() {
         $(".jsc-modal-content").slideToggle();
         $('.header-menu-button').attr('style', 'display: none;');
         $('.header-menu-close-button').removeAttr('style', 'display: none;');
+
+        // メニューが開いているときにスクロールを停止する
+        $('body').attr('style', 'position: fixed; overflow-y: scroll;');
       });
 
       $(".jsc-modal-close").unbind().click(function() {
@@ -179,6 +186,7 @@ $(function() {
         });
         $('.header-menu-close-button').attr('style', 'display: none;');
         $('.header-menu-button').removeAttr('style', 'display: none;');
+        $('body').removeAttr('style', 'position: fixed; overflow-y: scroll;');
       });
 
       $(document).on("click", ".jsc-modal-overlay", function() {
@@ -190,6 +198,7 @@ $(function() {
 
         $('.header-menu-close-button').attr('style', 'display: none;');
         $('.header-menu-button').removeAttr('style', 'display: none;');
+        $('body').removeAttr('style', 'position: fixed; overflow-y: scroll;');
       });
     });
   </script>
