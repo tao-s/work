@@ -1033,7 +1033,41 @@ body {
   color: #555555;
   margin-top: 4px;
 }
-
+.globalFooter .footer_agent{
+ background-image: url(../images/footer_agent_back.jpg);
+ background-position: center;
+ background-size: cover;
+ height: 240px;
+}
+.globalFooter .footer_agent_content{
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+.globalFooter .footer_agent_text{
+  width: 50%;
+  float: left;
+}
+.globalFooter .footer_agent_text img{
+  padding: 20px 0;
+  width: 400px;
+}
+.footer_agent_btm {
+  margin-top: 30px;
+}
+.footer_agent_btm a{
+  display:inline-block;
+  color: #fff;
+  background-color: #F6AC00;
+  border-radius: 5px;
+  padding: 15px 25px;
+}
+.footer_agent_btm a{
+  color: #fff;
+}
+.footer_sp{
+  display: none;
+}
 @media screen and (max-width: 640px) {
   .globalFooter {
     width: 100%;
@@ -1076,6 +1110,33 @@ body {
     margin-top: 10px;
     display: block;
   }
+  .globalFooter .footer_agent{
+   background-image: url(../images/footer_agent_back_sp.jpg);
+   max-height: 380px;
+   min-height: 341px;
+   padding: 0 3%;
+  }
+  .footer_pc{
+    display: none;
+  }
+  .footer_sp{
+    display: block;
+  }
+  .globalFooter .footer_agent_text img{
+    width: 100%;
+    text-align: center;
+  }
+  .globalFooter .footer_agent_text{
+  width: 100%;
+  }
+   .footer_agent_btm{
+    margin-top: 40px;
+   }
+  .footer_agent_btm a{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
 }
 
 @-webkit-keyframes fadeOut {
@@ -1988,6 +2049,7 @@ input[type=text] {
 .company .company-access-map-detail-address,
 .company .company-access-map-detail-access {
   width: 480px;
+  height: 110px;
   background-color: #FFF;
 }
 
@@ -2057,6 +2119,12 @@ input[type=text] {
   .company .company-access-map-detail-access {
     margin-left: 0;
     margin-top: 10px;
+  }
+  .company .company-access-map-detail-address,
+  .company .company-access-map-detail-access {
+    width: 480px;
+    height: 100px;
+    background-color: #FFF;
   }
 }
 
@@ -3314,6 +3382,9 @@ _contact
 }
 
 @media screen and (max-width: 640px) {
+  .job {
+    margin-top: 10px !important;
+  }
   .job .job-inner, .job .new-job {
     width: 100%;
   }
@@ -3369,6 +3440,7 @@ _contact
   background-color: #649E00;
   color: #FFF;
   border: none;
+  font-weight: bold;
 }
 
 .detail .main-table td {
@@ -3422,6 +3494,7 @@ _contact
   height: 20px;
   line-height: 20px;
   padding: 0px 8px;
+  margin-top: -1px;
 }
 
 .detail .detail-description {
@@ -3557,6 +3630,7 @@ _contact
 
 @media screen and (max-width: 640px) {
   .detail .detail-inner {
+    margin-top:10px;
     width: 100%;
     padding: 0;
   }
@@ -3712,6 +3786,62 @@ _contact
   .top .job-tag-area p + p {
     font-size: 12px;
     color: #999999;
+  }
+  .support_agent_sp{
+    margin-top: 20px;
+    position: relative;
+  }
+  .support_agent_sp_text{
+    position: absolute;
+    top:10%;
+    width: 60%;
+    text-align: center;
+    left: 15%;
+  }
+  .support_agent_sp_text h2{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .support_agent_sp_text p{
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .support_agent_sp_btm a{
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    background-color: #649E00;
+    display: inline-block;
+    padding: 3px 0;
+    border-radius: 5px;
+  }
+  .support_ric_sp{
+    margin-top: 20px;
+    position: relative;
+  }
+  .support_ric_sp_text{
+    width: 60%;
+    position: absolute;
+    top:6%;
+    right: 17%;
+    text-align: center;
+  }
+  .support_ric_sp_text h2{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .support_ric_sp_text p{
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .support_ric_sp_btm a{
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    background-color: #649E00;
+    display: inline-block;
+    padding: 3px 0;
+    border-radius: 5px;
   }
 }
 
@@ -4350,7 +4480,9 @@ _contact
   margin: 10px;
   width: 45%;
 }
-
+.side-search {
+  border: solid 1px #eeeeee;
+}
 .side-search p {
   margin-top: 15px;
   width: 100%;
