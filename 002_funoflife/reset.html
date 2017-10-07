@@ -25,29 +25,14 @@
 
 <body>
 <!-- ここにheader.htmlを挿入してください -->
-<div class="globalViewport l-row reset">
-  <div class="globalMain globalMain--narrow">
-    <div class="l-group">
-      <h2 class="m-heading m-heading--h2">パスワード再発行</h2>
-      <form action="http://local.educareer-tao-s.c9users.io/password/reset" method="post">
-        <input type="hidden" name="_token" value="yqkk7BQsrGl0q6yZdSqednx21GBnlAXa73PcwV4K">
-        <div class="l-group">
-          <table class="m-table">
-            <tbody>
-            <tr>
-              <th><label for="inputEmail">メールアドレス <span
-                      class="m-label m-label--require">必須</span></label></th>
-              <td><input id="inputEmail" type="text" name="email" value="" placeholder="メールアドレス"></td>
-            </tr>
-            </tbody>
-          </table>
-          <div class="l-row l-row--xs">
-            <div class="col-12"><input type="submit" value="パスワードを再発行" class="m-button m-button--default">
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+<div class="reset">
+  <div class="reset-inner">
+    <h2 class="text-center">パスワード再発行</h2>
+    <form action="http://local.educareer-tao-s.c9users.io/password/reset" method="post">
+      <input type="hidden" name="_token" value="yqkk7BQsrGl0q6yZdSqednx21GBnlAXa73PcwV4K">
+        <input id="inputEmail" type="text" name="email" value="" placeholder="メールアドレス">
+        <input type="submit" value="パスワードを再発行" class="m-button m-button--default">
+    </form>
   </div>
 </div>
 </div>
