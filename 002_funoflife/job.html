@@ -649,8 +649,13 @@
         fixedStartHeight = $('.job').offset().top;
 
         $(window).on('scroll', function() {
+          // SPのとき発火しないように修正
+          if($(window).width() < 640) {
+            return;
+          }
+
           if( $(window).scrollTop() > fixedStartHeight ) {
-            console.log('test');
+            // console.log('test');
             $('.l-row div.col-3').attr('style', 'position: fixed; width: 268.5px; top: 20px;');
             $('.l-row div.col-8').attr('style', 'margin-left: 310px;');
           } else {
