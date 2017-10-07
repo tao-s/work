@@ -2340,7 +2340,6 @@ _contact
 
 .register h2 {
   font-size: 20px;
-  font-weight: bold;
   margin-bottom: 40px;
 }
 
@@ -2348,7 +2347,7 @@ _contact
   width: 600px;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 50px 0;
+  padding: 26px 0;
 }
 
 .register .register-form {
@@ -2408,6 +2407,7 @@ _contact
     padding-bottom: 20px;
     border-bottom: 1px solid #F0F0F0;
     margin-bottom: 20px;
+    font-size: 14px;
   }
   .register .register-inner {
     width: 100%;
@@ -2421,6 +2421,7 @@ _contact
   }
   .register .register-form-sns {
     display: block;
+    margin-bottom: 30px;
   }
   .register .register-form-sns a {
     display: block;
