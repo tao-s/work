@@ -169,6 +169,9 @@
         $(".jsc-modal-content").slideToggle();
         $('.header-menu-button').attr('style', 'display: none;');
         $('.header-menu-close-button').removeAttr('style', 'display: none;');
+
+        // メニューが開いているときにスクロールを停止する
+        $('body').attr('style', 'position: fixed; overflow-y: scroll;');
       });
 
       $(".jsc-modal-close").unbind().click(function() {
@@ -178,6 +181,7 @@
         });
         $('.header-menu-close-button').attr('style', 'display: none;');
         $('.header-menu-button').removeAttr('style', 'display: none;');
+        $('body').removeAttr('style', 'position: fixed; overflow-y: scroll;');
       });
 
       $(document).on("click", ".jsc-modal-overlay", function() {
@@ -189,6 +193,7 @@
 
         $('.header-menu-close-button').attr('style', 'display: none;');
         $('.header-menu-button').removeAttr('style', 'display: none;');
+        $('body').removeAttr('style', 'position: fixed; overflow-y: scroll;');
       });
     });
   </script>
