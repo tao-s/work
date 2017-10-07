@@ -3605,6 +3605,10 @@ _contact
   }
 }
 
+.top .support .top-support-text {
+  margin-top: 16px;
+}
+
 .top .career-support {
   overflow: hidden;
 }
