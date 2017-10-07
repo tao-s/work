@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -594,7 +593,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #333;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-family: YuGothic, 'Yu Gothic', sans-serif;
   min-width: 1200px;
 }
 
@@ -3368,6 +3367,10 @@ _contact
   background-color: #FAFAFA;
 }
 
+.detail textarea {
+  background-color: #F8F8F8;
+}
+
 .detail .job-detail {
   width: 86%;
 }
@@ -3396,6 +3399,12 @@ _contact
   padding: 4px 8px;
   margin-top: 10px;
   font-weight: normal;
+}
+
+@media screen and (max-width: 640px) {
+  .detail .job-tag {
+    border-radius: 0px !important;
+  }
 }
 
 .detail .main-table {
@@ -3470,6 +3479,7 @@ _contact
   border-radius: 4px;
   line-height: 1.5;
   border: 1px solid #EEE;
+  color: #333333;
 }
 
 .detail .detail-description h3 + p {
@@ -3532,14 +3542,33 @@ _contact
 
 .detail .detail-form .sub-button, .detail .detail-apply .sub-button {
   width: 240px;
+  margin-left: 20px;
 }
 
 .detail .detail-apply-title {
   text-align: center;
 }
 
+.detail .detail-apply-title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .detail .detail-apply-title img {
-  width: 378px;
+  margin-top: 20px;
+  width: 180px;
+}
+
+.detail .detail-apply-title + p {
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 640px) {
+  .detail .detail-apply-title + p {
+    line-height: 2;
+    margin-top: 20px;
+  }
 }
 
 .detail .detail-apply {
@@ -3554,11 +3583,25 @@ _contact
 
 .detail .detail-apply table input {
   height: 50px;
+  background-color: #F8F8F8;
 }
 
 .detail .detail-apply table th, .detail .detail-apply table td {
   background-color: transparent;
   border: none;
+}
+
+.detail .detail-apply table th {
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .detail .detail-apply table th {
+    padding: 0;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
 }
 
 .detail .detail-apply table .w100 {
@@ -3567,19 +3610,12 @@ _contact
 
 .detail .detail-apply table input, .detail .detail-apply table select, .detail .detail-apply table textarea {
   border-radius: 5px;
-}
-
-.detail .detail-apply table input {
-  background-color: #F8F8F8;
+  padding-left: 20px;
 }
 
 .detail .detail-apply a.kiyaku {
   color: #375FB1;
   text-decoration: underline;
-}
-
-.detail .detail-apply p {
-  margin-bottom: 10px;
 }
 
 .detail .detail-apply .m-button--default {
@@ -3591,10 +3627,17 @@ _contact
   width: 220px;
 }
 
+.detail .detail-apply .detail-apply-confirm {
+  color: #797979;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 640px) {
   .detail .detail-inner {
     width: 100%;
     padding: 0;
+    margin-top: 10px;
   }
   .detail .detail-title {
     padding-left: 10px;
@@ -3610,6 +3653,7 @@ _contact
   }
   .detail .detail-form .sub-button, .detail .detail-apply .sub-button {
     width: 60%;
+    margin-left: 10px;
   }
   .detail .job-tag-company {
     font-size: 12px;
@@ -3624,9 +3668,13 @@ _contact
   }
   .detail .main-table td {
     border-bottom: 3px solid #FFF;
+    color: #333333;
   }
   .detail .detail-kanren {
     margin-top: 0;
+  }
+  .detail .detail-kanren ul {
+    margin: 10px;
   }
   .detail .detail-form {
     margin-left: 0;
