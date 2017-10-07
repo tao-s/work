@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -593,7 +594,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #333;
-  font-family: YuGothic, 'Yu Gothic', sans-serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
   min-width: 1200px;
 }
 
@@ -676,9 +677,6 @@ body {
   color: #fff;
 }
 
-.globalHeader {
-  border-bottom: 1px solid #ccc;
-}
 
 .globalHeader .header-list-area {
   position: absolute;
@@ -935,8 +933,8 @@ body {
     width: 100%;
     color: #FFF;
     font-size: 18px;
-    height: 58px;
-    line-height: 58px;
+    height: 52px;
+    line-height: 52px;
   }
   .globalHeader .header-menu-list-area li a :hover {
     text-decoration: none;
@@ -969,6 +967,7 @@ body {
   background-color: #649E00;
   width: 100%;
   height: 54px;
+  font-size: 12px;
   padding: 30px 0;
   text-align: center;
   padding-bottom: 50px;
@@ -1034,7 +1033,41 @@ body {
   color: #555555;
   margin-top: 4px;
 }
-
+.globalFooter .footer_agent{
+ background-image: url(../images/footer_agent_back.jpg);
+ background-position: center;
+ background-size: cover;
+ height: 240px;
+}
+.globalFooter .footer_agent_content{
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+.globalFooter .footer_agent_text{
+  width: 50%;
+  float: left;
+}
+.globalFooter .footer_agent_text img{
+  padding: 20px 0;
+  width: 400px;
+}
+.footer_agent_btm {
+  margin-top: 30px;
+}
+.footer_agent_btm a{
+  display:inline-block;
+  color: #fff;
+  background-color: #F6AC00;
+  border-radius: 5px;
+  padding: 15px 25px;
+}
+.footer_agent_btm a{
+  color: #fff;
+}
+.footer_sp{
+  display: none;
+}
 @media screen and (max-width: 640px) {
   .globalFooter {
     width: 100%;
@@ -1077,6 +1110,33 @@ body {
     margin-top: 10px;
     display: block;
   }
+  .globalFooter .footer_agent{
+   background-image: url(../images/footer_agent_back_sp.jpg);
+   max-height: 380px;
+   min-height: 341px;
+   padding: 0 3%;
+  }
+  .footer_pc{
+    display: none;
+  }
+  .footer_sp{
+    display: block;
+  }
+  .globalFooter .footer_agent_text img{
+    width: 100%;
+    text-align: center;
+  }
+  .globalFooter .footer_agent_text{
+  width: 100%;
+  }
+   .footer_agent_btm{
+    margin-top: 40px;
+   }
+  .footer_agent_btm a{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
 }
 
 @-webkit-keyframes fadeOut {
@@ -1363,7 +1423,8 @@ input[type=text] {
 }
 
 .m-text.m-text--small {
-  font-size: 12px;
+  font-size: 10px;
+  padding-top: 3px;
 }
 
 .m-text.m-text--rtl {
@@ -1694,8 +1755,6 @@ input[type=text] {
 
 .pagination {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 .pagination ul, .pagination ol, .pagination li {
@@ -1818,13 +1877,13 @@ input[type=text] {
 
 @media screen and (min-width: 640px) {
   .pc-none {
-    display: none !important;
+    display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
   .sp-none {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -1893,18 +1952,6 @@ input[type=text] {
   }
 }
 
-.company .company-main {
-  background-image: url("../images/company-bg-pc.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 140px;
-}
-
-.company .company-main img {
-  width: 206px;
-  padding-top: 56px;
-}
-
 .company .company-profile {
   margin-top: 35px;
 }
@@ -1917,6 +1964,7 @@ input[type=text] {
   margin-top: 35px;
   border-spacing: 0px 10px;
   border-collapse: separate;
+  font-weight: bold;
 }
 
 .company .company-profile table th {
@@ -1924,10 +1972,12 @@ input[type=text] {
   color: #FFF;
   padding: 15px;
   width: 170px;
+  font-weight: bold;
 }
 
 .company .company-profile table td {
   border: none;
+  font-weight: bold;
   background-color: #F0F0F0;
   padding: 15px;
 }
@@ -1952,7 +2002,6 @@ input[type=text] {
 
 .company .company-service-list li {
   display: inline-block;
-  width: 220px;
 }
 
 .company .company-service-list li a {
@@ -1962,38 +2011,6 @@ input[type=text] {
 
 .company .company-service-list li + li {
   margin-left: 70px;
-}
-
-.company .company-service-list li img {
-  width: 220px;
-}
-
-@media screen and (max-width: 640px) {
-  .company .company-service-list li {
-    margin: 0 10px;
-    width: calc(100% - 20px);
-  }
-  .company .company-service-list li + li {
-    margin-left: 10px;
-  }
-  .company .company-service-list li .sub-button {
-    margin-top: 18px;
-  }
-}
-
-.company .company-service-list .company-service-list-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.company .company-service-list .company-service-list-description {
-  margin-top: 18px;
-  font-size: 13px;
-}
-
-.company .company-service-list .sub-button {
-  margin-top: 8px;
 }
 
 .company .company-access {
@@ -2018,6 +2035,7 @@ input[type=text] {
 
 .company .company-access-map-detail {
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .company .company-access-map-detail h3 {
@@ -2031,6 +2049,7 @@ input[type=text] {
 .company .company-access-map-detail-address,
 .company .company-access-map-detail-access {
   width: 480px;
+  height: 110px;
   background-color: #FFF;
 }
 
@@ -2052,15 +2071,21 @@ input[type=text] {
   .company .company-profile h2 img {
     width: 156px;
   }
+  .company .company-profile table {
+  margin-top: 15px;
+}
   .company .company-profile table tr, .company .company-profile table td, .company .company-profile table th {
     display: block;
     width: 100%;
   }
   .company .company-profile table td {
     border-bottom: 2px solod #FFF;
+    font-weight: normal;
+    margin-bottom: 5px;
   }
   .company .company-profile table th {
     padding: 10px;
+    font-weight: normal;
   }
   .company .company-profile-inner,
   .company .company-access-inner,
@@ -2094,6 +2119,12 @@ input[type=text] {
   .company .company-access-map-detail-access {
     margin-left: 0;
     margin-top: 10px;
+  }
+  .company .company-access-map-detail-address,
+  .company .company-access-map-detail-access {
+    width: 480px;
+    height: 100px;
+    background-color: #FFF;
   }
 }
 
@@ -2340,6 +2371,7 @@ _contact
 
 .register h2 {
   font-size: 20px;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 
@@ -2347,7 +2379,7 @@ _contact
   width: 600px;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 26px 0;
+  padding: 50px 0;
 }
 
 .register .register-form {
@@ -2407,7 +2439,6 @@ _contact
     padding-bottom: 20px;
     border-bottom: 1px solid #F0F0F0;
     margin-bottom: 20px;
-    font-size: 14px;
   }
   .register .register-inner {
     width: 100%;
@@ -2421,7 +2452,6 @@ _contact
   }
   .register .register-form-sns {
     display: block;
-    margin-bottom: 30px;
   }
   .register .register-form-sns a {
     display: block;
@@ -2448,22 +2478,20 @@ _contact
   color: #FFF;
   background-color: #649E00;
   margin: 0 auto;
+  padding: 10px;
   border-radius: 4px;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
-  height: 44px;
-  line-height: 44px;
 }
 
 .login .button:hover {
   opacity: 0.8;
-  text-decoration: none;
 }
 
 .login h2 {
   font-size: 20px;
-  margin-bottom: 10px;
-  color: #333333;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .login .login-inner {
@@ -2527,17 +2555,8 @@ _contact
 }
 
 @media screen and (max-width: 640px) {
-  .login .login-form-kiyaku a {
-    color: #6BBCED;
-  }
-}
-
-@media screen and (max-width: 640px) {
   .login h2 {
-    font-weight: normal;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .login .button {
     margin-top: 0;
@@ -3223,44 +3242,8 @@ _contact
   }
 }
 
-.recruiter .recruiter-main {
-  background-image: url("../images/recruiter-main.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 518px;
-}
-
-.recruiter .recruiter-main-text-area {
-  width: 680px;
-  margin-left: 128px;
-  padding-top: 119px;
-  color: #FFF;
-}
-
-.recruiter .recruiter-main-text-area img {
-  margin-top: 16px;
-  width: 194px;
-}
-
-.recruiter .recruiter-main-text-area .sub-button {
-  width: 345px;
-  margin-top: 27px;
-}
-
-.recruiter .recruiter-main-text-catch {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.recruiter .recruiter-main-text-sub {
-  margin-top: 31px;
-  font-weight: bold;
-  font-size: 21px;
-}
-
-.recruiter .recruiter-main-text-description {
-  margin-top: 10px;
-  font-size: 14px;
+.recruiter .recruiter-main a {
+  display: block;
 }
 
 .recruiter .recruiter-main-contact {
@@ -3287,83 +3270,10 @@ _contact
   padding: 30px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-.recruiter .recruiter-feature-inner .recruiter-feature-title {
-  padding-top: 0;
-  width: 100%;
-}
-
-.recruiter .recruiter-feature-title {
-  width: 248px;
-  display: block;
-  margin: 0 auto;
-  padding-top: 45px;
-}
-
-.recruiter .recruiter-feature-left-area {
-  width: 473px;
-  height: 332px;
-  background-color: #FFF;
-  padding: 20px;
-}
-
-.recruiter .recruiter-feature-left-area img {
-  width: 93px;
-}
-
-.recruiter .recruiter-feature-left-area .recruiter-feature-title {
-  margin-top: 20px;
-}
-
-.recruiter .recruiter-feature-02, .recruiter .recruiter-feature-03 {
-  background-color: #FFF;
-  height: 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 30px 50px;
-  margin-left: 20px;
-}
-
-.recruiter .recruiter-feature-02 .recruiter-feature-title, .recruiter .recruiter-feature-03 .recruiter-feature-title {
-  text-align: left;
-}
-
-.recruiter .recruiter-feature-02 img {
-  width: 85px;
-}
-
-.recruiter .recruiter-feature-03 {
-  margin-top: 10px;
-}
-
-.recruiter .recruiter-feature-03 img {
-  width: 83px;
-}
-
-.recruiter .recruiter-feature-description {
-  text-align: left;
-}
-
-.recruiter .recruiter-feature-02-description,
-.recruiter .recruiter-feature-03-description {
-  margin-left: 50px;
-  text-align: left;
-}
-
-.recruiter .recruiter-feature-title {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.recruiter .recruiter-feature-description {
-  font-size: 12px;
-  margin-top: 12px;
+.recruiter .recruiter-feature-inner img {
+  width: 1026px;
 }
 
 .recruiter .recruiter-flow {
@@ -3376,139 +3286,17 @@ _contact
   margin: 0 auto;
 }
 
-@media screen and (min-width: 640px) {
-  .recruiter .recruiter-contact-bottom {
-    background-image: url("../images/recruiter-contact-bg-pc.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 240px;
-    width: 100%;
-  }
-}
-
-.recruiter .recruiter-contact-bottom .recruiter-contact-bottom-text-area {
-  width: 680px;
-  margin-left: 128px;
-  padding-top: 59px;
-  color: #FFF;
-}
-
-.recruiter .recruiter-contact-bottom .sub-button {
-  width: 345px;
-  margin-top: 27px;
-}
-
 @media screen and (max-width: 640px) {
-  .recruiter .recruiter-main-sp a img {
-    width: 345px;
-    display: block;
-    margin: 0 auto;
-    padding-top: 40px;
-  }
-  .recruiter .recruiter-feature {
-    padding-bottom: 30px;
-  }
-  .recruiter .recruiter-feature-sp {
-    background-color: #FAFAFA;
-    padding: 10px 5px;
-  }
-  .recruiter .recruiter-feature-sp-title {
-    width: 248px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-  .recruiter .recruiter-feature-sp-01,
-  .recruiter .recruiter-feature-sp-02,
-  .recruiter .recruiter-feature-sp-03 {
-    background-color: #FFF;
-    width: 355px;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-  .recruiter .recruiter-feature-sp-01 img,
-  .recruiter .recruiter-feature-sp-02 img,
-  .recruiter .recruiter-feature-sp-03 img {
-    margin: 0 auto;
-    display: block;
-  }
-  .recruiter .recruiter-feature-sp-01 img {
-    width: 93px;
-  }
-  .recruiter .recruiter-feature-sp-02,
-  .recruiter .recruiter-feature-sp-03 {
-    margin-top: 20px;
-  }
-  .recruiter .recruiter-feature-sp-02 img,
-  .recruiter .recruiter-feature-sp-03 img {
-    width: 85px;
-  }
-  .recruiter .recruiter-feature-title {
-    font-size: 16px;
-    line-height: 1.4;
-    margin-top: 10px;
-    padding-top: 10px;
-  }
-  .recruiter .recruiter-feature-description {
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: left;
-  }
-  .recruiter .recruiter-main-sp-contact {
-    padding-top: 30px;
-  }
-  .recruiter .recruiter-main-sp-contact .sub-button {
-    margin-top: 20px;
-    width: calc(100% - 20px);
-  }
-  .recruiter .recruiter-contact-bottom-text-area-sp {
-    color: #FFF;
-    padding-bottom: 30px;
-  }
-  .recruiter .recruiter-contact-bottom-text-area-sp .sub-button {
-    background: #FFF;
-    color: #F6AC00;
-    font-weight: bold;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 345px;
-    display: block;
-  }
-  .recruiter .recruiter-contact-bottom-text-area-sp-title {
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: bold;
-    padding-top: 20px;
-  }
-  .recruiter .recruiter-contact-bottom-text-area-sp-description {
-    margin-top: 20px;
-  }
-  .recruiter .recruiter-flow-sp-title {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 24px;
-  }
-  .recruiter .recruiter-main-sp-contact-title {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-  .recruiter .recruiter-main-sp-contact-title-description {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-top: 15px;
-  }
-  .recruiter .recruiter-flow-sp-scroll-area {
+  .recruiter .recruiter-feature-inner {
     width: 100%;
-    overflow-x: auto;
-    padding: 20px;
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .recruiter .recruiter-flow-sp-scroll-area img {
-    width: 1021px;
-    height: 174px;
+  .recruiter .recruiter-feature-inner img {
+    width: 357px;
   }
   .recruiter .recruiter-contact-bottom {
     background-color: #F6AC00;
@@ -3526,42 +3314,8 @@ _contact
   }
 }
 
-.agent .agent-main-pc {
-  height: 519px;
-  background-image: url("../images/agent-main-bg-pc.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.agent .agent-main-title-pc {
+.agent > a {
   display: block;
-  margin: 0 auto;
-  padding-top: 135px;
-  width: 719px;
-}
-
-.agent .agent-register-button-pc {
-  display: block;
-  margin: 0 auto;
-  width: 404px;
-  padding-top: 45px;
-}
-
-.agent .agent-main-sp {
-  height: 388px;
-  background-image: url("../images/agent-main-bg-sp.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.agent .agent-main-title-sp {
-  padding-top: 46px;
-  width: 320px;
-}
-
-.agent .agent-register-button-sp {
-  width: 240px;
-  padding-top: 28px;
 }
 
 .agent .agent-merit {
@@ -3585,53 +3339,6 @@ _contact
 
 .agent .agent-merit-list img {
   width: 757px;
-  margin: 0 auto;
-  margin-top: 40px;
-  display: block;
-}
-
-.agent .agent-merit-list img + img {
-  margin-top: 30px;
-}
-
-@media screen and (min-width: 640px) {
-  .agent .agent-contact-area {
-    background-image: url("../images/agent-contact-bg-pc.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 188px;
-  }
-  .agent .agent-contact-area img {
-    width: 132px;
-    padding-top: 30px;
-  }
-  .agent .agent-contact-area .agent-contact-area-text {
-    margin-top: 10px;
-    font-size: 18px;
-    font-family: "Yu Mincho", "YuMincho";
-  }
-  .agent .agent-contact-area .sub-button {
-    margin-top: 15px;
-    width: 355px;
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-}
-
-.agent .agent-flow {
-  padding-bottom: 20px;
-}
-
-.agent .agent-flow img {
-  width: 1021px;
-  padding-top: 20px;
-}
-
-.agent .agent-flow-title {
-  padding-top: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
 }
 
 @media screen and (max-width: 640px) {
@@ -3651,35 +3358,7 @@ _contact
     margin-top: 15px;
   }
   .agent .agent-merit-list img {
-    width: 375px;
-  }
-  .agent .agent-contact-area {
-    background-color: #F6AC00;
-    padding: 20px 5px;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #FFF;
-  }
-  .agent .agent-contact-area img {
-    width: 139px;
-  }
-  .agent .agent-contact-area .agent-contact-area-text {
-    font-family: "Yu Mincho", "YuMincho";
-    margin-top: 10px;
-  }
-  .agent .agent-contact-area .sub-button {
-    background-color: #FFF;
     width: 100%;
-    color: #F6AC00;
-    margin-top: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-  }
-  .agent .agent-scroll-area-sp {
-    width: 100%;
-    overflow-x: auto;
-    padding: 20px;
-    margin-bottom: 20px;
   }
 }
 
@@ -3703,6 +3382,9 @@ _contact
 }
 
 @media screen and (max-width: 640px) {
+  .job {
+    margin-top: 10px !important;
+  }
   .job .job-inner, .job .new-job {
     width: 100%;
   }
@@ -3717,10 +3399,6 @@ _contact
 
 .detail {
   background-color: #FAFAFA;
-}
-
-.detail textarea {
-  background-color: #F8F8F8;
 }
 
 .detail .job-detail {
@@ -3753,12 +3431,6 @@ _contact
   font-weight: normal;
 }
 
-@media screen and (max-width: 640px) {
-  .detail .job-tag {
-    border-radius: 0px !important;
-  }
-}
-
 .detail .main-table {
   border-spacing: 00px 10px;
   border-collapse: separate;
@@ -3768,6 +3440,7 @@ _contact
   background-color: #649E00;
   color: #FFF;
   border: none;
+  font-weight: bold;
 }
 
 .detail .main-table td {
@@ -3793,6 +3466,8 @@ _contact
   width: 40px;
   height: 40px;
   vertical-align: middle;
+  background-color:#649E00;
+  border-radius: 50%;
 }
 
 .detail .detail-subinfo {
@@ -3819,6 +3494,7 @@ _contact
   height: 20px;
   line-height: 20px;
   padding: 0px 8px;
+  margin-top: -1px;
 }
 
 .detail .detail-description {
@@ -3831,7 +3507,6 @@ _contact
   border-radius: 4px;
   line-height: 1.5;
   border: 1px solid #EEE;
-  color: #333333;
 }
 
 .detail .detail-description h3 + p {
@@ -3894,33 +3569,14 @@ _contact
 
 .detail .detail-form .sub-button, .detail .detail-apply .sub-button {
   width: 240px;
-  margin-left: 20px;
 }
 
 .detail .detail-apply-title {
   text-align: center;
 }
 
-.detail .detail-apply-title p {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .detail .detail-apply-title img {
-  margin-top: 20px;
-  width: 180px;
-}
-
-.detail .detail-apply-title + p {
-  margin-top: 30px;
-  font-size: 13px;
-}
-
-@media screen and (max-width: 640px) {
-  .detail .detail-apply-title + p {
-    line-height: 2;
-    margin-top: 20px;
-  }
+  width: 378px;
 }
 
 .detail .detail-apply {
@@ -3935,25 +3591,11 @@ _contact
 
 .detail .detail-apply table input {
   height: 50px;
-  background-color: #F8F8F8;
 }
 
 .detail .detail-apply table th, .detail .detail-apply table td {
   background-color: transparent;
   border: none;
-}
-
-.detail .detail-apply table th {
-  font-weight: bold;
-  padding: 10px;
-}
-
-@media screen and (max-width: 640px) {
-  .detail .detail-apply table th {
-    padding: 0;
-    padding-bottom: 5px;
-    font-size: 13px;
-  }
 }
 
 .detail .detail-apply table .w100 {
@@ -3962,12 +3604,19 @@ _contact
 
 .detail .detail-apply table input, .detail .detail-apply table select, .detail .detail-apply table textarea {
   border-radius: 5px;
-  padding-left: 20px;
+}
+
+.detail .detail-apply table input {
+  background-color: #F8F8F8;
 }
 
 .detail .detail-apply a.kiyaku {
   color: #375FB1;
   text-decoration: underline;
+}
+
+.detail .detail-apply p {
+  margin-bottom: 10px;
 }
 
 .detail .detail-apply .m-button--default {
@@ -3979,17 +3628,11 @@ _contact
   width: 220px;
 }
 
-.detail .detail-apply .detail-apply-confirm {
-  color: #797979;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
 @media screen and (max-width: 640px) {
   .detail .detail-inner {
+    margin-top:10px;
     width: 100%;
     padding: 0;
-    margin-top: 10px;
   }
   .detail .detail-title {
     padding-left: 10px;
@@ -4005,7 +3648,6 @@ _contact
   }
   .detail .detail-form .sub-button, .detail .detail-apply .sub-button {
     width: 60%;
-    margin-left: 10px;
   }
   .detail .job-tag-company {
     font-size: 12px;
@@ -4020,13 +3662,9 @@ _contact
   }
   .detail .main-table td {
     border-bottom: 3px solid #FFF;
-    color: #333333;
   }
   .detail .detail-kanren {
     margin-top: 0;
-  }
-  .detail .detail-kanren ul {
-    margin: 10px;
   }
   .detail .detail-form {
     margin-left: 0;
@@ -4050,10 +3688,6 @@ _contact
     font-size: 10px;
     color: #797979;
   }
-}
-
-.top .support .top-support-text {
-  margin-top: 16px;
 }
 
 .top .career-support {
@@ -4109,11 +3743,10 @@ _contact
   text-decoration: none;
   opacity: 0.8;
 }
-
 .top .top-main-section {
   margin: 0 auto;
   margin-top: 50px;
-  width: 1200px;
+  max-width: 1024px;
 }
 
 .top .pagination {
@@ -4154,6 +3787,62 @@ _contact
     font-size: 12px;
     color: #999999;
   }
+  .support_agent_sp{
+    margin-top: 20px;
+    position: relative;
+  }
+  .support_agent_sp_text{
+    position: absolute;
+    top:10%;
+    width: 60%;
+    text-align: center;
+    left: 15%;
+  }
+  .support_agent_sp_text h2{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .support_agent_sp_text p{
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .support_agent_sp_btm a{
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    background-color: #649E00;
+    display: inline-block;
+    padding: 3px 0;
+    border-radius: 5px;
+  }
+  .support_ric_sp{
+    margin-top: 20px;
+    position: relative;
+  }
+  .support_ric_sp_text{
+    width: 60%;
+    position: absolute;
+    top:6%;
+    right: 17%;
+    text-align: center;
+  }
+  .support_ric_sp_text h2{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .support_ric_sp_text p{
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .support_ric_sp_btm a{
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    background-color: #649E00;
+    display: inline-block;
+    padding: 3px 0;
+    border-radius: 5px;
+  }
 }
 
 .job-list .syokusyu {
@@ -4164,6 +3853,8 @@ _contact
 
 .job-list .syokusyu img {
   width: 60px;
+  background-color: #649E00;
+  border-radius: 50%;
 }
 
 .job-list .job-tag {
@@ -4255,6 +3946,9 @@ _contact
     top: 0;
     width: calc(90% - 20px);
   }
+  .job-list .job-tag {
+    border-radius: 0px;
+  }
 }
 
 .breadcrumbs {
@@ -4300,6 +3994,7 @@ _contact
   width: auto;
   z-index: 100;
   top: 150px;
+  left: 0px;
 }
 
 .slide-area .support {
@@ -4311,6 +4006,7 @@ _contact
 
 .slide-area .form {
   height: 406px;
+  max-width: 1024px;
   margin-bottom: 51px;
   position: relative;
   z-index: 1000;
@@ -4784,7 +4480,9 @@ _contact
   margin: 10px;
   width: 45%;
 }
-
+.side-search {
+  border: solid 1px #eeeeee;
+}
 .side-search p {
   margin-top: 15px;
   width: 100%;
