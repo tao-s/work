@@ -1951,6 +1951,7 @@ input[type=text] {
 
 .company .company-service-list li {
   display: inline-block;
+  width: 220px;
 }
 
 .company .company-service-list li a {
@@ -1960,6 +1961,38 @@ input[type=text] {
 
 .company .company-service-list li + li {
   margin-left: 70px;
+}
+
+.company .company-service-list li img {
+  width: 220px;
+}
+
+@media screen and (max-width: 640px) {
+  .company .company-service-list li {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+  .company .company-service-list li + li {
+    margin-left: 10px;
+  }
+  .company .company-service-list li .sub-button {
+    margin-top: 18px;
+  }
+}
+
+.company .company-service-list .company-service-list-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.company .company-service-list .company-service-list-description {
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.company .company-service-list .sub-button {
+  margin-top: 8px;
 }
 
 .company .company-access {
