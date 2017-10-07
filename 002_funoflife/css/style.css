@@ -1892,6 +1892,18 @@ input[type=text] {
   }
 }
 
+.company .company-main {
+  background-image: url("../images/company-bg-pc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 140px;
+}
+
+.company .company-main img {
+  width: 206px;
+  padding-top: 56px;
+}
+
 .company .company-profile {
   margin-top: 35px;
 }
