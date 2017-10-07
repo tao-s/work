@@ -1695,6 +1695,8 @@ input[type=text] {
 
 .pagination {
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .pagination ul, .pagination ol, .pagination li {
