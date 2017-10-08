@@ -57,3 +57,8 @@
 .icon--nextUnit {
   @include sprite($next-unit);
 }
+
+.job-icon{
+  background-color: $green;
+  border-radius: 50%;
+}
